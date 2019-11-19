@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:rpivo/timeward.git",
   "author": "Ryan Pivovar <ryanpivovar@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
