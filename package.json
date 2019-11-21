@@ -1,7 +1,7 @@
 {
   "name": "timeward",
   "version": "0.0.0",
-  "description": "productivity tool for perfectionists",
+  "description": "productivity management for perfectionists",
   "main": "index.js",
   "repository": "git@github.com:rpivo/timeward.git",
   "author": "Ryan Pivovar <ryanpivovar@gmail.com>",
