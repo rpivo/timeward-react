@@ -10,3 +10,5 @@ December 1, 2019
 - added .gitignore file.
 - added node_modules to .gitignore.
 - added docs folder.
+- added project board to GitHub.
+- added description to project.
