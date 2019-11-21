@@ -4,5 +4,6 @@
 December 1, 2019
 
 ### Updates
-- Git Branch scheme set up.
+- git branch scheme set up.
 - npm project initialized inside repo.
+- added jest.
