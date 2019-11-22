@@ -16,3 +16,4 @@ December 1, 2019
 - added react and react-dom.
 - added type declarations for react and react-dom.
 - added typescript.
+- added ts-loader and source-map-loader for webpack and typescript integration.
