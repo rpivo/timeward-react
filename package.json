@@ -1,12 +1,14 @@
 {
   "name": "timeward",
   "version": "0.0.0",
-  "description": "productivity management for perfectionists",
+  "description": "productivity for perfectionists",
   "main": "index.js",
   "repository": "git@github.com:rpivo/timeward.git",
   "author": "Ryan Pivovar <ryanpivovar@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
