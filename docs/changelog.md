@@ -12,3 +12,5 @@ December 1, 2019
 - added docs folder.
 - added project board to GitHub.
 - added description to project.
+- added webpack and webpack-cli.
+- added react and react-dom.
