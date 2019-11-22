@@ -14,3 +14,5 @@ December 1, 2019
 - added description to project.
 - added webpack and webpack-cli.
 - added react and react-dom.
+- added type declarations for react and react-dom.
+- added typescript.
