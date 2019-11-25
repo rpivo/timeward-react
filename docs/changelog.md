@@ -12,3 +12,14 @@ December 1, 2019
 - added docs folder.
 - added project board to GitHub.
 - added description to project.
+- added webpack and webpack-cli.
+- added react and react-dom.
+- added type declarations for react and react-dom.
+- added typescript.
+- added ts-loader and source-map-loader for webpack and typescript integration.
+- added typescript config file.
+- added dist folder for webpack builds.
+- added dist folder to .gitignore.
+- added src folder for source code webpack pulls from.
+- added index.html as main browser entry point for webpack bundle (dist/main.js).
+- added webpack config.
