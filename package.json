@@ -23,6 +23,7 @@
     "react-dom": "^16.12.0"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "eslint './src/**/*.{ts,tsx}'"
   }
 }
