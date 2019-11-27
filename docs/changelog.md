@@ -25,3 +25,5 @@ December 1, 2019
 - added webpack config.
 - added App.tsx and index.tsx.
 - added build script to package.json.
+- added TypeScript-ESLint dev dependencies.
+- added ESLint config.
