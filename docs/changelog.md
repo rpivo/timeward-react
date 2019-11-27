@@ -23,3 +23,5 @@ December 1, 2019
 - added src folder for source code webpack pulls from.
 - added index.html as main browser entry point for webpack bundle (dist/main.js).
 - added webpack config.
+- added App.tsx and index.tsx.
+- added build script to package.json.
