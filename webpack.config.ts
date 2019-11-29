@@ -1,4 +1,6 @@
-module.exports = {
+import webpack from 'webpack';
+
+const config: webpack.Configuration = {
   mode: 'production',
   devtool: 'source-map',
   resolve: {
@@ -26,4 +28,6 @@ module.exports = {
     'react': 'React',
     'react-dom': 'ReactDOM'
   }
-};
+}
+
+export default config;
