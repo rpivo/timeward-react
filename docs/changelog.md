@@ -27,3 +27,4 @@ December 1, 2019
 - added build script to package.json.
 - added TypeScript-ESLint dev dependencies.
 - added ESLint config.
+- added ts-node to allow for webpack config using ES6 and typescript.
