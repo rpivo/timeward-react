@@ -28,3 +28,4 @@ December 1, 2019
 - added TypeScript-ESLint dev dependencies.
 - added ESLint config.
 - added ts-node and type declarations for node, webpack, and webpack-dev-server to allow for webpack config using ES6 and typescript.
+- update to importing only render method from reactDOM.
