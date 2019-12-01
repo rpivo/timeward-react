@@ -3,6 +3,9 @@
 ## Release 0.2.0 (planned)
 Sprint 2 / December 15, 2019
 
+### Updates
+- updated readme.
+
 ## Release 0.1.0
 Sprint 1 / December 1, 2019
 
