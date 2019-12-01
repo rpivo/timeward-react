@@ -3,7 +3,4 @@ import { render } from 'react-dom';
 
 import { App } from './components/App';
 
-render(
-  <App compiler='TypeScript' framework='React' />,
-  document.getElementById('example')
-);
+render(<App compiler='TypeScript' framework='React' />, document.getElementById('root'));
