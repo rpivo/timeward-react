@@ -1,7 +1,23 @@
 # changelog
 
-## Release 0.1.0 (planned)
-December 1, 2019
+## Release 0.2.0 (planned)
+Sprint 2 / December 15, 2019
+
+### Updates
+- updated readme.
+- added ts-node and type declarations for node, webpack, and webpack-dev-server to allow for webpack config using ES6 and typescript.
+- update to importing only render method from reactDOM.
+- added type declarations for jest.
+- added typescript preprocessor for jest.
+- added jest config.
+- added test script.
+
+## Release 0.1.0
+Sprint 1 / December 1, 2019
+
+### 3 bug, 3 documentation, 15 enhancement, and 11 question issues were closed (31 total)
+
+This being the first two weeks working on this project, most of the work done has been focused around development setup and getting the various parts of the toolchain to play nicely. React, TypeScript, Webpack, ESLint, and Jest were added and configured. This is an ongoing process.
 
 ### Updates
 - set up git flow branch scheme.
@@ -27,9 +43,8 @@ December 1, 2019
 - added build script to package.json.
 - added TypeScript-ESLint dev dependencies.
 - added ESLint config.
-- added ts-node and type declarations for node, webpack, and webpack-dev-server to allow for webpack config using ES6 and typescript.
-- update to importing only render method from reactDOM.
-- added type declarations for jest.
-- added typescript preprocessor for jest.
-- added jest config.
-- added test script.
+- update to importing only render method from ReactDOM.
+
+### Ongoing
+- configuring webpack-dev-server.
+- adding the first Jest tests and getting Jest to play nicely with TypeScript.
