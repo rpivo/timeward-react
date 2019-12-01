@@ -32,3 +32,4 @@ December 1, 2019
 - added type declarations for jest.
 - added typescript preprocessor for jest.
 - added jest config.
+- added test script.
