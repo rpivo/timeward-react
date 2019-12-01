@@ -28,6 +28,6 @@ const config: webpack.Configuration = {
     'react': 'React',
     'react-dom': 'ReactDOM'
   }
-}
+};
 
 export default config;

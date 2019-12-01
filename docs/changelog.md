@@ -31,3 +31,4 @@ December 1, 2019
 - update to importing only render method from reactDOM.
 - added type declarations for jest.
 - added typescript preprocessor for jest.
+- added jest config.
