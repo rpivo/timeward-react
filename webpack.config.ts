@@ -1,10 +1,20 @@
 import webpack from 'webpack';
+import * as path from 'path';
+
+const __dirname = path.resolve();
 
 const config: webpack.Configuration = {
   mode: 'production',
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    hot: true,
+    open: true,
+    port: 9000
+  },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.ts', '.tsx']
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
