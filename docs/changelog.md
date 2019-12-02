@@ -5,12 +5,14 @@ Sprint 2 / December 15, 2019
 
 ### Updates
 - updated readme.
-- added ts-node and type declarations for node, webpack, and webpack-dev-server to allow for webpack config using ES6 and typescript.
+- added ts-node and type declarations for Node, Webpack, and webpack-dev-server to allow for Webpack config using ES6 and TypeScript.
 - update to importing only render method from reactDOM.
-- added type declarations for jest.
-- added typescript preprocessor for jest.
-- added jest config.
+- added type declarations for Jest.
+- added TypeScript preprocessor for Jest.
+- added Jest config.
 - added test script.
+- updated React html container id from 'example' to 'root'.
+- added tests for index.tsx.
 
 ## Release 0.1.0
 Sprint 1 / December 1, 2019
@@ -22,23 +24,23 @@ This being the first two weeks working on this project, most of the work done ha
 ### Updates
 - set up git flow branch scheme.
 - initialized npm project inside repo.
-- added jest.
+- added Jest.
 - added .gitignore file.
 - added node_modules to .gitignore.
 - added docs folder.
 - added project board to GitHub.
 - added description to project.
-- added webpack and webpack-cli.
-- added react and react-dom.
-- added type declarations for react and react-dom.
-- added typescript.
-- added ts-loader and source-map-loader for webpack and typescript integration.
-- added typescript config file.
-- added dist folder for webpack builds.
+- added Webpack and webpack-cli.
+- added React and ReactDOM.
+- added type declarations for React and ReactDOM.
+- added TypeScript.
+- added ts-loader and source-map-loader for Webpack and TypeScript integration.
+- added TypeScript config file.
+- added dist folder for Webpack builds.
 - added dist folder to .gitignore.
-- added src folder for source code webpack pulls from.
-- added index.html as main browser entry point for webpack bundle (dist/main.js).
-- added webpack config.
+- added src folder for source code Webpack pulls from.
+- added index.html as main browser entry point for Webpack bundle (dist/main.js).
+- added Webpack config.
 - added App.tsx and index.tsx.
 - added build script to package.json.
 - added TypeScript-ESLint dev dependencies.
