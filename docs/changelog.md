@@ -13,6 +13,8 @@ Sprint 2 / December 15, 2019
 - added test script.
 - updated React html container id from 'example' to 'root'.
 - added tests for index.tsx.
+- added webpack-dev-server.
+- added start script.
 
 ## Release 0.1.0
 Sprint 1 / December 1, 2019

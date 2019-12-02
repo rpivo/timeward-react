@@ -42,6 +42,7 @@
   "scripts": {
     "build": "yarn lint && webpack",
     "lint": "eslint './src/**/*.{ts,tsx}'",
+    "start": "webpack-dev-server",
     "test": "jest"
   }
 }
