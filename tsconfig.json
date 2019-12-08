@@ -4,6 +4,7 @@
     "jsx": "react",
     "module": "commonjs",
     "noImplicitAny": true,
+    "noImplicitReturns": true,
     "outDir": "./dist/",
     "sourceMap": true,
     "target": "es5",
