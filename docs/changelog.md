@@ -17,6 +17,7 @@ Sprint 2 / December 15, 2019
 - added start script.
 - added webpack-dev-server config in webpack config, allowing for webpack-dev-server to work and hot reload.
 - added noImplicitReturns to tsconfig.
+- added styled-components.
 
 ## Release 0.1.0
 Sprint 1 / December 1, 2019
