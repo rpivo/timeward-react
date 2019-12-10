@@ -7,7 +7,7 @@ Sprint 2 / December 15, 2019
 - updated readme.
 - added ts-node and type declarations for Node, Webpack, and webpack-dev-server to allow for Webpack config using ES6 and TypeScript.
 - update to importing only render method from reactDOM.
-- added type declarations for Jest.
+- added type declarations for Jest and styled-components.
 - added TypeScript preprocessor for Jest.
 - added Jest config.
 - added test script.
