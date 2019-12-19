@@ -6,6 +6,8 @@ Sprint 3 / January 2, 2020
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
 
+Improved and extended TypeScript integration. Added Jest config and the first test. Added minor improvements to Webpack config, including beginning implementations of webpack-dev-server.
+
 ### Updates
 - updated readme.
 - added ts-node and type declarations for Node, Webpack, and webpack-dev-server to allow for Webpack config using ES6 and TypeScript.
