@@ -1,7 +1,10 @@
 # changelog
 
-## Release 0.2.0 (planned)
-Sprint 2 / December 15, 2019
+## Release 0.3.0 (planned)
+Sprint 3 / January 2, 2020
+
+## Release 0.2.0
+Sprint 2 / December 19, 2019
 
 ### Updates
 - updated readme.
