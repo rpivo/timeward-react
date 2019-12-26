@@ -3,10 +3,11 @@
 ## Release 0.3.0 (planned)
 Sprint 3 / January 2, 2020
 
+- added --watchAll to test script.
+- added alwaysStrict: true to TypeScript config.
+
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
-
-- added --watchAll to test script.
 
 ### 0 bug, 1 documentation, 11 enhancement, and 13 question issues were closed (25 total)
 
