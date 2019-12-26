@@ -1,5 +1,5 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { App } from './components/App';
+import { App } from './components/App/App';
 
-render(<App compiler='TypeScript' framework='React' />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));

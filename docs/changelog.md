@@ -1,7 +1,21 @@
 # changelog
 
-## Release 0.2.0 (planned)
-Sprint 2 / December 15, 2019
+## Release 0.3.0 (planned)
+Sprint 3 / January 2, 2020
+
+- added --watchAll to test script.
+- added alwaysStrict: true to TypeScript config.
+- moved App component to its own folder.
+- added Timer component.
+- gutted App component boilerplate.
+- routed Timer component to App component.
+
+## Release 0.2.0
+Sprint 2 / December 19, 2019
+
+### 0 bug, 1 documentation, 11 enhancement, and 13 question issues were closed (25 total)
+
+Improved and extended TypeScript integration. Added Jest config and the first test. Added minor improvements to Webpack config, including beginning implementations of webpack-dev-server.
 
 ### Updates
 - updated readme.

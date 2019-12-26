@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { App } from './components/App';
+import { App } from './components/App/App';
 
 jest.mock("react-dom", () => ({ render: jest.fn() }));
 
@@ -12,7 +12,7 @@ describe('index', () => {
   it('should call ReactDOM.render', () => {
     require('./index');
     expect(render).toHaveBeenCalledWith(
-      <App compiler='TypeScript' framework='React' />,
+      <App />,
       document.getElementById('root')
     );
   });
