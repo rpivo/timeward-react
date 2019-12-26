@@ -12,7 +12,7 @@ describe('index', () => {
   it('should call ReactDOM.render', () => {
     require('./index');
     expect(render).toHaveBeenCalledWith(
-      <App compiler='TypeScript' framework='React' />,
+      <App />,
       document.getElementById('root')
     );
   });
