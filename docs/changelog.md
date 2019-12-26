@@ -6,6 +6,9 @@ Sprint 3 / January 2, 2020
 - added --watchAll to test script.
 - added alwaysStrict: true to TypeScript config.
 - moved App component to its own folder.
+- added Timer component.
+- gutted App component boilerplate.
+- routed Timer component to App component.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
