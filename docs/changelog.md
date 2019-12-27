@@ -11,6 +11,7 @@ Sprint 3 / January 2, 2020
 - routed Timer component to App component.
 - added react-test-renderer.
 - added type declarations for react-test-renderer.
+- added snapshot test for index.tsx.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
