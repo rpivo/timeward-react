@@ -3,6 +3,7 @@
 ## Release 0.3.0 (planned)
 Sprint 3 / January 2, 2020
 
+### Updates
 - added --watchAll to test script.
 - added alwaysStrict: true to TypeScript config.
 - moved App component to its own folder.
@@ -14,6 +15,7 @@ Sprint 3 / January 2, 2020
 - added snapshot test for index.tsx.
 - move all tests to spec folder.
 - updated packages.
+- add coverage folder to .gitignore.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
