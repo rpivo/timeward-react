@@ -9,6 +9,7 @@ Sprint 3 / January 2, 2020
 - added Timer component.
 - gutted App component boilerplate.
 - routed Timer component to App component.
+- added react-test-renderer.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
