@@ -7,6 +7,11 @@
   "author": "Ryan Pivovar <ryanpivovar@gmail.com>",
   "license": "MIT",
   "jest": {
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
     "roots": [
       "<rootDir>/src"
     ],
@@ -49,6 +54,6 @@
     "build": "yarn lint && webpack",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "start": "webpack-dev-server",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll --coverage"
   }
 }
