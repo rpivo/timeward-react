@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-import renderer from 'react-test-renderer';
 import { App } from '../components/App';
 
 jest.mock("react-dom", () => ({ render: jest.fn() }));
@@ -16,12 +15,5 @@ describe('index', () => {
       <App />,
       document.getElementById('root')
     );
-  });
-
-  it('should render correctly', () => {
-    const tree = renderer
-      .create(<App />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
   });
 });
