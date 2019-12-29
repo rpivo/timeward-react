@@ -17,6 +17,7 @@ Sprint 3 / January 2, 2020
 - updated packages.
 - add coverage folder to .gitignore.
 - added coverage tracking to yarn test script.
+- added paragraph on current toolchain to readme.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
