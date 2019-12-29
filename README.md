@@ -9,4 +9,4 @@ Features will include time tracking, project management, reminders, calendar int
 
 ### Toolchain
 
-Under the hood, Timeward is built with a number of tools, including **Jest** for testing, **React** for UI development, **Webpack** for bundling, **ESLint** for linting, and TypeScript for scalability and additional programming language functionality.
+Under the hood, Timeward is built with a number of tools, including **Jest** for testing, **React** for UI development, **Webpack** for bundling, **ESLint** for linting, and **TypeScript** for scalability and additional programming language functionality.
