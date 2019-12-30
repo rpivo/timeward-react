@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-import { App } from './components/App/App';
+import { App } from '../components/App';
 
 jest.mock("react-dom", () => ({ render: jest.fn() }));
 
@@ -10,7 +10,7 @@ beforeAll(() => {
 
 describe('index', () => {
   it('should call ReactDOM.render', () => {
-    require('./index');
+    require('../index');
     expect(render).toHaveBeenCalledWith(
       <App />,
       document.getElementById('root')

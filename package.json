@@ -7,6 +7,11 @@
   "author": "Ryan Pivovar <ryanpivovar@gmail.com>",
   "license": "MIT",
   "jest": {
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
     "roots": [
       "<rootDir>/src"
     ],
@@ -24,6 +29,7 @@
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.1",
+    "@types/react-test-renderer": "^16.9.1",
     "@types/webpack": "^4.41.0",
     "@types/webpack-dev-server": "^3.9.0",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
@@ -31,6 +37,7 @@
     "eslint": "^6.7.1",
     "eslint-plugin-react": "^7.16.0",
     "jest": "^24.9.0",
+    "react-test-renderer": "^16.12.0",
     "source-map-loader": "^0.2.4",
     "ts-jest": "^24.2.0",
     "ts-loader": "^6.2.1",
@@ -49,6 +56,6 @@
     "build": "yarn lint && webpack",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "start": "webpack-dev-server",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll --coverage"
   }
 }

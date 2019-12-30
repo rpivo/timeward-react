@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import * as path from 'path';
+import path from 'path';
 
 const __dirname = path.resolve();
 

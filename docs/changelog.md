@@ -3,12 +3,21 @@
 ## Release 0.3.0 (planned)
 Sprint 3 / January 2, 2020
 
+### Updates
 - added --watchAll to test script.
 - added alwaysStrict: true to TypeScript config.
-- moved App component to its own folder.
+- moved components at top level of components folder.
 - added Timer component.
 - gutted App component boilerplate.
 - routed Timer component to App component.
+- added react-test-renderer.
+- added type declarations for react-test-renderer.
+- added snapshot tests for App.tsx and Timer.tsx.
+- move all tests to spec folder.
+- updated packages.
+- add coverage folder to .gitignore.
+- added coverage tracking to yarn test script.
+- added paragraph on current toolchain to readme.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
