@@ -18,6 +18,8 @@ Sprint 3 / January 2, 2020
 - add coverage folder to .gitignore.
 - added coverage tracking to yarn test script.
 - added paragraph on current toolchain to readme.
+- added styled-components.
+- added type declarations for ESLint and styled-components.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
@@ -40,7 +42,6 @@ Improved and extended TypeScript integration. Added Jest config and the first te
 - added start script.
 - added webpack-dev-server config in webpack config, allowing for webpack-dev-server to work and hot reload.
 - added noImplicitReturns to tsconfig.
-- added styled-components.
 
 ## Release 0.1.0
 Sprint 1 / December 1, 2019
@@ -74,7 +75,3 @@ This being the first two weeks working on this project, most of the work done ha
 - added TypeScript-ESLint dev dependencies.
 - added ESLint config.
 - update to importing only render method from ReactDOM.
-
-### Ongoing
-- configuring webpack-dev-server.
-- adding the first Jest tests and getting Jest to play nicely with TypeScript.
