@@ -12,7 +12,7 @@ Sprint 3 / January 2, 2020
 - routed Timer component to App component.
 - added react-test-renderer.
 - added type declarations for react-test-renderer.
-- added snapshot test for App.tsx.
+- added snapshot tests for App.tsx and Timer.tsx.
 - move all tests to spec folder.
 - updated packages.
 - add coverage folder to .gitignore.
