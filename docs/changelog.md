@@ -6,11 +6,11 @@ Sprint 3 / January 2, 2020
 ### Updates
 - added --watchAll to test script.
 - added alwaysStrict: true to TypeScript config.
-- moved components at top level of components folder.
+- moved components to top level of components folder.
 - added Timer component.
 - gutted App component boilerplate.
 - added react-test-renderer.
-- added type declarations for react-test-renderer.
+- added type declarations for react-test-renderer, ESLint, and styled-components.
 - added snapshot tests for App.tsx and Timer.tsx.
 - move all tests to spec folder.
 - updated packages.
@@ -18,7 +18,6 @@ Sprint 3 / January 2, 2020
 - added coverage tracking to yarn test script.
 - added paragraph on current toolchain to readme.
 - added styled-components.
-- added type declarations for ESLint and styled-components.
 - added Dashboard page component.
 - routed App, Dashboard, and Timer components together.
 
