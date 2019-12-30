@@ -9,7 +9,6 @@ Sprint 3 / January 2, 2020
 - moved components at top level of components folder.
 - added Timer component.
 - gutted App component boilerplate.
-- routed Timer component to App component.
 - added react-test-renderer.
 - added type declarations for react-test-renderer.
 - added snapshot tests for App.tsx and Timer.tsx.
@@ -20,6 +19,8 @@ Sprint 3 / January 2, 2020
 - added paragraph on current toolchain to readme.
 - added styled-components.
 - added type declarations for ESLint and styled-components.
+- added Dashboard page component.
+- routed App, Dashboard, and Timer components together.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
