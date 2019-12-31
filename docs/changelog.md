@@ -20,6 +20,7 @@ Sprint 3 / January 2, 2020
 - added styled-components.
 - added Dashboard page component.
 - routed App, Dashboard, and Timer components together.
+- added tests for proposed functionality for Timer component.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
