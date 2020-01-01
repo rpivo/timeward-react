@@ -23,6 +23,7 @@ Sprint 3 / January 2, 2020
 - routed App, Dashboard, and Timer components together.
 - added tests for proposed functionality for Timer component.
 - added sprints markdown file to the docs folder, outlining how the project is iterated upon from one sprint to the next.
+- route up props and state to Timer and Button components.
 
 ## Release 0.2.0
 Sprint 2 / December 19, 2019

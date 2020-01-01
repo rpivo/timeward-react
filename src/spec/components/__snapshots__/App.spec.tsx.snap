@@ -2,7 +2,9 @@
 
 exports[`App should render correctly 1`] = `
 <div>
-  Timer
-  <button />
+  00:00:00
+  <button>
+    test
+  </button>
 </div>
 `;
