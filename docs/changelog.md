@@ -9,15 +9,14 @@ Sprint 3 / January 2, 2020
 - moved components to top level of components folder.
 - added Timer component.
 - gutted App component boilerplate.
-- added react-test-renderer.
-- added type declarations for react-test-renderer, ESLint, and styled-components.
+- added packages react-test-renderer, styled-components, and webpack-merge.
+- added type declarations for react-test-renderer, ESLint, and styled-components, and webpack-merge.
 - added snapshot tests for App.tsx and Timer.tsx.
 - move all tests to spec folder.
 - updated packages.
 - add coverage folder to .gitignore.
 - added coverage tracking to yarn test script.
 - added paragraph on current toolchain to readme.
-- added styled-components.
 - added Dashboard page component.
 - added Button component.
 - routed App, Dashboard, and Timer components together.

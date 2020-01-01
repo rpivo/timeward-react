@@ -33,6 +33,7 @@
     "@types/styled-components": "^4.4.1",
     "@types/webpack": "^4.41.0",
     "@types/webpack-dev-server": "^3.9.0",
+    "@types/webpack-merge": "^4.1.5",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
     "eslint": "^6.7.1",
@@ -46,7 +47,8 @@
     "typescript": "^3.7.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "react": "^16.12.0",
@@ -54,9 +56,9 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
-    "build": "yarn lint && webpack",
-    "lint": "eslint './src/**/*.{ts,tsx}'",
     "dev": "webpack-dev-server",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "prod": "yarn lint && webpack",
     "test": "jest --watchAll --coverage"
   }
 }
