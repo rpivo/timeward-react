@@ -19,6 +19,7 @@ Sprint 3 / January 2, 2020
 - added paragraph on current toolchain to readme.
 - added styled-components.
 - added Dashboard page component.
+- added Button component.
 - routed App, Dashboard, and Timer components together.
 - added tests for proposed functionality for Timer component.
 - added sprints markdown file to the docs folder, outlining how the project is iterated upon from one sprint to the next.
