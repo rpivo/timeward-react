@@ -57,7 +57,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --config webpack/webpack.config.ts",
-    "prod": "yarn lint && webpack --config webpack/webpack.config.ts",
+    "prod": "yarn lint && webpack --config webpack/webpack.common.ts",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "test": "jest --watchAll --coverage"
   }
