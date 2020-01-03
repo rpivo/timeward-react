@@ -5,8 +5,7 @@ Sprint 4 / January 16, 2020
 
 ### Updates
 - updated readme.
-- created webpack folder to house webpack config files.
-- added webpack.common.ts.
+- created webpack folder and set up webpack-merge to be able to create separate dev and prod builds.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020

@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 
-const config: webpack.Configuration = {
+const common: webpack.Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
   },
@@ -28,4 +28,4 @@ const config: webpack.Configuration = {
   }
 };
 
-export default config;
+export default common;
