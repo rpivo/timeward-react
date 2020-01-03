@@ -5,7 +5,9 @@ Timeward is a productivity tool designed to help people manage their time better
 
 Features will include time tracking, project management, reminders, calendar integration, and task/to-do management.
 
-"Timeward" is a portmanteau of the words "time" and "forward". Arguably the most valuable resource we are given is time, and time is perpetually moving forward, whether we like it or not. In trying to wrangle in the time that we have, we sometimes get bogged down by the details we may have forgotten. We get thrown off by events we didn't foresee. Timeward is designed to be a failsafe for these moments.
+"Timeward" is a portmanteau of the words "time" and "forward". The most valuable resource we are given is time. It perpetually moves forward, whether we like it or not. In trying to wrangle in the time that we have, we sometimes get bogged down by forgotten details and the minutiae of life. We get thrown off by events we don't foresee. 
+
+Timeward is designed to be a failsafe for these moments.
 
 ### Toolchain
 
