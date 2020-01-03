@@ -1,13 +1,24 @@
 # changelog
 
-## Release 0.3.0 (planned)
+## Release 0.4.0 (planned)
+Sprint 4 / January 16, 2020
+
+### Updates
+- updated readme.
+
+## Release 0.3.0
 Sprint 3 / January 2, 2020
+
+### 0 bug, 2 documentation, 16 enhancement, and 21 question issues were closed (39 total)
+
+Restructured overall `src` folder structure. Added Timer and Button components. Used TypeScript interfaces and generics to allow some of these components to handle managing their own state and accepting props from parent components. Set up snapshot testing. Added page components folder, and added the Dashboard page component.
 
 ### Updates
 - added --watchAll to test script.
 - added alwaysStrict: true to TypeScript config.
 - moved components to top level of components folder.
-- added Timer component.
+- added Timer and Button components.
+- turn Timer component into a stateful component, incorporating TypeScript interfaces and generics to set up the component's state.
 - gutted App component boilerplate.
 - added packages react-test-renderer, styled-components, and webpack-merge.
 - added type declarations for react-test-renderer, ESLint, and styled-components, and webpack-merge.
@@ -18,7 +29,6 @@ Sprint 3 / January 2, 2020
 - added coverage tracking to yarn test script.
 - added paragraph on current toolchain to readme.
 - added Dashboard page component.
-- added Button component.
 - routed App, Dashboard, and Timer components together.
 - added tests for proposed functionality for Timer component.
 - added sprints markdown file to the docs folder, outlining how the project is iterated upon from one sprint to the next.
