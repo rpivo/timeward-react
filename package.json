@@ -56,9 +56,9 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --config webpack/webpack.config.ts",
+    "prod": "yarn lint && webpack --config webpack/webpack.config.ts",
     "lint": "eslint './src/**/*.{ts,tsx}'",
-    "prod": "yarn lint && webpack",
     "test": "jest --watchAll --coverage"
   }
 }
