@@ -11,11 +11,7 @@ const common: webpack.Configuration = {
       {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'ts-loader'
-          }
-        ]
+        use: [{ loader: 'ts-loader' }]
       },
       {
         enforce: 'pre',
