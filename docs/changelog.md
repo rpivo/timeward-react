@@ -11,6 +11,7 @@ Sprint 4 / January 16, 2020
 - set up relative imports in TypeScript config using baseUrl and paths properties.
 - updated all import statements to use relative paths.
 - set up Dashboard as a styled-component.
+- wrapped app component in top-level div.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
