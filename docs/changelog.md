@@ -7,6 +7,7 @@ Sprint 4 / January 16, 2020
 - updated readme.
 - created webpack folder and set up webpack-merge to be able to create separate dev and prod builds.
 - configured jest to find relative-imported modules.
+- added package tsconfig-paths-webpack-plugin.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
