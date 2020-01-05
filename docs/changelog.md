@@ -9,6 +9,7 @@ Sprint 4 / January 16, 2020
 - configured jest to find relative-imported modules.
 - added tsconfig-paths-webpack-plugin.
 - set up relative imports in TypeScript config using baseUrl and paths properties.
+- updated all import statements to use relative paths.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
