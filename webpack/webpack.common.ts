@@ -1,8 +1,10 @@
 import webpack from 'webpack';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 const common: webpack.Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
+    plugins: [new TsconfigPathsPlugin({})]
   },
   module: {
     rules: [
