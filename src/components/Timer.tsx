@@ -8,7 +8,7 @@ export class Timer extends React.Component <{}, TimerState> {
 
   public render(): JSX.Element { return (
       <div>
-        {this.state.time}
+        { this.state.time }
         <Button kind='test' />
       </div>
     );
