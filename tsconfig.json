@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
     "alwaysStrict": true,
+    "baseUrl": "./src",
     "esModuleInterop": true,
     "jsx": "react",
     "module": "commonjs",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "outDir": "./dist/",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+    },
     "sourceMap": true,
     "target": "es5",
   }
