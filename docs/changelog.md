@@ -12,6 +12,7 @@ Sprint 4 / January 16, 2020
 - updated all import statements to use relative paths.
 - set up Dashboard as a styled-component.
 - wrapped app component in top-level div.
+- greatly improved ESLint config.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020

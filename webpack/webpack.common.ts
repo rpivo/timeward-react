@@ -2,28 +2,28 @@ import webpack from 'webpack';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 const common: webpack.Configuration = {
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-    plugins: [new TsconfigPathsPlugin({})]
+  externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM',
   },
   module: {
     rules: [
       {
-        test: /\.ts(x?)$/,
         exclude: /node_modules/,
-        use: [{ loader: 'ts-loader' }]
+        test: /\.ts(x?)$/,
+        use: [{ loader: 'ts-loader' }],
       },
       {
         enforce: 'pre',
+        loader: 'source-map-loader',
         test: /\.js$/,
-        loader: 'source-map-loader'
-      }
-    ]
+      },
+    ],
   },
-  externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM'
-  }
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+    plugins: [new TsconfigPathsPlugin({})],
+  },
 };
 
 export default common;
