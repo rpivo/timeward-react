@@ -7,7 +7,8 @@ Sprint 4 / January 16, 2020
 - updated readme.
 - created Webpack folder and set up webpack-merge to be able to create separate dev and prod builds.
 - configured Jest and Webpack to find relative-imported modules.
-- added tsconfig-paths-webpack-plugin.
+- added tsconfig-paths-webpack-plugin and webpack-bundle-analyzer.
+- added type declarations for webpack-bundle-analyzer.
 - set up relative imports in TypeScript config using baseUrl and paths properties.
 - updated all import statements to use relative paths.
 - set up Dashboard as a styled-component.
