@@ -63,8 +63,9 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
-    "dev": "webpack-dev-server --config webpack/webpack.dev.ts",
-    "prod": "yarn lint && webpack --config webpack/webpack.prod.ts",
+    "analyze": "webpack --config webpack/webpack.analysis.ts --progress",
+    "start": "webpack-dev-server --config webpack/webpack.dev.ts --progress",
+    "build": "yarn lint && webpack --config webpack/webpack.prod.ts --progress",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "test": "jest --watchAll --coverage"
   }

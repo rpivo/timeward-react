@@ -14,6 +14,8 @@ Sprint 4 / January 16, 2020
 - set up Dashboard as a styled-component.
 - wrapped app component in top-level div.
 - greatly improved ESLint config.
+- updated script names.
+- added script to run webpack-bundle-analyzer.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
