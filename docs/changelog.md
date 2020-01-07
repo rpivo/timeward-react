@@ -16,6 +16,7 @@ Sprint 4 / January 16, 2020
 - greatly improved ESLint config.
 - updated script names.
 - added script to run webpack-bundle-analyzer.
+- added webpack file to be used analyze script is run.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
