@@ -63,7 +63,7 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
-    "analyze": "webpack --config webpack/webpack.analysis.ts --progress",
+    "analyze": "webpack --config webpack/webpack.analyzer.ts --progress",
     "start": "webpack-dev-server --config webpack/webpack.dev.ts --progress",
     "build": "yarn lint && webpack --config webpack/webpack.prod.ts --progress",
     "lint": "eslint './src/**/*.{ts,tsx}'",
