@@ -8,7 +8,7 @@ const __dirname = path.resolve();
 const dev: webpack.Configuration = merge(common, {
   devServer: {
     compress: true,
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'dist/dev'),
     hot: true,
     open: true,
     port: 9000,
