@@ -2,10 +2,6 @@ import webpack from 'webpack';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 const common: webpack.Configuration = {
-  externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM',
-  },
   module: {
     rules: [
       {

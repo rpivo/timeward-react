@@ -14,6 +14,10 @@ const dev: webpack.Configuration = merge(common, {
     port: 9000,
   },
   devtool: 'source-map',
+  externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM',
+  },
   mode: 'development',
 });
 
