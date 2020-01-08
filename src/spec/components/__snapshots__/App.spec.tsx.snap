@@ -2,13 +2,17 @@
 
 exports[`App should render correctly 1`] = `
 <div
-  className="sc-bdVaJa iKqjKk"
+  className="app"
 >
-  <div>
-    00:00:00
-    <button>
-      test
-    </button>
+  <div
+    className="sc-bdVaJa iKqjKk"
+  >
+    <div>
+      00:00:00
+      <button>
+        test
+      </button>
+    </div>
   </div>
 </div>
 `;

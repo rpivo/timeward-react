@@ -17,6 +17,9 @@ Sprint 4 / January 16, 2020
 - updated script names.
 - added script to run webpack-bundle-analyzer.
 - added webpack file to be used when analyze script is run.
+- added dev and prod folders to dist folder.
+- moved react development files to dist/dev.
+- prepared separate index.html files for dist/dev and dist/prod.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
