@@ -22,6 +22,7 @@ Sprint 4 / January 16, 2020
 - prepared separate index.html files for dist/dev and dist/prod.
 - moved Webpack externals from webpack.common.ts to webpack.dev.ts.
 - added Webpack splitChunks config to separate vendors into their own bundle file.
+- updated Timer state from string to number.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
