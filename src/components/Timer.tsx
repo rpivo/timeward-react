@@ -4,7 +4,20 @@ import { Button } from '@components/Button';
 interface TimerState { time: number }
 
 export class Timer extends React.Component <{}, TimerState> {
-  public state: TimerState = { time: '00:00:00' };
+
+  public state: TimerState = { time: 0 };
+
+  constructor(props: {}) {
+    super(props);
+
+    this.initTimer();
+  }
+
+  private initTimer(): void {
+    setInterval(() => {
+      this.setState({ time: this.state.time + 1 });
+    }, 1000);
+  }
 
   public render(): JSX.Element {
     return (

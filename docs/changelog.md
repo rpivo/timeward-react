@@ -23,6 +23,7 @@ Sprint 4 / January 16, 2020
 - moved Webpack externals from webpack.common.ts to webpack.dev.ts.
 - added Webpack splitChunks config to separate vendors into their own bundle file.
 - updated Timer state from string to number.
+- added constructor and initTimer methods to Timer, allowing the Timer to start incrementing time on page load.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
