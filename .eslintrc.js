@@ -21,6 +21,7 @@ module.exports = {
     "indent": ["error", 2],
     "max-len": ["error", { "code": 100 }],
     "no-inline-comments": 0,
+    "no-magic-numbers": 0,
     "no-underscore-dangle": 0,
     "no-warning-comments": 0,
     "object-curly-spacing": ["error", "always"],
