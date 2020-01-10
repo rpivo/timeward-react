@@ -8,7 +8,7 @@ exports[`App should render correctly 1`] = `
     className="sc-bdVaJa iKqjKk"
   >
     <div>
-      00:00:00
+      0
       <button>
         test
       </button>
