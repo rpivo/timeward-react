@@ -25,6 +25,7 @@ Sprint 4 / January 16, 2020
 - updated Timer state from string to number.
 - added constructor and initTimer methods to Timer, allowing the Timer to start incrementing time on page load.
 - added PieChart component and matching styled-component.
+- routed up PieChart to Dashboard.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
