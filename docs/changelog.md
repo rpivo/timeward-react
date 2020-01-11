@@ -24,6 +24,7 @@ Sprint 4 / January 16, 2020
 - added Webpack splitChunks config to separate vendors into their own bundle file.
 - updated Timer state from string to number.
 - added constructor and initTimer methods to Timer, allowing the Timer to start incrementing time on page load.
+- added PieChart component.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
