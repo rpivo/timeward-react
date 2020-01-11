@@ -5,13 +5,20 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <div
-    className="sc-bdVaJa iKqjKk"
+    className="sc-bwzfXH fKrxbd"
   >
     <div>
       0
       <button>
         test
       </button>
+    </div>
+    <div
+      className="sc-bdVaJa bRlRMt"
+    >
+      <div>
+        pie chart
+      </div>
     </div>
   </div>
 </div>
