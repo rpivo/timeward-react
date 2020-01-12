@@ -9,14 +9,25 @@ exports[`App should render correctly 1`] = `
   >
     <div>
       0
-      <button
-        className="sc-bdVaJa cBEQmH"
+      <div
+        className="sc-bdVaJa jsXmAR"
+        onClick={[Function]}
       >
-        start
-      </button>
+        <svg
+          height="50"
+          viewBox="0 0 44.398 50"
+          width="44.398"
+        >
+          <path
+            d="M28.682,12.087a4.188,4.188,0,0,1,7.254,0L56.741,48.109a4.188,4.188,0,0,1-3.627,6.283H11.5a4.188,4.188,0,0,1-3.627-6.283Z"
+            fill="#aaa"
+            transform="translate(54.392 -7.309) rotate(90)"
+          />
+        </svg>
+      </div>
     </div>
     <div
-      className="sc-bwzfXH iOEewQ"
+      className="sc-bwzfXH fCnBKW"
     >
       <div />
     </div>

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import startButton from '@assets/startButton.svg';
 
-const StyledButton = styled.button`
-  background-image: url("${startButton}");
-  margin: 25px;
+const StyledButton = styled.div`
+  display: inline-block;
+  cursor: pointer;
 `;
 
 export default StyledButton;

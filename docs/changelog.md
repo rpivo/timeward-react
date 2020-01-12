@@ -11,7 +11,8 @@ Sprint 4 / January 16, 2020
 - added type declarations for webpack-bundle-analyzer and file-loader.
 - set up relative imports in TypeScript config using baseUrl and paths properties.
 - updated all import statements to use relative paths.
-- set up Dashboard, Button, and PieChart as a styled-components.
+- added PieChart component.
+- set up Dashboard, PieChart, and Button as styled-components.
 - wrapped app component in top-level div.
 - greatly improved ESLint config.
 - updated script names.
@@ -24,15 +25,11 @@ Sprint 4 / January 16, 2020
 - added Webpack splitChunks config to separate vendors into their own bundle file.
 - updated Timer state from string to number.
 - added constructor and initTimer methods to Timer, allowing the Timer to start incrementing time on page load.
-- added PieChart component and matching styled-component.
 - routed up PieChart to Dashboard.
-- added mocks folder inside spec folder.
-- added svgMocks.ts to contain mocked svg assets to be used in Jest testing.
-- added typings folder to contain custom type declarations.
-- added custom svg type declaration.
-- added startButton svg to be used on the Button component.
-- set up Button so that it uses a default `kind` prop, and removed the current prop passed in from the Timer component so that the Button component is initialized with the default prop.
-- set up file-loader in Webpack common config.
+- added handleClick prop to Button component to accept function passed down from parent that will fire when the Button component is clicked.
+- added SVG elements in Button component to change the icon that is used for the component (handled by click at the moment).
+- added buttonType state to Timer component and initialize it as 'start'.
+- added setButtonType method to Timer component that is passed to Button component to fire on Button click.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
