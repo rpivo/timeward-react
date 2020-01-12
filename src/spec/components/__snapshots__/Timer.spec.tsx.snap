@@ -3,8 +3,10 @@
 exports[`Timer should render correctly 1`] = `
 <div>
   0
-  <button>
-    test
+  <button
+    className="sc-bdVaJa cBEQmH"
+  >
+    start
   </button>
 </div>
 `;
