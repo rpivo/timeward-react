@@ -28,6 +28,8 @@ Sprint 4 / January 16, 2020
 - routed up PieChart to Dashboard.
 - added mocks folder inside spec folder.
 - added svgMocks.ts to contain mocked svg assets to be used in Jest testing.
+- added typings folder to contain custom type declarations.
+- added custom svg type declaration.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
