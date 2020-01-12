@@ -15,8 +15,13 @@ export class Timer extends React.Component <{}, TimerState> {
 
   constructor(props: {}) {
     super(props);
+    this.setButtonType = this.setButtonType.bind(this);
 
     this.initTimer();
+  }
+
+  private setButtonType(): void {
+    this.setState({ buttonType: this.state.buttonType === 'start' ? 'stop' : 'start' });
   }
 
   private initTimer(): void {
@@ -29,7 +34,7 @@ export class Timer extends React.Component <{}, TimerState> {
     return (
       <div>
         { this.state.time }
-        <Button kind='test' />
+        <Button kind={ this.state.buttonType } handleClick={ this.setButtonType } />
       </div>
     );
   }
