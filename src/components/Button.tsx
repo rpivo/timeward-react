@@ -17,7 +17,12 @@ const Stop = (): JSX.Element =>
   </svg>;
 
 export class Button extends React.Component <ButtonProps, {}> {
+
   public render(): JSX.Element {
-    return <button>{ this.props.kind }</button>;
+    return (
+      <StyledButton onClick={(): void => this.props.handleClick() }>
+        { this.props.kind === 'start' ? <Start /> : <Stop /> }
+      </StyledButton>
+    );
   }
 }
