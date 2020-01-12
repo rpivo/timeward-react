@@ -5,6 +5,10 @@ const common: webpack.Configuration = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [{ loader: 'file-loader' }],
+      },
+      {
         exclude: /node_modules/,
         test: /\.ts(x?)$/,
         use: [{ loader: 'ts-loader' }],
