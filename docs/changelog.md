@@ -30,6 +30,7 @@ Sprint 4 / January 16, 2020
 - added svgMocks.ts to contain mocked svg assets to be used in Jest testing.
 - added typings folder to contain custom type declarations.
 - added custom svg type declaration.
+- added startButton svg to be used on the Button component.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
