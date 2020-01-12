@@ -14,8 +14,7 @@
     ],
     "moduleNameMapper": {
       "@components/(.*)": "<rootDir>/src/components/$1",
-      "@pages/(.*)": "<rootDir>/src/pages/$1",
-      "\\.svg": "<rootDir>/src/spec/mocks/svgMocks.ts"
+      "@pages/(.*)": "<rootDir>/src/pages/$1"
     },
     "roots": [
       "<rootDir>/src"
