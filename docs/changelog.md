@@ -31,6 +31,7 @@ Sprint 4 / January 16, 2020
 - added typings folder to contain custom type declarations.
 - added custom svg type declaration.
 - added startButton svg to be used on the Button component.
+- set up Button so that it uses a default `kind` prop, and removed the current prop passed in from the Timer component so that the Button component is initialized with the default prop.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020

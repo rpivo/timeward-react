@@ -23,7 +23,7 @@ export class Timer extends React.Component <{}, TimerState> {
     return (
       <div>
         { this.state.time }
-        <Button kind='test' />
+        <Button />
       </div>
     );
   }
