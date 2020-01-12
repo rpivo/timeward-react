@@ -11,7 +11,8 @@ Sprint 4 / January 16, 2020
 - added type declarations for webpack-bundle-analyzer.
 - set up relative imports in TypeScript config using baseUrl and paths properties.
 - updated all import statements to use relative paths.
-- set up Dashboard as a styled-component.
+- added PieChart component.
+- set up Dashboard, PieChart, and Button as styled-components.
 - wrapped app component in top-level div.
 - greatly improved ESLint config.
 - updated script names.
@@ -24,7 +25,6 @@ Sprint 4 / January 16, 2020
 - added Webpack splitChunks config to separate vendors into their own bundle file.
 - updated Timer state from string to number.
 - added constructor and initTimer methods to Timer, allowing the Timer to start incrementing time on page load.
-- added PieChart component and matching styled-component.
 - routed up PieChart to Dashboard.
 
 ## Release 0.3.0

@@ -1,4 +1,5 @@
 import React from 'react';
+import StyledButton from '@components/styles/StyledButton';
 
 interface ButtonProps { kind: string }
 
