@@ -1,11 +1,17 @@
 import React from 'react';
 import { Button } from '@components/Button';
 
-interface TimerState { time: number }
+interface TimerState {
+  buttonType: string;
+  time: number;
+}
 
 export class Timer extends React.Component <{}, TimerState> {
 
-  public state: TimerState = { time: 0 };
+  public state: TimerState = {
+    buttonType: 'start',
+    time: 0,
+  };
 
   constructor(props: {}) {
     super(props);
