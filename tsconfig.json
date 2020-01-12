@@ -9,6 +9,7 @@
     "noImplicitReturns": true,
     "outDir": "./dist/",
     "paths": {
+      "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
     },
