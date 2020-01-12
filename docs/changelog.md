@@ -26,6 +26,8 @@ Sprint 4 / January 16, 2020
 - updated Timer state from string to number.
 - added constructor and initTimer methods to Timer, allowing the Timer to start incrementing time on page load.
 - routed up PieChart to Dashboard.
+- added handleClick prop to Button component to accept function passed down from parent that will fire when the Button component is clicked.
+- added SVG elements in Button component to change the icon that is used for the component (handled by click at the moment).
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
