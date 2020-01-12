@@ -11,7 +11,7 @@ Sprint 4 / January 16, 2020
 - added type declarations for webpack-bundle-analyzer and file-loader.
 - set up relative imports in TypeScript config using baseUrl and paths properties.
 - updated all import statements to use relative paths.
-- set up Dashboard as a styled-component.
+- set up Dashboard and Button as a styled-components.
 - wrapped app component in top-level div.
 - greatly improved ESLint config.
 - updated script names.
