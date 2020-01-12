@@ -19,6 +19,7 @@ module.exports = {
     "global-require": 0,
     "jsx-quotes": 0,
     "indent": ["error", 2],
+    "init-declarations": 0,
     "max-len": ["error", { "code": 100 }],
     "no-inline-comments": 0,
     "no-magic-numbers": 0,
