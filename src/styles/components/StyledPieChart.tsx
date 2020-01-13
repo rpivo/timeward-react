@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledPieChart = styled.div`
-  background: #668;
+  background: ${(props): string => props.theme.primary};
   width: 100px;
   height: 100px;
   border-radius: 50%;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Timer } from '@components/Timer';
 import { PieChart } from '@components/PieChart';
-import StyledDashboard from '@pages/styles/Dashboard.styled';
+import StyledDashboard from '@styles/pages/Dashboard.styled';
 
 export class Dashboard extends React.Component {
   public render(): JSX.Element {
