@@ -30,6 +30,7 @@ Sprint 4 / January 16, 2020
 - added SVG elements in Button component to change the icon that is used for the component (handled by click at the moment).
 - added buttonType state to Timer component and initialize it as 'start'.
 - added setButtonType method to Timer component that is passed to Button component to fire on Button click.
+- added styles folder to moduleNameMapper in package.json so that Jest knows where to find style files.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
