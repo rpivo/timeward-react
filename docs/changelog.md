@@ -31,6 +31,7 @@ Sprint 4 / January 16, 2020
 - added buttonType state to Timer component and initialize it as 'start'.
 - added setButtonType method to Timer component that is passed to Button component to fire on Button click.
 - added styles folder to moduleNameMapper in package.json so that Jest knows where to find style files.
+- wrapped App component in styled-components ThemeProvider and passed it custome theme.
 
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
