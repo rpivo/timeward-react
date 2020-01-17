@@ -1,14 +1,25 @@
 # changelog
 
-## Release 0.4.0 (planned)
+## Release 0.5.0
+Sprint 5 / January 30, 2020
+
+### Updates
+
+
+
+## Release 0.4.0
 Sprint 4 / January 16, 2020
+
+### 0 bug, 1 documentation, 14 enhancement, and 12 question issues were closed (27 total)
+
+Improved the Webpack configuration with a number of changes, including splitting up the configuration into different files for different environment builds as well as an analysis build that uses webpack-bundle-analyzer. Also set Webpack up to split vendors into a separate bundle file. Added dev and prod folders to the local dist folder as a place for Webpack to output builds. Set up the codebase to use relative imports, which involved configuration for Jest, TypeScript, and Webpack. Added the PieChart component. Set up styled-components and began setting up some components as styled-components. Routed up a basic styled-components theme that will be expanded upon over time. Greatly improved ESLint config. Set up the Timer's 1-second increment functionality. Added click functionality to the Button component that allows it to change icons when clicked (from play icon to pause icon, for instance). Separated styles into their own parent folder (may change this over time).
 
 ### Updates
 - updated readme.
 - created Webpack folder and set up webpack-merge to be able to create separate dev and prod builds.
 - configured Jest and Webpack to find relative-imported modules.
-- added tsconfig-paths-webpack-plugin, webpack-bundle-analyzer, and file-loader.
-- added type declarations for webpack-bundle-analyzer and file-loader.
+- added tsconfig-paths-webpack-plugin, webpack-bundle-analyzer.
+- added type declarations for webpack-bundle-analyzer.
 - set up relative imports in TypeScript config using baseUrl and paths properties.
 - updated all import statements to use relative paths.
 - added PieChart component.
