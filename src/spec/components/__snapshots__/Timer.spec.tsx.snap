@@ -19,5 +19,20 @@ exports[`Timer should render correctly 1`] = `
       />
     </svg>
   </div>
+  <div
+    className="sc-bdVaJa ffUBey"
+    onClick={[Function]}
+  >
+    <svg
+      height="50"
+      viewBox="0 0 50 50"
+      width="50"
+    >
+      <path
+        d="M4.237,0H45.763A4.237,4.237,0,0,1,50,4.237V45.763A4.237,4.237,0,0,1,45.763,50H4.237A4.237,4.237,0,0,1,0,45.763V4.237A4.237,4.237,0,0,1,4.237,0Z"
+        fill="#aaa"
+      />
+    </svg>
+  </div>
 </div>
 `;
