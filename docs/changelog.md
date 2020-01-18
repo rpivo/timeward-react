@@ -7,6 +7,7 @@ Sprint 5 / January 30, 2020
 - added GlobalStyle file to styles folder. This uses styled-components' createGlobalStyle to add global styles to the project. 
 - set global SVG styles to inherit the width of their parent (may change this in the future).
 - shrunk existing timer button down in size.
+- updated naming convention for all style files to be *.styled.tsx.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
