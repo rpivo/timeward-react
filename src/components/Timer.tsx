@@ -40,7 +40,15 @@ export class Timer extends React.Component <{}, TimerState> {
     return (
       <div>
         { this.state.time }
-        <Button kind={ this.state.buttonType } handleClick={ this.setButtonType } />
+        <Button
+          kind={ this.state.buttonType }
+          handleClick={
+            this.state.buttonType === 'start'
+              ? (): void => this.startTimer()
+              : (): void => this.pauseTimer()
+          }
+        />
+        <Button kind='stop' handleClick={ (): void => this.stopTimer() } />
       </div>
     );
   }

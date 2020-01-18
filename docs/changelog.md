@@ -11,6 +11,7 @@ Sprint 5 / January 30, 2020
 - added multiline-comment-style rule to ESLint config to allow for quickly commenting out blocks of code.
 - used parameter property in Timer component to set this.interval property on the Timer component which is for the timer interval.
 - added startTimer, stopTimer, and pauseTimer methods to Timer component.
+- made handleClick on first Timer Button conditional so that a different method fires depending on the Button's button type (which gets set in state and changes when the Button is clicked).
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
