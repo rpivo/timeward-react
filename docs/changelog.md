@@ -8,6 +8,7 @@ Sprint 5 / January 30, 2020
 - set global SVG styles to inherit the width of their parent (may change this in the future).
 - shrunk existing timer button down in size.
 - updated naming convention for all style files to be *.styled.tsx.
+- added multiline-comment-style rule to ESLint config to allow for quickly commenting out blocks of code.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020

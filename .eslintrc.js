@@ -21,6 +21,7 @@ module.exports = {
     "implicit-arrow-linebreak": 0,
     "indent": ["error", 2],
     "max-len": ["error", { "code": 100 , "ignorePattern": "<path([\\s\\S]*?)/>" }],
+    "multiline-comment-style": 0,
     "multiline-ternary": 0,
     "no-console": 0,
     "no-inline-comments": 0,
