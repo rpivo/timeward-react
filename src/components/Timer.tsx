@@ -13,9 +13,9 @@ export class Timer extends React.Component <{}, TimerState> {
     time: 0,
   };
 
-  constructor(props: {}) {
+  constructor(props: {}, private interval: number) {
     super(props);
-    this.setButtonType = this.setButtonType.bind(this);
+  }
 
     this.initTimer();
   }

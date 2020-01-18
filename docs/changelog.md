@@ -9,6 +9,7 @@ Sprint 5 / January 30, 2020
 - shrunk existing timer button down in size.
 - updated naming convention for all style files to be *.styled.tsx.
 - added multiline-comment-style rule to ESLint config to allow for quickly commenting out blocks of code.
+- used parameter property in Timer component to set this.interval property on the Timer component which is for the timer interval.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
