@@ -17,17 +17,23 @@ export class Timer extends React.Component <{}, TimerState> {
     super(props);
   }
 
-    this.initTimer();
+  private startTimer(): void {
+    this.setState({ buttonType: 'pause' }, () => {
+      this.interval = setInterval(() => {
+        this.setState({ time: this.state.time + 1 });
+      }, 1000);
+    });
   }
 
-  private setButtonType(): void {
-    this.setState({ buttonType: this.state.buttonType === 'start' ? 'stop' : 'start' });
+  private pauseTimer(): void {
+    this.setState({ buttonType: 'start' }, () => clearInterval(this.interval));
   }
 
-  private initTimer(): void {
-    setInterval(() => {
-      this.setState({ time: this.state.time + 1 });
-    }, 1000);
+  private stopTimer(): void {
+    this.setState({
+      buttonType: 'start',
+      time: 0,
+    }, () => clearInterval(this.interval));
   }
 
   public render(): JSX.Element {
