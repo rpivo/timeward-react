@@ -4,8 +4,7 @@
 Sprint 5 / January 30, 2020
 
 ### Updates
-
-
+- added GlobalStyle file to styles folder. This uses styled-components' createGlobalStyle to add global styles to the project. 
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
