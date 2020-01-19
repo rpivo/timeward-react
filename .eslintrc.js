@@ -15,6 +15,7 @@ module.exports = {
     "class-methods-use-this": 0,
     "comma-dangle": ["error", "always-multiline"],
     "dot-location": 0,
+    "dot-notation": 0,
     "function-call-argument-newline": 0,
     "global-require": 0,
     "jsx-quotes": 0,
