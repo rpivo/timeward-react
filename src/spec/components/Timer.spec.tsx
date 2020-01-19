@@ -1,30 +1,53 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import { Timer } from '@components/Timer';
+import { Button } from '@components/Button';
 
 describe('Timer', () => {
-  it('should render correctly', () => {
-    const tree = renderer
-      .create(<Timer />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+  const wrapper = shallow<Timer>(<Timer />);
+
+  describe('render', () => {
+    const testRenderer = renderer.create(<Timer />);
+    const testInstance = testRenderer.root;
+
+    it('should render correctly', () => {
+      testRenderer.toJSON();
+      expect(testRenderer).toMatchSnapshot();
+    });
+
+    it('should contain two Button components', () => {
+      const children = testInstance.findAllByType(Button);
+      expect(children.length).toEqual(2);
+    });
   });
 
-  describe('play', () => {
-    it('should play when play button is clicked', () => { /* todo */ });
-
-    it('should increment by 1 second every second while playing', () => { /* todo */ });
+  describe('state', () => {
+    expect(wrapper.state('buttonType')).toBe('start');
+    expect(wrapper.state('time')).toBe(0);
   });
 
-  describe('pause', () => {
-    it('should pause when pause button is clicked', () => { /* todo */ });
+  describe('methods', () => {
+    const instance = wrapper.instance();
 
-    it('should not increment time while paused', () => { /* todo */ });
-  });
+    it('should call startTimer', () => {
+      instance['startTimer']();
 
-  describe('stop', () => {
-    it('should stop when stop button is clicked', () => { /* todo */ });
+      expect(wrapper.state('buttonType')).toBe('pause');
+      expect(wrapper.state('time')).toBe(0);
+    });
 
-    it('should reset the clock when stopped', () => { /* todo */ });
+    it('should call pauseTimer', () => {
+      instance['pauseTimer']();
+
+      expect(wrapper.state('buttonType')).toBe('start');
+    });
+
+    it('should call stopTimer', () => {
+      instance['stopTimer']();
+
+      expect(wrapper.state('buttonType')).toBe('start');
+      expect(wrapper.state('time')).toBe(0);
+    });
   });
 });

@@ -15,6 +15,7 @@ Sprint 5 / January 30, 2020
 - removed dot notation rule from ESLint to allow dot notation escape hatch for TypeScript testing.
 - added Jest setupTests file.
 - added Enzyme to improve testing experience.
+- added additional tests for Timer component.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
