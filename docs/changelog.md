@@ -17,6 +17,7 @@ Sprint 5 / January 30, 2020
 - added Enzyme to improve testing experience.
 - added additional tests for Timer component.
 - converted App component from class component to function component.
+- added excluded property to tsconfig.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
