@@ -20,6 +20,7 @@
     "roots": [
       "<rootDir>/src"
     ],
+    "setupFilesAfterEnv": ["<rootDir>/src/spec/setupTests.ts"],
     "testMatch": [
       "**/__tests__/**/*.+(ts|tsx|js)",
       "**/?(*.)+(spec|test).+(ts|tsx|js)"

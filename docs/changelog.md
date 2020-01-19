@@ -13,6 +13,7 @@ Sprint 5 / January 30, 2020
 - added startTimer, stopTimer, and pauseTimer methods to Timer component.
 - made handleClick on first Timer Button conditional so that a different method fires depending on the Button's button type (which gets set in state and changes when the Button is clicked).
 - removed dot notation rule from ESLint to allow dot notation escape hatch for TypeScript testing.
+- added Jest setupTests file.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
