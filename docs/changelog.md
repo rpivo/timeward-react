@@ -18,6 +18,7 @@ Sprint 5 / January 30, 2020
 - added additional tests for Timer component.
 - converted App component from class component to function component.
 - added excluded property to tsconfig.
+- added Timesheet component.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
