@@ -21,6 +21,8 @@ Sprint 5 / January 30, 2020
 - added Timesheet component.
 - routed up Timesheet component to Dashboard page.
 - added renderSwitch method to Button component to allow for three-way kind-switching between Stop, Pause, and Start icons.
+- added utilities folder to Jest and TypeScript relative paths.
+- replace long SVG path strings with abstractions, and move those strings to a separate utilities file buttonPaths.ts.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
