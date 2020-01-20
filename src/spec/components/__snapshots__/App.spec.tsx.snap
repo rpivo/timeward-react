@@ -5,7 +5,7 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <div
-    className="sc-htpNat bjlljt"
+    className="sc-bxivhb hQHKZF"
   >
     <div>
       0
@@ -42,9 +42,14 @@ exports[`App should render correctly 1`] = `
       </div>
     </div>
     <div
-      className="sc-bwzfXH gEjdzy"
+      className="sc-htpNat cgfMNz"
     >
       <div />
+    </div>
+    <div
+      className="sc-bwzfXH efHUeE"
+    >
+      Timesheet
     </div>
   </div>
 </div>
