@@ -21,7 +21,7 @@ module.exports = {
     "jsx-quotes": 0,
     "implicit-arrow-linebreak": 0,
     "indent": ["error", 2],
-    "max-len": ["error", { "code": 100 , "ignorePattern": "<path([\\s\\S]*?)/>" }],
+    "max-len": ["error", { "code": 100 }],
     "multiline-comment-style": 0,
     "multiline-ternary": 0,
     "no-console": 0,
