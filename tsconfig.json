@@ -12,6 +12,7 @@
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
+      "@utilities/*": ["utilities/*"],
     },
     "sourceMap": true,
     "target": "es5",
