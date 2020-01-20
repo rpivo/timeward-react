@@ -16,10 +16,11 @@ Sprint 5 / January 30, 2020
 - added Jest setupTests file.
 - added Enzyme to improve testing experience.
 - added additional tests for Timer component.
-- converted App component from class component to function component.
+- converted App and Button components from class components to function components.
 - added excluded property to tsconfig.
 - added Timesheet component.
 - routed up Timesheet component to Dashboard page.
+- added renderSwitch method to Button component to allow for three-way kind-switching between Stop, Pause, and Start icons.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
