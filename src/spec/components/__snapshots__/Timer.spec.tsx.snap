@@ -2,7 +2,10 @@
 
 exports[`Timer render should render correctly 1`] = `
 <div>
-  0
+  <span>
+    00:00:
+    00
+  </span>
   <div
     className="sc-bdVaJa ffUBey"
     onClick={[Function]}
