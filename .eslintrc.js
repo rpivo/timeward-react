@@ -14,6 +14,7 @@ module.exports = {
     "capitalized-comments": 0,
     "class-methods-use-this": 0,
     "comma-dangle": ["error", "always-multiline"],
+    "curly": 0,
     "dot-location": 0,
     "dot-notation": 0,
     "function-call-argument-newline": 0,
