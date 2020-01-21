@@ -61,14 +61,12 @@ export class Timer extends React.Component <{}, TimerState> {
   }
 
   private stopTimer(): void {
+    this.hours = 0;
+    this.minutes = 0;
     this.setState({
       buttonType: 'start',
       seconds: 0,
-    }, () => {
-      clearInterval(this.interval);
-      this.hours = 0;
-      this.minutes = 0;
-    });
+    }, () => clearInterval(this.interval));
   }
 
   public render(): JSX.Element {
