@@ -24,7 +24,7 @@ describe('Timer', () => {
 
   describe('state', () => {
     expect(wrapper.state('buttonType')).toBe('start');
-    expect(wrapper.state('time')).toBe(0);
+    expect(wrapper.state('seconds')).toBe(0);
   });
 
   describe('methods', () => {
@@ -34,7 +34,7 @@ describe('Timer', () => {
       instance['startTimer']();
 
       expect(wrapper.state('buttonType')).toBe('pause');
-      expect(wrapper.state('time')).toBe(0);
+      expect(wrapper.state('seconds')).toBe(0);
     });
 
     it('should call pauseTimer', () => {
@@ -47,7 +47,7 @@ describe('Timer', () => {
       instance['stopTimer']();
 
       expect(wrapper.state('buttonType')).toBe('start');
-      expect(wrapper.state('time')).toBe(0);
+      expect(wrapper.state('seconds')).toBe(0);
     });
   });
 });

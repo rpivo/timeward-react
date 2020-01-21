@@ -3,14 +3,14 @@ import { Button } from '@components/Button';
 
 interface TimerState {
   buttonType: string;
-  time: number;
+  seconds: number;
 }
 
 export class Timer extends React.Component <{}, TimerState> {
 
   public state: TimerState = {
     buttonType: 'start',
-    time: 0,
+    seconds: 0,
   };
 
   constructor(props: {}, private interval: number) {
@@ -20,7 +20,7 @@ export class Timer extends React.Component <{}, TimerState> {
   private startTimer(): void {
     this.setState({ buttonType: 'pause' }, () => {
       this.interval = setInterval(() => {
-        this.setState({ time: this.state.time + 1 });
+        this.setState({ seconds: this.state.seconds + 1 });
       }, 1000);
     });
   }
@@ -32,7 +32,7 @@ export class Timer extends React.Component <{}, TimerState> {
   private stopTimer(): void {
     this.setState({
       buttonType: 'start',
-      time: 0,
+      seconds: 0,
     }, () => clearInterval(this.interval));
   }
 
