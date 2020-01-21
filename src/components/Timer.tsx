@@ -13,13 +13,39 @@ export class Timer extends React.Component <{}, TimerState> {
     seconds: 0,
   };
 
-  constructor(props: {}, private interval: number) {
+  constructor(
+    props: {},
+    private interval: number,
+    private hours: number,
+    private minutes: number,
+    private seconds: number,
+  ) {
     super(props);
+    this.hours = 0;
+    this.minutes = 0;
+    this.seconds = 0;
   }
 
-  private convertSecondsToString(seconds: number): string {
-    if (seconds < 10) return seconds.toString().padStart(2, '0');
-    return seconds.toString();
+  private convertNumberToPaddedString(num: number | string): string {
+    num = num.toString();
+    return num.length < 2 ? num.padStart(2, '0') : num;
+  }
+
+  private constructStringFromSeconds(): string {
+    if (this.state.seconds > 0 && this.state.seconds % 60 === 0) {
+      this.seconds = 0;
+      this.minutes += 1;
+      if (this.minutes > 0 && this.minutes % 60 === 0) {
+        this.minutes = 0;
+        this.hours += 1;
+      }
+    } else this.seconds = this.state.seconds % 60;
+
+    return `
+    ${this.convertNumberToPaddedString(this.hours)}:\
+    ${this.convertNumberToPaddedString(this.minutes)}:\
+    ${this.convertNumberToPaddedString(this.seconds)}
+    `;
   }
 
   private startTimer(): void {
@@ -38,13 +64,17 @@ export class Timer extends React.Component <{}, TimerState> {
     this.setState({
       buttonType: 'start',
       seconds: 0,
-    }, () => clearInterval(this.interval));
+    }, () => {
+      clearInterval(this.interval);
+      this.hours = 0;
+      this.minutes = 0;
+    });
   }
 
   public render(): JSX.Element {
     return (
       <div>
-        <span>00:00:{ this.convertSecondsToString(this.state.seconds) }</span>
+        <span>{ this.constructStringFromSeconds() }</span>
         <Button
           kind={ this.state.buttonType }
           handleClick={

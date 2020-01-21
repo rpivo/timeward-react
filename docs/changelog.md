@@ -24,7 +24,7 @@ Sprint 5 / January 30, 2020
 - added utilities folder to Jest and TypeScript relative paths.
 - replace long SVG path strings with abstractions, and move those strings to a separate utilities file buttonPaths.ts.
 - update Timer component's time prop in state to be called seconds.
-- added convertSecondsToString method to Timer component. This takes this.state.seconds and converts it to a string that has a single padded zero if this.state.seconds is less than 10.
+- added seconds to string conversion methods in Timer component to convert seconds to a time string.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
