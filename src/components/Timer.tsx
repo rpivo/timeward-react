@@ -17,6 +17,11 @@ export class Timer extends React.Component <{}, TimerState> {
     super(props);
   }
 
+  private convertSecondsToString(seconds: number): string {
+    if (seconds < 10) return seconds.toString().padStart(2, '0');
+    return seconds.toString();
+  }
+
   private startTimer(): void {
     this.setState({ buttonType: 'pause' }, () => {
       this.interval = setInterval(() => {
@@ -39,7 +44,7 @@ export class Timer extends React.Component <{}, TimerState> {
   public render(): JSX.Element {
     return (
       <div>
-        { this.state.time }
+        <span>00:00:{ this.convertSecondsToString(this.state.seconds) }</span>
         <Button
           kind={ this.state.buttonType }
           handleClick={
