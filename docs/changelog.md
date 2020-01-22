@@ -25,6 +25,7 @@ Sprint 5 / January 30, 2020
 - replace long SVG path strings with abstractions, and move those strings to a separate utilities file buttonPaths.ts.
 - update Timer component's time prop in state to be called seconds.
 - added seconds to string conversion methods in Timer component to convert seconds to a time string.
+- updated packages.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
