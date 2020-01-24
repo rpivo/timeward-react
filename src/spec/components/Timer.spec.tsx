@@ -60,7 +60,6 @@ describe('Timer', () => {
         wrapper.state().seconds = 60;
         TimerInstance.minutes = 59;
         instance['constructStringFromSeconds']();
-        // expect(TimerInstance.minutes).toBe(0);
         expect(TimerInstance.hours).toBe(1);
       });
     });
