@@ -1,11 +1,26 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { Timer } from '@components/Timer';
 import { Button } from '@components/Button';
 
 describe('Timer', () => {
-  const wrapper = shallow<Timer>(<Timer />);
+  interface TimerInstance extends React.Component<{}, {}> {
+    seconds: number;
+    minutes: number;
+    hours: number;
+  }
+
+  const wrapper = mount<Timer>(<Timer />);
+  const timer = wrapper.find(Timer);
+  const TimerInstance = timer.instance() as TimerInstance;
+
+  beforeEach(() => {
+    wrapper.state().seconds = 0;
+    TimerInstance.hours = 0;
+    TimerInstance.minutes = 0;
+    TimerInstance.seconds = 0;
+  });
 
   describe('render', () => {
     const testRenderer = renderer.create(<Timer />);
@@ -29,6 +44,26 @@ describe('Timer', () => {
 
   describe('methods', () => {
     const instance = wrapper.instance();
+
+    describe('constructStringFromSeconds', () => {
+      it('should return a timestring', () => {
+        expect(instance['constructStringFromSeconds']()).toBe('00:00:00');
+      });
+
+      it('should set this.seconds to 0 under certain conditions', () => {
+        wrapper.state().seconds = 60;
+        instance['constructStringFromSeconds']();
+        expect(TimerInstance.seconds).toBe(0);
+      });
+
+      it('should set this.minutes to 0 under certain conditions', () => {
+        wrapper.state().seconds = 60;
+        TimerInstance.minutes = 59;
+        instance['constructStringFromSeconds']();
+        // expect(TimerInstance.minutes).toBe(0);
+        expect(TimerInstance.hours).toBe(1);
+      });
+    });
 
     it('should call startTimer', () => {
       instance['startTimer']();

@@ -41,11 +41,11 @@ export class Timer extends React.Component <{}, TimerState> {
       }
     } else this.seconds = this.state.seconds % 60;
 
-    return `
+    return (`
     ${this.convertNumberToPaddedString(this.hours)}:\
     ${this.convertNumberToPaddedString(this.minutes)}:\
     ${this.convertNumberToPaddedString(this.seconds)}
-    `;
+    `).replace(/\s/g, '');
   }
 
   private startTimer(): void {
