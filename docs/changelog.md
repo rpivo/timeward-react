@@ -30,6 +30,7 @@ Sprint 5 / January 30, 2020
 - added Tile component and matching styled-component.
 - wrapped timer component in tile component.
 - added site-wide font styles.
+- linked changelog to readme.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
