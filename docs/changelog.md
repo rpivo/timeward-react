@@ -27,6 +27,7 @@ Sprint 5 / January 30, 2020
 - added seconds to string conversion methods in Timer component to convert seconds to a time string.
 - updated packages.
 - removed unnecessary nested div element inside PieChart component.
+- added Tile component and matching styled-component.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
