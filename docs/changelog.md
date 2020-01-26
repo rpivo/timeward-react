@@ -28,6 +28,7 @@ Sprint 5 / January 30, 2020
 - updated packages.
 - removed unnecessary nested div element inside PieChart component.
 - added Tile component and matching styled-component.
+- wrapped timer component in tile component.
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
