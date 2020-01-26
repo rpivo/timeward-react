@@ -39,8 +39,6 @@ export const Button = (props: ButtonProps): JSX.Element => {
   };
 
   return (
-    <StyledButton onClick={(): void => props.handleClick() }>
-      { renderSwitch(props.kind) }
-    </StyledButton>
+    <StyledButton onClick={ props.handleClick }>{ renderSwitch(props.kind) }</StyledButton>
   );
 };
