@@ -4,7 +4,7 @@ See the [changelog](docs/changelog.md) for the latest updates on this project.
 
 ### productivity for perfectionists.
 
-Timeward is a productivity tool designed to help you manaage your time better, and to help make the progress in that time more meaningful.
+Timeward is a productivity tool designed to help you manage your time better, and to help make the progress in that time more meaningful.
 
 Timeward helps you build positive habits with your schedule, whether it be tracking the progress of life-long goals, or just helping you prioritize personal time. It's made to help you with both the greatest aspirations as well as finding the smallest stress-free moments.
 
