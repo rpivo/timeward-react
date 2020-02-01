@@ -9,6 +9,7 @@ describe('Timer', () => {
     seconds: number;
     minutes: number;
     hours: number;
+    interval: () => void;
   }
 
   const wrapper = mount<Timer>(<Timer />);
@@ -65,10 +66,16 @@ describe('Timer', () => {
     });
 
     it('should call startTimer', () => {
+      jest.useFakeTimers();
+      const setStateSpy = jest.spyOn(TimerInstance, 'setState');
       instance['startTimer']();
+      jest.advanceTimersByTime(1000);
 
+      expect(setInterval).toHaveBeenCalledTimes(1);
       expect(wrapper.state('buttonType')).toBe('pause');
-      expect(wrapper.state('seconds')).toBe(0);
+      expect(wrapper.state('seconds')).toBe(1);
+      expect(TimerInstance.interval).toBe(1);
+      expect(setStateSpy).toHaveBeenCalled();
     });
 
     it('should call pauseTimer', () => {

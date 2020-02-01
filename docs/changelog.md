@@ -1,7 +1,16 @@
 # changelog
 
+## Release 0.6.0
+Sprint 6 / February 15, 2020
+
+### Updates
+
 ## Release 0.5.0
-Sprint 5 / January 30, 2020
+Sprint 5 / February 1, 2020
+
+### 1 bug, 2 documentation, 16 enhancement, and 6 question issues were closed (25 total)
+
+Added all basic functionality to the Timer component, which is now able to start, stop, and pause. Updated styled-components config to allow for adding global styles. Improved testing by adding the Enzyme package as well as a global setup config. Began moving class components to function components in the process of moving entirely to hooks (this is still an ongoing process). Added a utilities folder to put globally used utility functions.
 
 ### Updates
 - added GlobalStyle file to styles folder. This uses styled-components' createGlobalStyle to add global styles to the project. 
