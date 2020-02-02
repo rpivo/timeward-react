@@ -5,12 +5,14 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <div
-    className="sc-AykKG bbisJH"
+    className="sc-AykKH gYDzJs"
   >
     <div
-      className="sc-AykKC iXYqjv"
+      className="sc-AykKC fxliwD"
     >
-      <div>
+      <div
+        className="sc-AykKE gPOhkH"
+      >
         <span>
           00:00:00
         </span>
@@ -46,15 +48,15 @@ exports[`App should render correctly 1`] = `
           </svg>
         </div>
       </div>
+      <div
+        className="sc-AykKF djlmek"
+      >
+        Timesheet
+      </div>
     </div>
     <div
-      className="sc-AykKF flWcZR"
+      className="sc-AykKG bJtMuy"
     />
-    <div
-      className="sc-AykKE gIRalD"
-    >
-      Timesheet
-    </div>
   </div>
 </div>
 `;
