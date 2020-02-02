@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tile } from '@components/Tile';
+import { Timeline } from '@components/Timeline';
 import { Timer } from '@components/Timer';
 import { Timesheet } from '@components/Timesheet';
 import { PieChart } from '@components/PieChart';
@@ -14,6 +15,9 @@ export class Dashboard extends React.Component {
           <Timesheet />
         </Tile>
         <PieChart />
+        <Tile width='full'>
+          <Timeline />
+        </Tile>
       </StyledDashboard>
     );
   }
