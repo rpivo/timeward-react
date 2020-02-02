@@ -7,6 +7,7 @@ Sprint 6 / February 15, 2020
 - added styled-component for Timer.
 - added Timesheet to same Tile as Timer.
 - updated ESLint config.
+- set up optional width prop to be passed to Tile styled-component.
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020
