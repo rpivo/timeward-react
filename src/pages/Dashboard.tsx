@@ -9,7 +9,10 @@ export class Dashboard extends React.Component {
   public render(): JSX.Element {
     return (
       <StyledDashboard>
-        <Tile><Timer /></Tile>
+        <Tile>
+          <Timer />
+          <Timesheet />
+        </Tile>
         <PieChart />
         <Timesheet />
       </StyledDashboard>
