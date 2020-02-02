@@ -14,7 +14,6 @@ export class Dashboard extends React.Component {
           <Timesheet />
         </Tile>
         <PieChart />
-        <Timesheet />
       </StyledDashboard>
     );
   }
