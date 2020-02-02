@@ -8,7 +8,7 @@ exports[`App should render correctly 1`] = `
     className="sc-AykKH gYDzJs"
   >
     <div
-      className="sc-AykKC fxliwD"
+      className="sc-AykKC knrMhs"
     >
       <div
         className="sc-AykKE gPOhkH"
@@ -57,6 +57,14 @@ exports[`App should render correctly 1`] = `
     <div
       className="sc-AykKG bJtMuy"
     />
+    <div
+      className="sc-AykKC bWSBwQ"
+      width="full"
+    >
+      <div>
+        Timeline
+      </div>
+    </div>
   </div>
 </div>
 `;
