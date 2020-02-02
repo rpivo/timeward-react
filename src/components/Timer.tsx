@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@components/Button';
 import StyledTimer from '@styles/components/Timer.styled';
 
-interface TimerState {
+type TimerState = {
   buttonType: string;
   seconds: number;
 }
