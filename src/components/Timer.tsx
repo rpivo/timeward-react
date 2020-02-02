@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@components/Button';
+import StyledTimer from '@styles/components/Timer.styled';
 
 interface TimerState {
   buttonType: string;
@@ -71,7 +72,7 @@ export class Timer extends React.Component <{}, TimerState> {
 
   public render(): JSX.Element {
     return (
-      <div>
+      <StyledTimer>
         <span>{ this.constructStringFromSeconds() }</span>
         <Button
           kind={ this.state.buttonType }
@@ -82,7 +83,7 @@ export class Timer extends React.Component <{}, TimerState> {
           }
         />
         <Button kind='stop' handleClick={ (): void => this.stopTimer() } />
-      </div>
+      </StyledTimer>
     );
   }
 }

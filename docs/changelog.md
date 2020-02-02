@@ -4,6 +4,7 @@
 Sprint 6 / February 15, 2020
 
 ### Updates
+- added styled-component for Timer.
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020
