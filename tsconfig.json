@@ -6,6 +6,7 @@
     "jsx": "react",
     "module": "commonjs",
     "noImplicitAny": true,
+    "noImplicitThis": true,
     "noImplicitReturns": true,
     "outDir": "./dist/",
     "paths": {
@@ -15,6 +16,9 @@
       "@utilities/*": ["utilities/*"],
     },
     "sourceMap": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
     "target": "es5",
   },
   "exclude": [
