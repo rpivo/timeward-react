@@ -11,6 +11,7 @@ Sprint 6 / February 15, 2020
 - added Timeline component.
 - converted all component interfaces to types.
 - added stricter settings to TypeScript config.
+- refactored Timer component from class to functional component that uses hooks.
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020

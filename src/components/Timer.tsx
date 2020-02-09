@@ -1,89 +1,79 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@components/Button';
 import StyledTimer from '@styles/components/Timer.styled';
 
-type TimerState = {
-  buttonType: string;
-  seconds: number;
-}
-
-export class Timer extends React.Component <{}, TimerState> {
-
-  public state: TimerState = {
+export const Timer = (): JSX.Element => {
+  const [state, setState] = useState({
     buttonType: 'start',
-    seconds: 0,
-  };
+    clockHours: 0,
+    clockMinutes: 0,
+    clockSeconds: 0,
+    timeInterval: false,
+    totalSeconds: 0,
+  });
 
-  constructor(
-    props: {},
-    private interval: number,
-    private hours: number,
-    private minutes: number,
-    private seconds: number,
-  ) {
-    super(props);
-    this.hours = 0;
-    this.minutes = 0;
-    this.seconds = 0;
-  }
+  useEffect(() => {
+    let interval: number | undefined;
+    if (state.timeInterval) {
+      interval = setInterval(() => {
+        setState(prevState => ({ ...prevState, totalSeconds: prevState.totalSeconds + 1 }));
+      }, 1000);
+    } else if (!state.timeInterval) {
+      clearInterval(interval);
+    }
+    return (): void => clearInterval(interval);
+  }, [state.timeInterval, state.totalSeconds]);
 
-  private convertNumberToPaddedString(num: number | string): string {
+  const convertNumberToPaddedString = (num: number | string): string => {
     num = num.toString();
     return num.length < 2 ? num.padStart(2, '0') : num;
-  }
+  };
 
-  private constructStringFromSeconds(): string {
-    if (this.state.seconds > 0 && this.state.seconds % 60 === 0) {
-      this.seconds = 0;
-      this.minutes += 1;
-      if (this.minutes > 0 && this.minutes % 60 === 0) {
-        this.minutes = 0;
-        this.hours += 1;
+  const constructStringFromSeconds = (): string => {
+    if (state.totalSeconds > 0 && state.totalSeconds % 60 === 0) {
+      state.clockSeconds = 0;
+      state.clockMinutes += 1;
+      if (state.clockMinutes > 0 && state.clockMinutes % 60 === 0) {
+        state.clockMinutes = 0;
+        state.clockHours += 1;
       }
-    } else this.seconds = this.state.seconds % 60;
+    } else state.clockSeconds = state.totalSeconds % 60;
 
-    return (`
-    ${this.convertNumberToPaddedString(this.hours)}:\
-    ${this.convertNumberToPaddedString(this.minutes)}:\
-    ${this.convertNumberToPaddedString(this.seconds)}
-    `).replace(/\s/g, '');
-  }
+    return (`${
+      convertNumberToPaddedString(state.clockHours)}:${
+      convertNumberToPaddedString(state.clockMinutes)}:${
+      convertNumberToPaddedString(state.clockSeconds)}
+    `);
+  };
 
-  private startTimer(): void {
-    this.setState({ buttonType: 'pause' }, () => {
-      this.interval = setInterval(() => {
-        this.setState({ seconds: this.state.seconds + 1 });
-      }, 1000);
-    });
-  }
+  const startTimer = (): void =>
+    setState(prevState => ({ ...prevState, buttonType: 'pause', timeInterval: true }));
 
-  private pauseTimer(): void {
-    this.setState({ buttonType: 'start' }, () => clearInterval(this.interval));
-  }
+  const pauseTimer = (): void =>
+    setState(prevState => ({ ...prevState, buttonType: 'start', timeInterval: false }));
 
-  private stopTimer(): void {
-    this.hours = 0;
-    this.minutes = 0;
-    this.setState({
+  const stopTimer = (): void =>
+    setState({
       buttonType: 'start',
-      seconds: 0,
-    }, () => clearInterval(this.interval));
-  }
+      clockHours: 0,
+      clockMinutes: 0,
+      clockSeconds: 0,
+      timeInterval: false,
+      totalSeconds: 0,
+    });
 
-  public render(): JSX.Element {
-    return (
-      <StyledTimer>
-        <span>{ this.constructStringFromSeconds() }</span>
-        <Button
-          kind={ this.state.buttonType }
-          handleClick={
-            this.state.buttonType === 'start'
-              ? (): void => this.startTimer()
-              : (): void => this.pauseTimer()
-          }
-        />
-        <Button kind='stop' handleClick={ (): void => this.stopTimer() } />
-      </StyledTimer>
-    );
-  }
-}
+  return (
+    <StyledTimer>
+      <span>{ constructStringFromSeconds() }</span>
+      <Button
+        kind={ state.buttonType }
+        handleClick={
+          state.buttonType === 'start'
+            ? (): void => startTimer()
+            : (): void => pauseTimer()
+        }
+      />
+      <Button kind='stop' handleClick={ (): void => stopTimer() } />
+    </StyledTimer>
+  );
+};
