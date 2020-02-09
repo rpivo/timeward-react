@@ -11,6 +11,7 @@ module.exports = {
   "plugins": ["@typescript-eslint", "react"],
   "rules": {
     "array-element-newline": 0,
+    "arrow-parens": 0,
     "capitalized-comments": 0,
     "class-methods-use-this": 0,
     "comma-dangle": ["error", "always-multiline"],
@@ -19,6 +20,7 @@ module.exports = {
     "dot-notation": 0,
     "function-call-argument-newline": 0,
     "global-require": 0,
+    "init-declarations": 0,
     "jsx-quotes": 0,
     "implicit-arrow-linebreak": 0,
     "indent": ["error", 2],
@@ -37,6 +39,7 @@ module.exports = {
     "no-underscore-dangle": 0,
     "no-warning-comments": 0,
     "object-curly-spacing": ["error", "always"],
+    "object-property-newline": 0,
     "one-var": 0,
     "padded-blocks": 0,
     "prefer-named-capture-group": 0,
