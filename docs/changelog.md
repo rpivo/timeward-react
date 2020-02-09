@@ -1,6 +1,6 @@
 # changelog
 
-## Release 0.6.0
+## Release 0.6.0 (planned)
 Sprint 6 / February 15, 2020
 
 ### Updates
