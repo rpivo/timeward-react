@@ -19,6 +19,7 @@ Sprint 6 / February 15, 2020
 - added react-router-dom and its matching types.
 - added Router, Switch, and Route to App component to facilitate route switching.
 - added Link components to Header component to facilitate route switching.
+- added Login page.
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020
