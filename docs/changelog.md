@@ -14,6 +14,7 @@ Sprint 6 / February 15, 2020
 - refactored Timer component from class to functional component that uses hooks.
 - added Header component.
 - added Page component as wrapper around pages.
+- removed margins from body element.
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020
