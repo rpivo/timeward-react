@@ -12,6 +12,8 @@ Sprint 6 / February 15, 2020
 - converted all component interfaces to types.
 - added stricter settings to TypeScript config.
 - refactored Timer component from class to functional component that uses hooks.
+- added Header component.
+- added Page component as wrapper around pages.
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020
