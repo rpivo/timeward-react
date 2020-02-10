@@ -17,6 +17,7 @@ Sprint 6 / February 15, 2020
 - removed margins from body element.
 - removed padding from Dashboard component.
 - added react-router-dom and its matching types.
+- added Router, Switch, and Route to App component to facilitate route switching.
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020

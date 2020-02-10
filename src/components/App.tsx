@@ -1,5 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Dashboard } from '@pages/Dashboard';
+import { Login } from '@pages/Login';
 import { Header } from '@components/Header';
 import { Page } from '@components/Page';
 import { ThemeProvider } from 'styled-components';
@@ -10,10 +12,19 @@ export const App = (): JSX.Element =>
   <ThemeProvider theme={ Theme }>
     <GlobalStyle />
     <div className='app'>
-      <Header />
-      <Page>
-        <Dashboard />
-      </Page>
+      <Router>
+        <Header />
+        <Page>
+          <Switch>
+            <Route path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+          </Switch>
+        </Page>
+      </Router>
     </div>
   </ThemeProvider>;
 
