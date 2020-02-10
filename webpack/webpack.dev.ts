@@ -9,6 +9,7 @@ const dev: webpack.Configuration = merge(common, {
   devServer: {
     compress: true,
     contentBase: path.join(__dirname, 'dist/dev'),
+    historyApiFallback: true,
     hot: true,
     open: true,
     port: 9000,

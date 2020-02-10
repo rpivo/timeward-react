@@ -30,6 +30,7 @@ const prod: webpack.Configuration = merge(common, {
   output: {
     filename: "[name].js",
     path: path.join(__dirname, "dist/prod"),
+    publicPath: '/',
   },
 });
 
