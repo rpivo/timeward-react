@@ -4,68 +4,79 @@ exports[`App should render correctly 1`] = `
 <div
   className="app"
 >
-  <div
-    className="sc-AykKH gYDzJs"
+  <header
+    className="sc-AykKI hjfXBi"
+  >
+    <div>
+      Header
+    </div>
+  </header>
+  <main
+    className="sc-AykKJ bjPPvP"
   >
     <div
-      className="sc-AykKC knrMhs"
+      className="sc-AykKH kyuWRJ"
     >
       <div
-        className="sc-AykKE gPOhkH"
+        className="sc-AykKC knrMhs"
       >
-        <span>
-          00:00:00
+        <div
+          className="sc-AykKE gPOhkH"
+        >
+          <span>
+            00:00:00
     
-        </span>
-        <div
-          className="sc-AykKD lamqUN"
-          onClick={[Function]}
-        >
-          <svg
-            height="50"
-            viewBox="0 0 44.398 50"
-            width="44.398"
+          </span>
+          <div
+            className="sc-AykKD lamqUN"
+            onClick={[Function]}
           >
-            <path
-              d="M28.682,12.087a4.188,4.188,0,0,1,7.254,0L56.741,48.109a4.188,4.188,0,0,1-3.627,6.283H11.5a4.188,4.188,0,0,1-3.627-6.283Z"
-              fill="#aaa"
-              transform="translate(54.392 -7.309) rotate(90)"
-            />
-          </svg>
+            <svg
+              height="50"
+              viewBox="0 0 44.398 50"
+              width="44.398"
+            >
+              <path
+                d="M28.682,12.087a4.188,4.188,0,0,1,7.254,0L56.741,48.109a4.188,4.188,0,0,1-3.627,6.283H11.5a4.188,4.188,0,0,1-3.627-6.283Z"
+                fill="#aaa"
+                transform="translate(54.392 -7.309) rotate(90)"
+              />
+            </svg>
+          </div>
+          <div
+            className="sc-AykKD lamqUN"
+            onClick={[Function]}
+          >
+            <svg
+              height="50"
+              viewBox="0 0 50 50"
+              width="50"
+            >
+              <path
+                d="M4.237,0H45.763A4.237,4.237,0,0,1,50,4.237V45.763A4.237,4.237,0,0,1,45.763,50H4.237A4.237,4.237,0,0,1,0,45.763V4.237A4.237,4.237,0,0,1,4.237,0Z"
+                fill="#aaa"
+              />
+            </svg>
+          </div>
         </div>
         <div
-          className="sc-AykKD lamqUN"
-          onClick={[Function]}
+          className="sc-AykKF djlmek"
         >
-          <svg
-            height="50"
-            viewBox="0 0 50 50"
-            width="50"
-          >
-            <path
-              d="M4.237,0H45.763A4.237,4.237,0,0,1,50,4.237V45.763A4.237,4.237,0,0,1,45.763,50H4.237A4.237,4.237,0,0,1,0,45.763V4.237A4.237,4.237,0,0,1,4.237,0Z"
-              fill="#aaa"
-            />
-          </svg>
+          Timesheet
         </div>
       </div>
       <div
-        className="sc-AykKF djlmek"
+        className="sc-AykKG bJtMuy"
+      />
+      <div
+        className="sc-AykKC bWSBwQ"
+        width="full"
       >
-        Timesheet
+        <div>
+          Timeline
+        </div>
       </div>
     </div>
-    <div
-      className="sc-AykKG bJtMuy"
-    />
-    <div
-      className="sc-AykKC bWSBwQ"
-      width="full"
-    >
-      <div>
-        Timeline
-      </div>
-    </div>
-  </div>
+  </main>
 </div>
 `;
