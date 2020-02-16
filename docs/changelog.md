@@ -21,6 +21,7 @@ Sprint 6 / February 15, 2020
 - added Link components to Header component to facilitate route switching.
 - added Login page.
 - updated Webpack config for React Router routing.
+- uninstalled webpack-merge due to typing issues.
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020
