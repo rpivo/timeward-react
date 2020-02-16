@@ -16,11 +16,11 @@ export const App = (): JSX.Element =>
         <Header />
         <Page>
           <Switch>
-            <Route path="/dashboard">
-              <Dashboard />
-            </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="*">
+              <Dashboard />
             </Route>
           </Switch>
         </Page>
