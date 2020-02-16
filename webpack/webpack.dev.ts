@@ -1,11 +1,8 @@
-import webpack from 'webpack';
-import merge from 'webpack-merge';
-import common from './webpack.common';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import path from 'path';
 
 const __dirname = path.resolve();
-
-const dev: webpack.Configuration = merge(common, {
+const dev = {
   devServer: {
     compress: true,
     contentBase: path.join(__dirname, 'dist/dev'),
@@ -20,6 +17,24 @@ const dev: webpack.Configuration = merge(common, {
     'react-dom': 'ReactDOM',
   },
   mode: 'development',
-});
+  module: {
+    rules: [
+      {
+        exclude: /node_modules/,
+        test: /\.ts(x?)$/,
+        use: [{ loader: 'ts-loader' }],
+      },
+      {
+        enforce: 'pre',
+        loader: 'source-map-loader',
+        test: /\.js$/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+    plugins: [new TsconfigPathsPlugin({})],
+  },
+};
 
 export default dev;

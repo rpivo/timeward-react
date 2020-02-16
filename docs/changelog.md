@@ -22,6 +22,8 @@ Sprint 6 / February 15, 2020
 - added Login page.
 - updated Webpack config for React Router routing.
 - uninstalled webpack-merge due to typing issues.
+- updated webpack env files to work without the use of webpack-merge.
+- deleted webpack.common.ts.
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020
