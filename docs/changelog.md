@@ -1,7 +1,16 @@
 # changelog
 
+## Release 0.7.0 (planned)
+Sprint 7 / February 29, 2020
+
+### Updates
+
 ## Release 0.6.0 (planned)
 Sprint 6 / February 15, 2020
+
+### 0 bug, 0 documentation, 11 enhancement, and 8 question issues were closed (19 total)
+
+Added login page, and installed React Router to handle multiple routes. Created development DynamoDB tables that will eventually be used to hold Timeward data. Added Header component. Converted Timer component to use hooks. Added favicon. Converted all interfaces to be type aliases.
 
 ### Updates
 - added styled-component for Timer.
