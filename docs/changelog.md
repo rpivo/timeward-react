@@ -5,7 +5,7 @@ Sprint 7 / February 29, 2020
 
 ### Updates
 
-## Release 0.6.0 (planned)
+## Release 0.6.0
 Sprint 6 / February 15, 2020
 
 ### 0 bug, 0 documentation, 11 enhancement, and 8 question issues were closed (19 total)
