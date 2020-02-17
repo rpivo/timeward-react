@@ -73,7 +73,15 @@ exports[`App should render correctly 1`] = `
         <div
           className="sc-AykKF djlmek"
         >
-          Timesheet
+          <div>
+            Time Record
+          </div>
+          <div>
+            Time Record
+          </div>
+          <div>
+            Time Record
+          </div>
         </div>
       </div>
       <div
