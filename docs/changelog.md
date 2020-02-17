@@ -7,6 +7,7 @@ Sprint 7 / February 29, 2020
 
 - made Dashboard the catch-all default route for React Router so that this page is the first page users will see (unless they aren't registered or logged in).
 - added global background color.
+- updated Tile component styles to not have rounded corners when stretching the full width of the page.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
