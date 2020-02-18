@@ -5,8 +5,11 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <header
-    className="sc-AykKI hjfXBi"
+    className="sc-AykKI ipZMMc"
   >
+    <h5>
+      TIMEWARD
+    </h5>
     <nav>
       <a
         href="/dashboard"
