@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button render should render correctly 1`] = `
+<div
+  className="sc-AykKC kZlTAg"
+  onClick={[Function]}
+>
+  <svg
+    height="50"
+    viewBox="0 0 41.949 50"
+    width="41.949"
+  >
+    <g
+      transform="translate(33 404)"
+    >
+      <path
+        d="M4.237,0H9.746a4.237,4.237,0,0,1,4.237,4.237V45.763A4.237,4.237,0,0,1,9.746,50H4.237A4.237,4.237,0,0,1,0,45.763V4.237A4.237,4.237,0,0,1,4.237,0Z"
+        fill="#aaa"
+        transform="translate(-5.034 -404)"
+      />
+      <path
+        d="M4.237,0H9.746a4.237,4.237,0,0,1,4.237,4.237V45.763A4.237,4.237,0,0,1,9.746,50H4.237A4.237,4.237,0,0,1,0,45.763V4.237A4.237,4.237,0,0,1,4.237,0Z"
+        fill="#aaa"
+        transform="translate(-33 -404)"
+      />
+    </g>
+  </svg>
+</div>
+`;

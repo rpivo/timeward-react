@@ -11,6 +11,7 @@ Sprint 7 / February 29, 2020
 - added TimeRecord component to represent singular time records inside the Timesheet component.
 - added Timeward site heading to header.
 - added Date component to be used as singular date objects inside Timeline component.
+- added tests for Button component.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
