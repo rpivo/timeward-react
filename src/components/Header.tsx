@@ -4,9 +4,9 @@ import StyledHeader from '@styles/components/Header.styled';
 
 export const Header = (): JSX.Element =>
   <StyledHeader>
-    <h5>TIMEWARD</h5>
+    <h6>TIMEWARD</h6>
     <nav>
-      <Link to="/dashboard">Dasbhoard</Link>
+      <Link to="/dashboard">Dashboard</Link>
       <Link to="/login">Login</Link>
     </nav>
   </StyledHeader>;

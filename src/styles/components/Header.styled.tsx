@@ -8,15 +8,16 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
 
-  h5 {
+  h6 {
     letter-spacing: 0.25rem;
-    margin: 0;
+    margin: 0.2rem;
   }
 
   nav a {
     text-decoration: none;
     color: white;
     padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 `;
 
