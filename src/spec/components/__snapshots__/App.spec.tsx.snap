@@ -5,7 +5,7 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <header
-    className="sc-AykKI ipZMMc"
+    className="sc-AykKJ emPWQt"
   >
     <h5>
       TIMEWARD
@@ -26,23 +26,23 @@ exports[`App should render correctly 1`] = `
     </nav>
   </header>
   <main
-    className="sc-AykKJ bjPPvP"
+    className="sc-AykKK kHfeMg"
   >
     <div
-      className="sc-AykKH kyuWRJ"
+      className="sc-AykKI hjTYGa"
     >
       <div
         className="sc-AykKC jXbYAx"
       >
         <div
-          className="sc-AykKE gPOhkH"
+          className="sc-AykKF hVJXkc"
         >
           <span>
             00:00:00
     
           </span>
           <div
-            className="sc-AykKD lamqUN"
+            className="sc-AykKE lbmOpu"
             onClick={[Function]}
           >
             <svg
@@ -58,7 +58,7 @@ exports[`App should render correctly 1`] = `
             </svg>
           </div>
           <div
-            className="sc-AykKD lamqUN"
+            className="sc-AykKE lbmOpu"
             onClick={[Function]}
           >
             <svg
@@ -74,7 +74,7 @@ exports[`App should render correctly 1`] = `
           </div>
         </div>
         <div
-          className="sc-AykKF djlmek"
+          className="sc-AykKG kZbhvN"
         >
           <div>
             Time Record
@@ -88,14 +88,24 @@ exports[`App should render correctly 1`] = `
         </div>
       </div>
       <div
-        className="sc-AykKG bJtMuy"
+        className="sc-AykKH jwnfob"
       />
       <div
         className="sc-AykKC lmLzZA"
         width="full"
       >
-        <div>
-          Timeline
+        <div
+          className="sc-AykKD byFXct"
+        >
+          <div>
+            Date
+          </div>
+          <div>
+            Date
+          </div>
+          <div>
+            Date
+          </div>
         </div>
       </div>
     </div>
