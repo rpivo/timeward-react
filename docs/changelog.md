@@ -9,6 +9,7 @@ Sprint 7 / February 29, 2020
 - added global background color.
 - updated Tile component styles to not have rounded corners when stretching the full width of the page.
 - added TimeRecord component to represent singular time records inside the Timesheet component.
+- added Timeward site heading to header.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
