@@ -14,6 +14,7 @@ Sprint 7 / February 29, 2020
 - added tests for Button component.
 - update Header nav link styles for hover effects.
 - upgraded local project directory to use Yarn 2.
+- added tests to Timer component.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
