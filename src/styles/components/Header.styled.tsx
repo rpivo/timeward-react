@@ -15,9 +15,14 @@ const StyledHeader = styled.header`
 
   nav a {
     text-decoration: none;
-    color: white;
+    color: #CCC;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  nav a:hover {
+    color: #FFF;
   }
 `;
 
