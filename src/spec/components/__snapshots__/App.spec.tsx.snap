@@ -5,7 +5,7 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <header
-    className="sc-AykKJ bygsuq"
+    className="sc-AykKK jNNXIP"
   >
     <h6>
       TIMEWARD
@@ -26,7 +26,7 @@ exports[`App should render correctly 1`] = `
     </nav>
   </header>
   <main
-    className="sc-AykKK kHfeMg"
+    className="sc-fzXfLO eLTAmS"
   >
     <div
       className="sc-AykKI hjTYGa"
