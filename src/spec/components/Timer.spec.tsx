@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { Timer } from '@components/Timer';
 import { Button } from '@components/Button';
 
 describe('Timer', () => {
-  const wrapper = shallow(<Timer />);
+  const wrapper = mount(<Timer />);
   const timer = wrapper.find(Timer);
 
   describe('render', () => {
