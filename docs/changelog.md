@@ -13,7 +13,6 @@ Sprint 7 / February 29, 2020
 - added Date component to be used as singular date objects inside Timeline component.
 - added tests for Button component.
 - update Header nav link styles for hover effects.
-- upgraded local project directory to use Yarn 2.
 - added tests to Timer component.
 
 ## Release 0.6.0
