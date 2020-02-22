@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyledForm } from '@styles/components/Form.styled';
 
-const Input = (): JSX.Element => <input />;
-
 type FormProps = {
   children: React.ReactNode;
 };
+
+const Input = (): JSX.Element => <input />;
 
 const Form = (props: FormProps): JSX.Element =>
   <StyledForm>

@@ -16,7 +16,11 @@ export class Dashboard extends React.Component {
         </Tile>
         <PieChart />
         <Tile width='full'>
-          <Timeline />
+          <Timeline>
+            <Timeline.Date />
+            <Timeline.Date />
+            <Timeline.Date />
+          </Timeline>
         </Tile>
       </StyledDashboard>
     );

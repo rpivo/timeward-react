@@ -1,10 +1,18 @@
 import React from 'react';
 import StyledTimeline from '@styles/components/Timeline.styled';
-import { Date } from '@components/Date';
 
-export const Timeline = (): JSX.Element =>
+type TimelineProps = {
+  children: React.ReactNode;
+};
+
+export const Date = (): JSX.Element =>
+  <div>Date</div>;
+
+export const Timeline = (props: TimelineProps): JSX.Element =>
   <StyledTimeline>
-    <Date />
-    <Date />
-    <Date />
+    { props.children }
   </StyledTimeline>;
+
+Timeline.Date = Date;
+
+export default Timeline;
