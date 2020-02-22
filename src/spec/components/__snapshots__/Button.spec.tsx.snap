@@ -2,13 +2,14 @@
 
 exports[`Button render should render correctly 1`] = `
 <div
-  className="sc-AykKC kZlTAg"
+  className="sc-AykKC fMYwxc"
+  kind="pause"
   onClick={[Function]}
 >
   <svg
-    height="50"
-    viewBox="0 0 41.949 50"
-    width="41.949"
+    height="15"
+    viewBox="0 0 50 50"
+    width="15"
   >
     <g
       transform="translate(33 404)"
