@@ -15,6 +15,7 @@ Sprint 7 / February 29, 2020
 - update Header nav link styles for hover effects.
 - added tests to Timer component.
 - created compound form component.
+- updated Timer and Button styles.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
