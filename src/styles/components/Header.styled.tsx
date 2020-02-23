@@ -11,6 +11,11 @@ const StyledHeader = styled.header`
   h6 {
     letter-spacing: 0.25rem;
     margin: 0.2rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 
   nav a {

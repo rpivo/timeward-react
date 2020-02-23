@@ -17,6 +17,7 @@ Sprint 7 / February 29, 2020
 - created compound form component.
 - updated Timer and Button styles.
 - removed Date Component file and combined Timeline component and Date component into a single compound component.
+- routed up Header logo to be clickable Link that navigates to the Dashboard page.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
