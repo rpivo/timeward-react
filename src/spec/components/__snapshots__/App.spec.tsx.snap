@@ -5,10 +5,15 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <header
-    className="sc-AykKK jNNXIP"
+    className="sc-AykKK boodaW"
   >
     <h6>
-      TIMEWARD
+      <a
+        href="/dashboard"
+        onClick={[Function]}
+      >
+        TIMEWARD
+      </a>
     </h6>
     <nav>
       <a
