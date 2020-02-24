@@ -20,6 +20,7 @@ Sprint 7 / February 29, 2020
 - routed up Header logo to be clickable Link that navigates to the Dashboard page.
 - added Alignment component.
 - wrapped Login Form in Alignment component.
+- added min-height to Page component.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
