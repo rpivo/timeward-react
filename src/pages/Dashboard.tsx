@@ -12,7 +12,11 @@ export class Dashboard extends React.Component {
       <StyledDashboard>
         <Tile>
           <Timer />
-          <Timesheet />
+          <Timesheet>
+            <Timesheet.Record />
+            <Timesheet.Record />
+            <Timesheet.Record />
+          </Timesheet>
         </Tile>
         <PieChart />
         <Tile width='full'>

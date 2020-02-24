@@ -21,6 +21,7 @@ Sprint 7 / February 29, 2020
 - added Alignment component.
 - wrapped Login Form in Alignment component.
 - added min-height to Page component.
+- refactored Timesheet and TimeRecord components to be compound component.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
