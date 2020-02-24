@@ -22,6 +22,10 @@ Sprint 7 / February 29, 2020
 - wrapped Login Form in Alignment component.
 - added min-height to Page component.
 - refactored Timesheet and TimeRecord components to be compound component.
+- updated Input component to be of type text.
+- capitalized login form label.
+- capitalize login form CTA text.
+- updated styles for form component.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020

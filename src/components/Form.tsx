@@ -5,13 +5,13 @@ type FormProps = {
   children: React.ReactNode;
 };
 
-const Input = (): JSX.Element => <input />;
+const Input = (): JSX.Element => <input type="text" />;
 
 const Form = (props: FormProps): JSX.Element =>
   <StyledForm>
-    <label>Login</label>
+    <label>LOGIN</label>
     { props.children }
-    <input type="submit" value="Submit" />
+    <input type="submit" value="SUBMIT" />
   </StyledForm>;
 
 Form.Input = Input;
