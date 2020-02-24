@@ -1,8 +1,11 @@
 import React from 'react';
+import Alignment from '@components/Alignment';
 import Form from '@components/Form';
 
 export const Login = (): JSX.Element =>
-  <Form>
-    <Form.Input />
-    <Form.Input />
-  </Form>;
+  <Alignment vertical horizontal>
+    <Form>
+      <Form.Input />
+      <Form.Input />
+    </Form>
+  </Alignment>;
