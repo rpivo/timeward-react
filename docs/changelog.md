@@ -27,6 +27,7 @@ Sprint 7 / February 29, 2020
 - capitalize login form CTA text.
 - updated styles for form component.
 - updated global background color.
+- updated theme primary color.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
