@@ -5,13 +5,11 @@ type TimelineProps = {
   children: React.ReactNode;
 };
 
-export const Date = (): JSX.Element =>
+const Date = (): JSX.Element =>
   <div>Date</div>;
 
 export const Timeline = (props: TimelineProps): JSX.Element =>
-  <StyledTimeline>
-    { props.children }
-  </StyledTimeline>;
+  <StyledTimeline>{ props.children }</StyledTimeline>;
 
 Timeline.Date = Date;
 
