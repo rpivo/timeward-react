@@ -28,6 +28,7 @@ Sprint 7 / February 29, 2020
 - updated styles for form component.
 - updated global background color.
 - updated theme primary color.
+- added test file for Login page.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
