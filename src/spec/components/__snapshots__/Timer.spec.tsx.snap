@@ -2,7 +2,7 @@
 
 exports[`Timer render should render correctly 1`] = `
 <div
-  className="sc-AykKD eKZiiZ"
+  className="sc-AykKD cstrHd"
 >
   <span>
     00:00:00
