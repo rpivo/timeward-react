@@ -30,6 +30,7 @@ Sprint 7 / February 29, 2020
 - updated theme primary color.
 - added test file for Login page.
 - updated all component imports to defaults where appropriate.
+- updated Timer and Timesheet styles.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020

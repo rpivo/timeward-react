@@ -8,12 +8,15 @@ type StyledAlignmentProps = {
 const StyledAlignment = styled.div<StyledAlignmentProps>`
   display: flex;
   justify-content: ${(props): string => props.horizontal ? `center` : `normal`};
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  position: ${(props): string => props.vertical ? `absolute` : `relative`};
+  top: ${(props): string => props.vertical ? `0` : `initial`};
+  right: ${(props): string => props.horizontal ? `0` : `initial`};
+  bottom:  ${(props): string => props.vertical ? `0` : `initial`};
+  left: ${(props): string => props.horizontal ? `0` : `initial`};
 
   div {
     display: flex;
-    flex-direction: column;
+    flex-direction: ${(props): string => props.vertical ? `column` : `row`};
     justify-content: ${(props): string => props.vertical ? `center` : `normal`};
   }
 `;

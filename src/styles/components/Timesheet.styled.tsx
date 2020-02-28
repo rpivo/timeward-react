@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-const StyledTimesheet = styled.div`
+export const StyledRecord = styled.div`
+  padding: 5px;
+`;
+
+export const StyledTimesheet = styled.div`
   height: 250px;
-  width: 250px;
-  background: #DDD;
+  width: 125px;
   border-radius: 5px;
   padding: 10px;
 `;
-
-export default StyledTimesheet;
