@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login render should render correctly 1`] = `
+<div
+  className="sc-AykKC iuULSP"
+>
+  <div>
+    <form
+      className="sc-AykKD iIpRaq"
+    >
+      <label>
+        LOGIN
+      </label>
+      <input
+        type="text"
+      />
+      <input
+        type="text"
+      />
+      <input
+        type="submit"
+        value="SUBMIT"
+      />
+    </form>
+  </div>
+</div>
+`;
