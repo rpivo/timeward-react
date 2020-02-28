@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-import { Timer } from '@components/Timer';
-import { Button } from '@components/Button';
+import Timer from '@components/Timer';
+import Button from '@components/Button';
 
 describe('Timer', () => {
   const wrapper = mount(<Timer />);

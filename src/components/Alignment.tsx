@@ -7,7 +7,7 @@ type AlignmentDivProps = {
   horizontal?: boolean;
 };
 
-export const AlignmentDiv = (props: AlignmentDivProps): JSX.Element =>
+const AlignmentDiv = (props: AlignmentDivProps): JSX.Element =>
   <StyledAlignment vertical={props.vertical} horizontal={props.horizontal}>
     <div>{ props.children }</div>
   </StyledAlignment>;

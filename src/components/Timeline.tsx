@@ -8,7 +8,7 @@ type TimelineProps = {
 const Date = (): JSX.Element =>
   <div>Date</div>;
 
-export const Timeline = (props: TimelineProps): JSX.Element =>
+const Timeline = (props: TimelineProps): JSX.Element =>
   <StyledTimeline>{ props.children }</StyledTimeline>;
 
 Timeline.Date = Date;

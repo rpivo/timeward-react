@@ -3,5 +3,7 @@ import StyledPage from '@styles/components/Page.styled';
 
 type PageProps = { children: React.ReactNode };
 
-export const Page = (props: PageProps): JSX.Element =>
+const Page = (props: PageProps): JSX.Element =>
   <StyledPage>{ props.children }</StyledPage>;
+
+export default Page;

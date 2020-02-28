@@ -7,7 +7,7 @@ type ButtonProps = {
   handleClick: () => void;
 }
 
-export const Button = (props: ButtonProps): JSX.Element => {
+const Button = (props: ButtonProps): JSX.Element => {
 
   const Start = (): JSX.Element =>
     <svg width="15" height="15" viewBox="0 0 50 50">
@@ -44,3 +44,5 @@ export const Button = (props: ButtonProps): JSX.Element => {
     </StyledButton>
   );
 };
+
+export default Button;

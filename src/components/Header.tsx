@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import StyledHeader from '@styles/components/Header.styled';
 
-export const Header = (): JSX.Element =>
+const Header = (): JSX.Element =>
   <StyledHeader>
     <h6><Link to="/dashboard">TIMEWARD</Link></h6>
     <nav>
@@ -10,3 +10,5 @@ export const Header = (): JSX.Element =>
       <Link to="/login">Login</Link>
     </nav>
   </StyledHeader>;
+
+export default Header;

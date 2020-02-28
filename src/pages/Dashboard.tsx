@@ -1,9 +1,10 @@
 import React from 'react';
-import { Tile } from '@components/Tile';
-import { Timeline } from '@components/Timeline';
-import { Timer } from '@components/Timer';
-import { Timesheet } from '@components/Timesheet';
-import { PieChart } from '@components/PieChart';
+import Alignment from '@components/Alignment';
+import PieChart from '@components/PieChart';
+import Tile from '@components/Tile';
+import Timeline from '@components/Timeline';
+import Timer from '@components/Timer';
+import Timesheet from '@components/Timesheet';
 import StyledDashboard from '@styles/pages/Dashboard.styled';
 
 export class Dashboard extends React.Component {
@@ -11,7 +12,9 @@ export class Dashboard extends React.Component {
     return (
       <StyledDashboard>
         <Tile>
-          <Timer />
+          <Alignment horizontal>
+            <Timer />
+          </Alignment>
           <Timesheet>
             <Timesheet.Record />
             <Timesheet.Record />

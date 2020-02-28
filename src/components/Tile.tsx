@@ -6,5 +6,7 @@ type TileProps = {
   width?: string;
 };
 
-export const Tile = (props: TileProps): JSX.Element =>
+const Tile = (props: TileProps): JSX.Element =>
   <StyledTile width={props.width}>{ props.children }</StyledTile>;
+
+export default Tile;

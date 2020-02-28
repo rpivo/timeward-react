@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from '@components/Button';
+import Button from '@components/Button';
 import StyledTimer from '@styles/components/Timer.styled';
 
-export const Timer = (): JSX.Element => {
+const Timer = (): JSX.Element => {
   const [state, setState] = useState({
     buttonType: 'start',
     clockHours: 0,
@@ -77,3 +77,5 @@ export const Timer = (): JSX.Element => {
     </StyledTimer>
   );
 };
+
+export default Timer;

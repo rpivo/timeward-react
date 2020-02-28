@@ -1,14 +1,14 @@
 import React from 'react';
-import StyledTimesheet from '@styles/components/Timesheet.styled';
+import { StyledTimesheet, StyledRecord } from '@styles/components/Timesheet.styled';
 
 type TimesheetProps = {
   children: React.ReactNode;
 };
 
 const Record = (): JSX.Element =>
-  <div>Time Record</div>;
+  <StyledRecord>Time Record</StyledRecord>;
 
-export const Timesheet = (props: TimesheetProps): JSX.Element =>
+const Timesheet = (props: TimesheetProps): JSX.Element =>
   <StyledTimesheet>{ props.children }</StyledTimesheet>;
 
 Timesheet.Record = Record;
