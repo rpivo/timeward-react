@@ -7,29 +7,26 @@ import Timer from '@components/Timer';
 import Timesheet from '@components/Timesheet';
 import StyledDashboard from '@styles/pages/Dashboard.styled';
 
-export class Dashboard extends React.Component {
-  public render(): JSX.Element {
-    return (
-      <StyledDashboard>
-        <Tile>
-          <Alignment horizontal>
-            <Timer />
-          </Alignment>
-          <Timesheet>
-            <Timesheet.Record />
-            <Timesheet.Record />
-            <Timesheet.Record />
-          </Timesheet>
-        </Tile>
-        <PieChart />
-        <Tile width='full'>
-          <Timeline>
-            <Timeline.Date />
-            <Timeline.Date />
-            <Timeline.Date />
-          </Timeline>
-        </Tile>
-      </StyledDashboard>
-    );
-  }
-}
+const Dashboard = (): JSX.Element =>
+  <StyledDashboard>
+    <Tile>
+      <Alignment horizontal>
+        <Timer />
+      </Alignment>
+      <Timesheet>
+        <Timesheet.Record />
+        <Timesheet.Record />
+        <Timesheet.Record />
+      </Timesheet>
+    </Tile>
+    <PieChart />
+    <Tile width='full'>
+      <Timeline>
+        <Timeline.Date />
+        <Timeline.Date />
+        <Timeline.Date />
+      </Timeline>
+    </Tile>
+  </StyledDashboard>;
+
+export default Dashboard;

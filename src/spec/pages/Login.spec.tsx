@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Login } from '@pages/Login';
+import Login from '@pages/Login';
 
 describe('Login', () => {
   describe('render', () => {
