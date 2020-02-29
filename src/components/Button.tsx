@@ -1,6 +1,6 @@
 import React from 'react';
 import StyledButton from '@styles/components/Button.styled';
-import { buttonPaths } from '@utilities/buttonPaths';
+import buttonPaths from '@utilities/buttonPaths';
 
 type ButtonProps = {
   kind: string;

@@ -1,4 +1,4 @@
-export const buttonPaths = {
+const buttonPaths = {
   // eslint-disable-next-line max-len
   pause: "M4.237,0H9.746a4.237,4.237,0,0,1,4.237,4.237V45.763A4.237,4.237,0,0,1,9.746,50H4.237A4.237,4.237,0,0,1,0,45.763V4.237A4.237,4.237,0,0,1,4.237,0Z",
   // eslint-disable-next-line max-len
@@ -6,3 +6,5 @@ export const buttonPaths = {
   // eslint-disable-next-line max-len
   stop: "M4.237,0H45.763A4.237,4.237,0,0,1,50,4.237V45.763A4.237,4.237,0,0,1,45.763,50H4.237A4.237,4.237,0,0,1,0,45.763V4.237A4.237,4.237,0,0,1,4.237,0Z",
 };
+
+export default buttonPaths;

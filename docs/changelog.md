@@ -1,7 +1,17 @@
 # changelog
 
-## Release 0.7.0 (planned)
+## Release 0.8.0
+Sprint 8 / March 14, 2020
+
+### Updates
+
+
+## Release 0.7.0
 Sprint 7 / February 29, 2020
+
+### 0 bug, 0 documentation, 22 enhancement, and 5 question issues were closed (27 total)
+
+Made a variety of styling improvements, including improved global and theme styles, Tile styles, Header styles, Timer styles, Button styles, Page styles, Form styles, and Timesheet styles. Created/refactored the Form, Timesheet, and Timeline to be compound components. Added an Alignment component to wrap other components and provide alignment styles to these wrapped components. Converted all imports to be defaults when appropriate. Converted remaining class components to function components. Began using the type definition React.FC to label function components.
 
 ### Updates
 
@@ -30,9 +40,9 @@ Sprint 7 / February 29, 2020
 - updated theme primary color.
 - added test file for Login page.
 - updated all component imports to defaults where appropriate.
-- updated Timer and Timesheet styles.
+- updated Timesheet styles.
 - converted remaining class components to function components.
-- added Graph component.
+- added Graph component and utilized type definition React.FC for this component.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
