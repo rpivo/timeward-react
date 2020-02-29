@@ -1,5 +1,6 @@
 import React from 'react';
 import Alignment from '@components/Alignment';
+import Graph from '@components/Graph';
 import PieChart from '@components/PieChart';
 import Tile from '@components/Tile';
 import Timeline from '@components/Timeline';
@@ -18,6 +19,9 @@ const Dashboard = (): JSX.Element =>
         <Timesheet.Record />
         <Timesheet.Record />
       </Timesheet>
+    </Tile>
+    <Tile>
+      <Graph />
     </Tile>
     <PieChart />
     <Tile width='full'>

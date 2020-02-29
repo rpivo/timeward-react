@@ -32,6 +32,7 @@ Sprint 7 / February 29, 2020
 - updated all component imports to defaults where appropriate.
 - updated Timer and Timesheet styles.
 - converted remaining class components to function components.
+- added Graph component.
 
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
