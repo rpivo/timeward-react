@@ -5,7 +5,7 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <header
-    className="sc-fzXfLP gHILxc"
+    className="sc-fzXfLQ gGhYAx"
   >
     <h6>
       <a
@@ -31,27 +31,27 @@ exports[`App should render correctly 1`] = `
     </nav>
   </header>
   <main
-    className="sc-fzXfLQ nEZnd"
+    className="sc-fzXfLR kQJyvu"
   >
     <div
-      className="sc-AykKK jugpqa"
+      className="sc-fzXfLO shteU"
     >
       <div
-        className="sc-AykKE frZKsP"
+        className="sc-AykKF edEgvo"
       >
         <div
           className="sc-AykKC gtNKeP"
         >
           <div>
             <div
-              className="sc-AykKH cXEqDN"
+              className="sc-AykKI dfudpW"
             >
               <span>
                 00:00:00
     
               </span>
               <div
-                className="sc-AykKG ksEcIQ"
+                className="sc-AykKH dNCSCJ"
                 kind="start"
                 onClick={[Function]}
               >
@@ -68,7 +68,7 @@ exports[`App should render correctly 1`] = `
                 </svg>
               </div>
               <div
-                className="sc-AykKG ksEcIQ"
+                className="sc-AykKH dNCSCJ"
                 kind="stop"
                 onClick={[Function]}
               >
@@ -87,34 +87,41 @@ exports[`App should render correctly 1`] = `
           </div>
         </div>
         <div
-          className="sc-AykKJ elPeEz"
+          className="sc-AykKK dUkhac"
         >
           <div
-            className="sc-AykKI dHXnjB"
+            className="sc-AykKJ bjWtGq"
           >
             Time Record
           </div>
           <div
-            className="sc-AykKI dHXnjB"
+            className="sc-AykKJ bjWtGq"
           >
             Time Record
           </div>
           <div
-            className="sc-AykKI dHXnjB"
+            className="sc-AykKJ bjWtGq"
           >
             Time Record
           </div>
         </div>
       </div>
       <div
-        className="sc-AykKD krCxTH"
+        className="sc-AykKF edEgvo"
+      >
+        <div
+          className="sc-AykKD iCxiqJ"
+        />
+      </div>
+      <div
+        className="sc-AykKE bFxHQE"
       />
       <div
-        className="sc-AykKE kFugSO"
+        className="sc-AykKF gxfzgX"
         width="full"
       >
         <div
-          className="sc-AykKF iwNsin"
+          className="sc-AykKG gogkYM"
         >
           <div>
             Date
