@@ -27,6 +27,7 @@ module.exports = {
     "max-len": ["error", { "code": 100 }],
     "max-lines-per-function": 0,
     "max-params": 0,
+    "max-statements": 0,
     "multiline-comment-style": 0,
     "multiline-ternary": 0,
     "no-confusing-arrow": 0,
