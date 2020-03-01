@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Button from '@components/Button';
+import React, { memo, useEffect, useState } from 'react';
+import Button, { ButtonProps } from '@components/Button';
 import StyledTimer from '@styles/components/Timer.styled';
 
 const Timer = (): JSX.Element => {
@@ -64,18 +64,16 @@ const Timer = (): JSX.Element => {
       totalSeconds: 0,
     });
 
+  const MemoizedButton = memo((props: ButtonProps) => {
+    MemoizedButton.displayName = 'MemoizedButton';
+    return <Button kind={ props.kind } handleClick={ props.handleClick } />;
+  });
+
   return (
     <StyledTimer>
       <span>{ constructStringFromSeconds() }</span>
-      <Button
-        kind={ state.buttonType }
-        handleClick={
-          state.buttonType === 'start'
-            ? (): void => startTimer()
-            : (): void => pauseTimer()
-        }
-      />
-      <Button kind='stop' handleClick={ (): void => stopTimer() } />
+      <MemoizedButton kind={state.buttonType} handleClick={ (): void => toggleTimer() } />
+      <MemoizedButton kind='stop' handleClick={ (): void => stopTimer() } />
     </StyledTimer>
   );
 };
