@@ -9,6 +9,7 @@ Sprint 8 / March 14, 2020
 - exported type definition for Button component to be used in Timer component.
 - refactored Timer component's stopTimer and startTimer functions into one toggleTimer function.
 - memoized Button child components inside Timer component to prevent unnecessary rerenders.
+- added test file for styled Alignment component.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
