@@ -26,9 +26,13 @@ const Dashboard = (): JSX.Element =>
     <PieChart />
     <Tile width='full'>
       <Timeline>
-        <Timeline.Date />
-        <Timeline.Date />
-        <Timeline.Date />
+        <Timeline.Day day={0} />
+        <Timeline.Day day={1} />
+        <Timeline.Day day={2} />
+        <Timeline.Day day={3} />
+        <Timeline.Day day={4} />
+        <Timeline.Day day={5} />
+        <Timeline.Day day={6} />
       </Timeline>
     </Tile>
   </StyledDashboard>;

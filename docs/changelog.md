@@ -10,6 +10,8 @@ Sprint 8 / March 14, 2020
 - refactored Timer component's stopTimer and startTimer functions into one toggleTimer function.
 - memoized Button child components inside Timer component to prevent unnecessary rerenders.
 - added test file for styled Alignment component.
+- changed name of Timeline.Date component to Timeline.Day.
+- updated Timeline.Day component to take in a day prop and render the correct date for the specific Day component based on this value.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
