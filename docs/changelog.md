@@ -6,6 +6,7 @@ Sprint 8 / March 14, 2020
 ### Updates
 
 - turned off max-statements rule in ESLint config.
+- exported type definition for Button component to be used in Timer component.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020

@@ -2,7 +2,7 @@ import React from 'react';
 import StyledButton from '@styles/components/Button.styled';
 import buttonPaths from '@utilities/buttonPaths';
 
-type ButtonProps = {
+export type ButtonProps = {
   kind: string;
   handleClick: () => void;
 }
