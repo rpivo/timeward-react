@@ -12,6 +12,7 @@ Sprint 8 / March 14, 2020
 - added test file for styled Alignment component.
 - changed name of Timeline.Date component to Timeline.Day.
 - updated Timeline.Day component to take in a day prop and render the correct date for the specific Day component based on this value.
+- updated Timeline styles.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
