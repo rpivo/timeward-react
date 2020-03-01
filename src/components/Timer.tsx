@@ -46,11 +46,13 @@ const Timer = (): JSX.Element => {
     `);
   };
 
-  const startTimer = (): void =>
-    setState(prevState => ({ ...prevState, buttonType: 'pause', timeInterval: true }));
-
-  const pauseTimer = (): void =>
+  const toggleTimer = (): void => {
+    if (state.buttonType === 'start') {
+      setState(prevState => ({ ...prevState, buttonType: 'pause', timeInterval: true }));
+      return;
+    }
     setState(prevState => ({ ...prevState, buttonType: 'start', timeInterval: false }));
+  };
 
   const stopTimer = (): void =>
     setState({
