@@ -126,6 +126,11 @@ exports[`App should render correctly 1`] = `
           <div
             className="day"
           >
+            3/2/2020
+          </div>
+          <div
+            className="day"
+          >
             3/1/2020
           </div>
           <div
@@ -152,11 +157,6 @@ exports[`App should render correctly 1`] = `
             className="day"
           >
             2/25/2020
-          </div>
-          <div
-            className="day"
-          >
-            2/24/2020
           </div>
         </div>
       </div>
