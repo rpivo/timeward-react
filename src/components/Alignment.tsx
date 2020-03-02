@@ -8,7 +8,7 @@ type AlignmentProps = {
 };
 
 const Alignment = (props: AlignmentProps): JSX.Element =>
-  <StyledAlignment vertical={props.vertical} horizontal={props.horizontal}>
+  <StyledAlignment vertical={ props.vertical } horizontal={ props.horizontal }>
     <div>{ props.children }</div>
   </StyledAlignment>;
 
