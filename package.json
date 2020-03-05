@@ -76,6 +76,6 @@
     "start": "webpack-dev-server --config webpack/webpack.dev.ts --progress",
     "build": "yarn lint && webpack --config webpack/webpack.prod.ts --progress",
     "lint": "eslint './src/**/*.{ts,tsx}'",
-    "test": "jest --watchAll --coverage"
+    "test": "jest --watchAll --coverage --notify"
   }
 }
