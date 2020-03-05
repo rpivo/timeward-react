@@ -14,6 +14,7 @@ Sprint 8 / March 14, 2020
 - updated Timeline.Day component to take in a day prop and render the correct date for the specific Day component based on this value.
 - updated Timeline styles.
 - added --notify to test script so that OS notifies when tests finish.
+- created Amazon Cognito dev user pool to hold user auth data.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
