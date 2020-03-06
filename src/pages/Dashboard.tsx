@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import Alignment from '@components/Alignment';
 import Graph from '@components/Graph';
 import PieChart from '@components/PieChart';
@@ -8,17 +8,21 @@ import Timer from '@components/Timer';
 import Timesheet from '@components/Timesheet';
 import StyledDashboard from '@styles/pages/Dashboard.styled';
 
-const Dashboard = (): JSX.Element =>
+export const DashboardContext = createContext('');
+
+const Dashboard: React.FC = (): JSX.Element =>
   <StyledDashboard>
     <Tile>
       <Alignment horizontal>
         <Timer />
       </Alignment>
-      <Timesheet>
-        <Timesheet.Record />
-        <Timesheet.Record />
-        <Timesheet.Record />
-      </Timesheet>
+      <DashboardContext.Provider value={'hello'}>
+        <Timesheet>
+          <Timesheet.Record />
+          <Timesheet.Record />
+          <Timesheet.Record />
+        </Timesheet>
+      </DashboardContext.Provider>
     </Tile>
     <Tile>
       <Graph />

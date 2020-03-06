@@ -16,6 +16,7 @@ Sprint 8 / March 14, 2020
 - added --notify to test script so that OS notifies when tests finish.
 - created Amazon Cognito dev user pool to hold user auth data.
 - passed DashboardContext to Timesheet component.
+- created DashboardContext in Dashboard page component.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
