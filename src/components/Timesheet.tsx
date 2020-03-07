@@ -7,8 +7,8 @@ type TimesheetProps = {
 };
 
 const Record = (): JSX.Element => {
-  const context = useContext(DashboardContext);
-  return <StyledRecord>{ context }</StyledRecord>;
+  const { store } = useContext(DashboardContext);
+  return <StyledRecord>{ store }</StyledRecord>;
 };
 
 

@@ -18,6 +18,7 @@ Sprint 8 / March 14, 2020
 - passed DashboardContext to Timesheet component.
 - created DashboardContext in Dashboard page component.
 - passed down Dashboard page's useReducer dispatch to Timer, allowing the Timer to update the Dashboard store.
+- passed Dashboard's store to Timesheet where it will render within that component.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
