@@ -17,6 +17,7 @@ Sprint 8 / March 14, 2020
 - created Amazon Cognito dev user pool to hold user auth data.
 - passed DashboardContext to Timesheet component.
 - created DashboardContext in Dashboard page component.
+- passed down Dashboard page's useReducer dispatch to Timer, allowing the Timer to update the Dashboard store.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020

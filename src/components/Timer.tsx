@@ -1,8 +1,10 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useContext, useEffect, useState } from 'react';
+import { DashboardContext } from '@pages/Dashboard';
 import Button, { ButtonProps } from '@components/Button';
 import StyledTimer from '@styles/components/Timer.styled';
 
 const Timer = (): JSX.Element => {
+  const { dispatch } = useContext(DashboardContext);
   const [state, setState] = useState({
     buttonType: 'start',
     clockHours: 0,
@@ -54,7 +56,7 @@ const Timer = (): JSX.Element => {
     setState(prevState => ({ ...prevState, buttonType: 'start', timeInterval: false }));
   };
 
-  const stopTimer = (): void =>
+  const stopTimer = (): void => {
     setState({
       buttonType: 'start',
       clockHours: 0,
@@ -63,6 +65,8 @@ const Timer = (): JSX.Element => {
       timeInterval: false,
       totalSeconds: 0,
     });
+    dispatch({ type: 'button clicked' });
+  };
 
   const MemoizedButton = memo((props: ButtonProps) => {
     MemoizedButton.displayName = 'MemoizedButton';
