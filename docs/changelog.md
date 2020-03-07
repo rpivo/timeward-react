@@ -19,6 +19,11 @@ Sprint 8 / March 14, 2020
 - created DashboardContext in Dashboard page component.
 - passed down Dashboard page's useReducer dispatch to Timer, allowing the Timer to update the Dashboard store.
 - passed Dashboard's store to Timesheet where it will render within that component.
+- updated DashboardContext to use DashboardContextType, and updated this type's dispatch to use React.Dispatch with custom type Action.
+- created Dashboard store reducer.
+- created Dashboard store.
+- used useReducer in Dashboard to pass Dashboard store and dispatch to children.
+- wrapped Timer and Timesheet in DashboardContext.Provider.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
