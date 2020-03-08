@@ -92,17 +92,7 @@ exports[`App should render correctly 1`] = `
           <div
             className="sc-AykKJ bjWtGq"
           >
-            start
-          </div>
-          <div
-            className="sc-AykKJ bjWtGq"
-          >
-            start
-          </div>
-          <div
-            className="sc-AykKJ bjWtGq"
-          >
-            start
+            0
           </div>
         </div>
       </div>
@@ -123,6 +113,11 @@ exports[`App should render correctly 1`] = `
         <div
           className="sc-AykKG bCpcUV"
         >
+          <div
+            className="day"
+          >
+            3/8/2020
+          </div>
           <div
             className="day"
           >
@@ -152,11 +147,6 @@ exports[`App should render correctly 1`] = `
             className="day"
           >
             3/2/2020
-          </div>
-          <div
-            className="day"
-          >
-            3/1/2020
           </div>
         </div>
       </div>
