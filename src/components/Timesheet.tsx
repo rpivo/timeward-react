@@ -13,7 +13,6 @@ const Record = (): JSX.Element => {
   );
 };
 
-
 const Timesheet = (props: TimesheetProps): JSX.Element =>
   <StyledTimesheet>{props.children}</StyledTimesheet>;
 
