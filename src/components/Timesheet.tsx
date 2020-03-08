@@ -2,9 +2,7 @@ import React, { useContext } from 'react';
 import { DashboardContext } from '@pages/Dashboard';
 import { StyledTimesheet, StyledRecord } from '@styles/components/Timesheet.styled';
 
-type TimesheetProps = {
-  children: React.ReactNode;
-};
+type TimesheetProps = { children: React.ReactNode };
 
 const Record = (): JSX.Element => {
   const { store } = useContext(DashboardContext);
