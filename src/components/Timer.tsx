@@ -57,6 +57,10 @@ const Timer = (): JSX.Element => {
   };
 
   const stopTimer = (): void => {
+    dispatch({
+      payload: state.totalSeconds,
+      type: 'button clicked',
+    });
     setState({
       buttonType: 'start',
       clockHours: 0,
@@ -65,7 +69,6 @@ const Timer = (): JSX.Element => {
       timeInterval: false,
       totalSeconds: 0,
     });
-    dispatch({ type: 'button clicked' });
   };
 
   const MemoizedButton = memo((props: ButtonProps) => {

@@ -8,27 +8,31 @@ import Timer from '@components/Timer';
 import Timesheet from '@components/Timesheet';
 import StyledDashboard from '@styles/pages/Dashboard.styled';
 
-type Action = { type: 'button clicked' };
+type Action = {
+  type: 'button clicked';
+  payload: number;
+};
+type Store = { seconds: number }[];
 
 type DashboardContextType = {
   dispatch: React.Dispatch<Action>;
-  store: string[];
+  store: Store;
 }
 
 export const DashboardContext = createContext({} as DashboardContextType);
 
 const Dashboard: React.FC = (): JSX.Element => {
 
-  const reducer = (state: string[], action: { type: string }): string[] => {
+  const reducer = (state: Store, action: Action): Store => {
     switch (action.type) {
     case 'button clicked':
-      return [...state, 'goodbye'];
+      return [...state, { seconds: action.payload }];
     default:
       return state;
     }
   };
 
-  const dashboardStore = ['start'];
+  const dashboardStore = [{ seconds: 0 }];
   const [store, dispatch] = useReducer(reducer, dashboardStore);
 
   return (
@@ -39,8 +43,6 @@ const Dashboard: React.FC = (): JSX.Element => {
             <Timer />
           </Alignment>
           <Timesheet>
-            <Timesheet.Record />
-            <Timesheet.Record />
             <Timesheet.Record />
           </Timesheet>
         </Tile>

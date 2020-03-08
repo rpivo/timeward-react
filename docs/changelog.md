@@ -24,6 +24,7 @@ Sprint 8 / March 14, 2020
 - created Dashboard store.
 - used useReducer in Dashboard to pass Dashboard store and dispatch to children.
 - wrapped Timer and Timesheet in DashboardContext.Provider.
+- updated Timer dispatch to send total timer seconds as the payload.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
