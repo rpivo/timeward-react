@@ -8,12 +8,14 @@ type TimesheetProps = {
 
 const Record = (): JSX.Element => {
   const { store } = useContext(DashboardContext);
-  return <StyledRecord>{ store }</StyledRecord>;
+  return (
+    <>{store.map((record, index) => <StyledRecord key={index}>{record.seconds}</StyledRecord>)}</>
+  );
 };
 
 
 const Timesheet = (props: TimesheetProps): JSX.Element =>
-  <StyledTimesheet>{ props.children }</StyledTimesheet>;
+  <StyledTimesheet>{props.children}</StyledTimesheet>;
 
 Timesheet.Record = Record;
 
