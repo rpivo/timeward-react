@@ -29,6 +29,7 @@ Sprint 8 / March 14, 2020
 - updated Timeline to not use UTC Date methods to get time string.
 - added Section component to create flexbox rows on pages.
 - added margin to Tile components.
+- updated packages.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
