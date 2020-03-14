@@ -1,7 +1,17 @@
 # changelog
 
+## Release 0.9.0
+Sprint 9 / March 28, 2020
+
+### Updates
+
+
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
+
+### 0 bug, 0 documentation, 8 feature, and 4 question issues were closed (12 total)
+
+Implemented first uses of memoization in the app, specifically in the way buttons render. Updated Timeline component to render the date based on the local timezone. Set up initial dev user pool in Amazon Cognito. Implemented first uses of context in the app to pass state from the Dashboard page to nested components. Implemented first uses of global state and useReducer in the app to be able to update and pass down state between the Dashboard page and its child components. Updated Timer and Timesheet components to share state -- when the Timer component stops the time, the Timesheet will rerender with a new time record based on this stopped time. Updated Timesheet to render a dynamic number of Time Records based on how many records there are.
 
 ### Updates
 
