@@ -2,6 +2,7 @@ import React, { createContext, useReducer } from 'react';
 import Alignment from '@components/Alignment';
 import Graph from '@components/Graph';
 import PieChart from '@components/PieChart';
+import Section from '@components/Section';
 import Tile from '@components/Tile';
 import Timeline from '@components/Timeline';
 import Timer from '@components/Timer';
@@ -37,19 +38,21 @@ const Dashboard: React.FC = (): JSX.Element => {
 
   return (
     <StyledDashboard>
-      <DashboardContext.Provider value={{ dispatch, store }}>
+      <Section>
+        <DashboardContext.Provider value={{ dispatch, store }}>
+          <Tile>
+            <Alignment horizontal>
+              <Timer />
+            </Alignment>
+            <Timesheet>
+              <Timesheet.Record />
+            </Timesheet>
+          </Tile>
+        </DashboardContext.Provider>
         <Tile>
-          <Alignment horizontal>
-            <Timer />
-          </Alignment>
-          <Timesheet>
-            <Timesheet.Record />
-          </Timesheet>
+          <Graph />
         </Tile>
-      </DashboardContext.Provider>
-      <Tile>
-        <Graph />
-      </Tile>
+      </Section>
       <PieChart />
       <Tile width='full'>
         <Timeline>
