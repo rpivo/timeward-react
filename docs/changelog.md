@@ -26,6 +26,7 @@ Sprint 8 / March 14, 2020
 - wrapped Timer and Timesheet in DashboardContext.Provider.
 - updated Timer dispatch to send total timer seconds as the payload.
 - updated Timesheet to render dynamic amount of components depending on how many records are stored in the Dashboard store.
+- updated Timeline to not use UTC Date methods to get time string.
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
