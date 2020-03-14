@@ -9,6 +9,7 @@ const StyledTile = styled.div<StyledTileProps>`
   display: ${(props): string => props.width === 'full' ? `block` : `inline-block`};
   padding: 10px;
   position: relative;
+  margin: 10px;
 `;
 
 export default StyledTile;
