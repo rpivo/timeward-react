@@ -5,7 +5,7 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <header
-    className="sc-fzXfLR gEHlDS"
+    className="sc-fzplWN fOgisK"
   >
     <h6>
       <a
@@ -31,30 +31,30 @@ exports[`App should render correctly 1`] = `
     </nav>
   </header>
   <main
-    className="sc-fzXfLS kesoeP"
+    className="sc-fznyAO jrPtbo"
   >
     <div
-      className="sc-fzXfLP irIksN"
+      className="sc-fzoLsD jIDzto"
     >
       <section
-        className="sc-AykKF iwNsin"
+        className="sc-AxhCb ZaNiK"
       >
         <div
-          className="sc-AykKG hfExZT"
+          className="sc-AxhUy fVAfvQ"
         >
           <div
-            className="sc-AykKC gtNKeP"
+            className="sc-AxjAm cEVkqc"
           >
             <div>
               <div
-                className="sc-AykKJ dnjQcf"
+                className="sc-Axmtr gKmsNw"
               >
                 <span>
                   00:00:00
     
                 </span>
                 <div
-                  className="sc-AykKI ixXrVy"
+                  className="sc-AxheI jGfEct"
                   kind="start"
                   onClick={[Function]}
                 >
@@ -71,7 +71,7 @@ exports[`App should render correctly 1`] = `
                   </svg>
                 </div>
                 <div
-                  className="sc-AykKI ixXrVy"
+                  className="sc-AxheI jGfEct"
                   kind="stop"
                   onClick={[Function]}
                 >
@@ -90,33 +90,38 @@ exports[`App should render correctly 1`] = `
             </div>
           </div>
           <div
-            className="sc-fzXfLO fCcJSq"
+            className="sc-fzozJi ddqBGC"
           >
             <div
-              className="sc-AykKK kbrjCb"
+              className="sc-AxmLO biSLxw"
             >
               0
             </div>
           </div>
         </div>
         <div
-          className="sc-AykKG hfExZT"
+          className="sc-AxhUy fVAfvQ"
         >
           <div
-            className="sc-AykKD cQIwDM"
+            className="sc-AxirZ pWORn"
           />
         </div>
       </section>
       <div
-        className="sc-AykKE bFxHQE"
+        className="sc-AxiKw khPQDu"
       />
       <div
-        className="sc-AykKG jhsUaa"
+        className="sc-AxhUy gMuXYF"
         width="full"
       >
         <div
-          className="sc-AykKH fYBPOy"
+          className="sc-AxgMl jpVdqI"
         >
+          <div
+            className="day"
+          >
+            3/14/2020
+          </div>
           <div
             className="day"
           >
@@ -146,11 +151,6 @@ exports[`App should render correctly 1`] = `
             className="day"
           >
             3/8/2020
-          </div>
-          <div
-            className="day"
-          >
-            3/7/2020
           </div>
         </div>
       </div>

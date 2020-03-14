@@ -2,11 +2,11 @@
 
 exports[`Login render should render correctly 1`] = `
 <div
-  className="sc-AykKC gGlknY"
+  className="sc-AxjAm czhxNj"
 >
   <div>
     <form
-      className="sc-AykKD iIpRaq"
+      className="sc-AxirZ nBVHB"
     >
       <label>
         LOGIN

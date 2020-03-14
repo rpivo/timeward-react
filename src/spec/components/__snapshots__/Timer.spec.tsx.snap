@@ -2,14 +2,14 @@
 
 exports[`Timer render should render correctly 1`] = `
 <div
-  className="sc-fzXfLP gGGian"
+  className="sc-fzoLsD bduNEq"
 >
   <span>
     00:00:00
     
   </span>
   <div
-    className="sc-fzXfLO fCWSSe"
+    className="sc-fzozJi jgtEGm"
     kind="start"
     onClick={[Function]}
   >
@@ -26,7 +26,7 @@ exports[`Timer render should render correctly 1`] = `
     </svg>
   </div>
   <div
-    className="sc-fzXfLO fCWSSe"
+    className="sc-fzozJi jgtEGm"
     kind="stop"
     onClick={[Function]}
   >

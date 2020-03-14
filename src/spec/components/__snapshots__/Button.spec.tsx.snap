@@ -2,7 +2,7 @@
 
 exports[`Button render should render correctly 1`] = `
 <div
-  className="sc-AykKC fMYwxc"
+  className="sc-AxjAm gCisFT"
   kind="pause"
   onClick={[Function]}
 >
