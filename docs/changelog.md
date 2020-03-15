@@ -11,6 +11,8 @@ Sprint 9 / March 28, 2020
 ### Updates
 
 - added .docz to .gitignore.
+- added frontmatter to changelog and sprints md files.
+- added docz package to begin documenting API of this project.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020

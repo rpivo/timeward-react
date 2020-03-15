@@ -66,6 +66,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "docz": "^2.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -73,9 +74,10 @@
   },
   "scripts": {
     "analyze": "webpack --config webpack/webpack.analyzer.ts --progress",
-    "start": "webpack-dev-server --config webpack/webpack.dev.ts --progress",
     "build": "yarn lint && webpack --config webpack/webpack.prod.ts --progress",
+    "docs": "yarn docz dev",
     "lint": "eslint './src/**/*.{ts,tsx}'",
+    "start": "webpack-dev-server --config webpack/webpack.dev.ts --progress",
     "test": "jest --watchAll --coverage --notify"
   }
 }
