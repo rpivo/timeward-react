@@ -16,6 +16,7 @@ Sprint 9 / March 28, 2020
 - added Alignment.mdx and components.md files.
 - updated ESLint config.
 - declare Timer as a React.FC type.
+- added tests for Timer component.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
