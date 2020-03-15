@@ -1,3 +1,8 @@
+---
+name: Changelog
+route: /changelog
+---
+
 # changelog
 
 ## Release 0.9.0
@@ -5,6 +10,7 @@ Sprint 9 / March 28, 2020
 
 ### Updates
 
+- added .docz to .gitignore.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020

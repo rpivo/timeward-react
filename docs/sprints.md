@@ -1,3 +1,8 @@
+---
+name: Sprints
+route: /sprints
+---
+
 # Things to Do Before, During, and After Every Sprint
 
 This project is iterated on with two-week sprints. During those two weeks, issues are created and tracked within GitHub. At the end of each sprint, these things should happen:
