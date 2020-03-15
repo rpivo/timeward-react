@@ -3,7 +3,7 @@ import { DashboardContext } from '@pages/Dashboard';
 import Button, { ButtonProps } from '@components/Button';
 import StyledTimer from '@styles/components/Timer.styled';
 
-const Timer = (): JSX.Element => {
+const Timer: React.FC = (): JSX.Element => {
   const { dispatch } = useContext(DashboardContext);
   const [state, setState] = useState({
     buttonType: 'start',

@@ -15,6 +15,7 @@ Sprint 9 / March 28, 2020
 - added docz package to begin documenting API of this project.
 - added Alignment.mdx and components.md files.
 - updated ESLint config.
+- declare Timer as a React.FC type.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
