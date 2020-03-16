@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useRef } from 'react';
 import Alignment from '@components/Alignment';
 import Graph from '@components/Graph';
 import PieChart from '@components/PieChart';
@@ -13,7 +13,10 @@ type Action = {
   type: 'button clicked';
   payload: number;
 };
-type Store = { seconds: number }[];
+type Store = {
+  label: string | undefined;
+  seconds: number;
+}[];
 
 type DashboardContextType = {
   dispatch: React.Dispatch<Action>;
@@ -24,23 +27,41 @@ export const DashboardContext = createContext({} as DashboardContextType);
 
 const Dashboard: React.FC = (): JSX.Element => {
 
+  const ref = useRef<HTMLInputElement>(null);
+
   const reducer = (state: Store, action: Action): Store => {
     switch (action.type) {
     case 'button clicked':
-      return [...state, { seconds: action.payload }];
+      return [
+        ...state,
+        {
+          label: ref?.current?.value,
+          seconds: action.payload,
+        },
+      ];
     default:
       return state;
     }
   };
 
-  const dashboardStore = [{ seconds: 0 }];
+  const dashboardStore = [
+    {
+      label: '',
+      seconds: 0,
+    },
+  ];
   const [store, dispatch] = useReducer(reducer, dashboardStore);
+
+  const handleBlur = (): void => console.log(ref?.current?.value);
 
   return (
     <StyledDashboard>
       <Section>
         <DashboardContext.Provider value={{ dispatch, store }}>
           <Tile>
+            <Alignment horizontal>
+              <input ref={ref} type='text' onBlur={(): void => handleBlur()}></input>
+            </Alignment>
             <Alignment horizontal>
               <Timer />
             </Alignment>

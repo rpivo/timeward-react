@@ -19,6 +19,7 @@ Sprint 9 / March 28, 2020
 - added tests for Timer component.
 - added test user to Cognito test user pool.
 - updated Timesheet component so that individual records also render the label for the record.
+- added label to records.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
