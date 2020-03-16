@@ -1,6 +1,6 @@
 import React from 'react';
-import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
+import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
 import Timer from '@components/Timer';
 import Button from '@components/Button';
