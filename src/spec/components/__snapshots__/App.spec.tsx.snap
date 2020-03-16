@@ -46,6 +46,16 @@ exports[`App should render correctly 1`] = `
             className="sc-AxjAm cEVkqc"
           >
             <div>
+              <input
+                onBlur={[Function]}
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            className="sc-AxjAm cEVkqc"
+          >
+            <div>
               <div
                 className="sc-Axmtr gKmsNw"
               >
@@ -96,6 +106,8 @@ exports[`App should render correctly 1`] = `
               className="sc-AxmLO biSLxw"
             >
               0
+               / 
+              
             </div>
           </div>
         </div>
