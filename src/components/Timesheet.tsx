@@ -7,7 +7,10 @@ type TimesheetProps = { children: React.ReactNode };
 const Record = (): JSX.Element => {
   const { store } = useContext(DashboardContext);
   return (
-    <>{store.map((record, index) => <StyledRecord key={index}>{record.seconds}</StyledRecord>)}</>
+    <>
+      {store.map((record, index) =>
+        <StyledRecord key={index}>{record.seconds} / {record.label}</StyledRecord>)}
+    </>
   );
 };
 
