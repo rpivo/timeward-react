@@ -7,9 +7,10 @@ type AlignmentProps = {
   horizontal?: boolean;
 };
 
-const Alignment = (props: AlignmentProps): JSX.Element =>
-  <StyledAlignment vertical={ props.vertical } horizontal={ props.horizontal }>
-    <div>{ props.children }</div>
-  </StyledAlignment>;
+const Alignment: React.FC<AlignmentProps> =
+  ({ children, vertical, horizontal }: AlignmentProps): JSX.Element =>
+    <StyledAlignment vertical={ vertical } horizontal={ horizontal }>
+      <div>{ children }</div>
+    </StyledAlignment>;
 
 export default Alignment;

@@ -3,7 +3,7 @@ import StyledSection from '@styles/components/Section.styled';
 
 type SectionProps = { children: React.ReactNode };
 
-const Section = (props: SectionProps): JSX.Element =>
-  <StyledSection>{ props.children }</StyledSection>;
+const Section: React.FC<SectionProps> = ({ children }: SectionProps): JSX.Element =>
+  <StyledSection>{ children }</StyledSection>;
 
 export default Section;

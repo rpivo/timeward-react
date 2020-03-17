@@ -4,7 +4,9 @@ import { StyledTimesheet, StyledRecord } from '@styles/components/Timesheet.styl
 
 type TimesheetProps = { children: React.ReactNode };
 
-const Record = (): JSX.Element => {
+type TimesheetComposition = { Record: React.FC };
+
+const Record: React.FC = (): JSX.Element => {
   const { store } = useContext(DashboardContext);
   return (
     <>
@@ -14,8 +16,9 @@ const Record = (): JSX.Element => {
   );
 };
 
-const Timesheet = (props: TimesheetProps): JSX.Element =>
-  <StyledTimesheet>{props.children}</StyledTimesheet>;
+const Timesheet: React.FC<TimesheetProps> & TimesheetComposition =
+  ({ children }: TimesheetProps): JSX.Element =>
+    <StyledTimesheet>{ children }</StyledTimesheet>;
 
 Timesheet.Record = Record;
 

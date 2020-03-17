@@ -1,16 +1,16 @@
 import React from 'react';
 import { StyledForm } from '@styles/components/Form.styled';
 
-type FormProps = {
-  children: React.ReactNode;
-};
+type FormProps = { children: React.ReactNode };
 
-const Input = (): JSX.Element => <input type="text" />;
+type FormComposition = { Input: React.FC };
 
-const Form = (props: FormProps): JSX.Element =>
+const Input: React.FC = (): JSX.Element => <input type="text" />;
+
+const Form: React.FC<FormProps> & FormComposition = ({ children }: FormProps): JSX.Element =>
   <StyledForm>
     <label>LOGIN</label>
-    { props.children }
+    { children }
     <input type="submit" value="SUBMIT" />
   </StyledForm>;
 

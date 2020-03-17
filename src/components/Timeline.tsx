@@ -1,25 +1,24 @@
 import React from 'react';
 import StyledTimeline from '@styles/components/Timeline.styled';
 
-type TimelineProps = {
-  children: React.ReactNode;
-};
+type TimelineProps = { children: React.ReactNode };
 
-type DayProps = {
-  day: number;
-}
+type DayProps = { day: number }
 
-const Day = (props: DayProps): JSX.Element => {
+type TimelineComposition = { Day: React.FC<DayProps> };
+
+const Day: React.FC<DayProps & {}> = ({ day }: DayProps): JSX.Element => {
   const getDayString = (): string => {
     const date = new Date();
-    date.setDate(date.getDate() - props.day);
+    date.setDate(date.getDate() - day);
     return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
   };
   return <div className='day'>{getDayString()}</div>;
 };
 
-const Timeline = (props: TimelineProps): JSX.Element =>
-  <StyledTimeline>{props.children}</StyledTimeline>;
+const Timeline: React.FC<TimelineProps> & TimelineComposition =
+  ({ children }: TimelineProps): JSX.Element =>
+    <StyledTimeline>{ children }</StyledTimeline>;
 
 Timeline.Day = Day;
 

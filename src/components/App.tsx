@@ -8,7 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import { Theme } from '@styles/theme';
 import { GlobalStyle } from '@styles/global';
 
-const App = (): JSX.Element =>
+const App: React.FC = (): JSX.Element =>
   <ThemeProvider theme={ Theme }>
     <GlobalStyle />
     <div className='app'>

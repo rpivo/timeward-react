@@ -6,7 +6,7 @@ type TileProps = {
   width?: string;
 };
 
-const Tile = (props: TileProps): JSX.Element =>
-  <StyledTile width={props.width}>{ props.children }</StyledTile>;
+const Tile: React.FC<TileProps> = ({ children, width }: TileProps): JSX.Element =>
+  <StyledTile width={width}>{ children }</StyledTile>;
 
 export default Tile;

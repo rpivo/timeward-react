@@ -21,6 +21,7 @@ Sprint 9 / March 28, 2020
 - updated Timesheet component so that individual records also render the label for the record.
 - added label to records.
 - added tests for Dashboard page.
+- added React.FC typing to all functional components.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020

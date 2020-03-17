@@ -7,14 +7,14 @@ export type ButtonProps = {
   handleClick: () => void;
 }
 
-const Button = (props: ButtonProps): JSX.Element => {
+const Button: React.FC<ButtonProps> = ({ kind, handleClick }: ButtonProps): JSX.Element => {
 
-  const Start = (): JSX.Element =>
+  const Start: React.FC = (): JSX.Element =>
     <svg width="15" height="15" viewBox="0 0 50 50">
       <path d={buttonPaths.start} transform="translate(54.392 -7.309) rotate(90)" fill="#aaa" />
     </svg>;
 
-  const Pause = (): JSX.Element =>
+  const Pause: React.FC = (): JSX.Element =>
     <svg width="15" height="15" viewBox="0 0 50 50">
       <g transform="translate(33 404)">
         <path d={buttonPaths.pause} transform="translate(-5.034 -404)" fill="#aaa"/>
@@ -22,13 +22,13 @@ const Button = (props: ButtonProps): JSX.Element => {
       </g>
     </svg>;
 
-  const Stop = (): JSX.Element =>
+  const Stop: React.FC = (): JSX.Element =>
     <svg width="15" height="15" viewBox="0 0 50 50">
       <path d={buttonPaths.stop} fill="#aaa"/>
     </svg>;
 
-  const renderSwitch = (kind: string): JSX.Element => {
-    switch (kind) {
+  const renderSwitch = (buttonType: string): JSX.Element => {
+    switch (buttonType) {
     case 'start':
       return <Start />;
     case 'pause':
@@ -39,8 +39,8 @@ const Button = (props: ButtonProps): JSX.Element => {
   };
 
   return (
-    <StyledButton kind={ props.kind } onClick={ props.handleClick }>
-      { renderSwitch(props.kind) }
+    <StyledButton kind={ kind } onClick={ handleClick }>
+      { renderSwitch(kind) }
     </StyledButton>
   );
 };
