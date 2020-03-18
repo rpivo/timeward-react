@@ -59,7 +59,7 @@ const Timer: React.FC = (): JSX.Element => {
   const stopTimer = (): void => {
     dispatch({
       payload: state.totalSeconds,
-      type: 'button clicked',
+      type: 'stop',
     });
     setState({
       buttonType: 'start',

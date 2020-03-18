@@ -10,7 +10,7 @@ import Timesheet from '@components/Timesheet';
 import StyledDashboard from '@styles/pages/Dashboard.styled';
 
 type Action = {
-  type: 'button clicked';
+  type: 'stop';
   payload: number;
 };
 type Store = {
@@ -31,7 +31,7 @@ const Dashboard: React.FC = (): JSX.Element => {
 
   const reducer = (state: Store, action: Action): Store => {
     switch (action.type) {
-    case 'button clicked':
+    case 'stop':
       return [
         ...state,
         {
