@@ -22,7 +22,8 @@ Sprint 9 / March 28, 2020
 - added label to records.
 - added tests for Dashboard page.
 - added React.FC typing to all functional components.
-- updated action name button clicked to stop in dashboard component.
+- updated action name button clicked to stop in Dashboard component.
+- updated Timesheet textbox to become empty when Timer's stop button is clicked.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020

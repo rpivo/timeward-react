@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useRef } from 'react';
+import React, { createContext, useEffect, useReducer, useRef } from 'react';
 import Alignment from '@components/Alignment';
 import Graph from '@components/Graph';
 import PieChart from '@components/PieChart';
@@ -35,7 +35,7 @@ const Dashboard: React.FC = (): JSX.Element => {
       return [
         ...state,
         {
-          label: ref?.current?.value,
+          label: ref.current!.value,
           seconds: action.payload,
         },
       ];
@@ -51,6 +51,10 @@ const Dashboard: React.FC = (): JSX.Element => {
     },
   ];
   const [store, dispatch] = useReducer(reducer, dashboardStore);
+
+  useEffect((): void => {
+    ref.current!.value = '';
+  }, [store]);
 
   const handleBlur = (): void => console.log(ref?.current?.value);
 
