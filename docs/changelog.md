@@ -33,6 +33,7 @@ Sprint 9 / March 28, 2020
 - updated Login page to pass in placeholder and password props to Form.Input components.
 - updated global background color.
 - updated Form styles.
+- added recordCount prop to Timeline Day components to pass in and display the number of records recorded for the day.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020

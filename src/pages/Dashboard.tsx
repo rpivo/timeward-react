@@ -82,7 +82,7 @@ const Dashboard: React.FC = (): JSX.Element => {
       <PieChart />
       <Tile width='full'>
         <Timeline>
-          <Timeline.Day day={0} />
+          <Timeline.Day day={0} recordCount={ store.length } />
           <Timeline.Day day={1} />
           <Timeline.Day day={2} />
           <Timeline.Day day={3} />
