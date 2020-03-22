@@ -73,7 +73,7 @@ const Timer: React.FC = (): JSX.Element => {
 
   const MemoizedButton = memo(({ kind, handleClick }: ButtonProps) => {
     MemoizedButton.displayName = 'MemoizedButton';
-    return <Button kind={ props.kind } handleClick={ props.handleClick } />;
+    return <Button kind={ kind } handleClick={ handleClick } />;
   });
 
   return (
