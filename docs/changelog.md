@@ -11,7 +11,7 @@ Sprint 9 / March 28, 2020
 ### Updates
 
 - added .docz to .gitignore.
-- added frontmatter to changelog and sprints md files.
+- added frontmatter to changelog and sprints markdown files.
 - added docz package to begin documenting API of this project.
 - added Alignment.mdx and components.md files.
 - updated ESLint config.
@@ -31,6 +31,7 @@ Sprint 9 / March 28, 2020
 - updated Handleblur function in Dashboard component to check for `typeof` ref's value.
 - added RestoreAllMocks() as teardown after each test is run.
 - updated Input component in Form to accept placeholder and password props.
+- updated Login page to pass in placeholder and password props to Form.Input components.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
