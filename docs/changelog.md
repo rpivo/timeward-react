@@ -32,6 +32,7 @@ Sprint 9 / March 28, 2020
 - added RestoreAllMocks() as teardown after each test is run.
 - updated Input component in Form to accept placeholder and password props.
 - updated Login page to pass in placeholder and password props to Form.Input components.
+- updated global background color.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
