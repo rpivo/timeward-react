@@ -3,9 +3,15 @@ import { StyledForm } from '@styles/components/Form.styled';
 
 type FormProps = { children: React.ReactNode };
 
-type FormComposition = { Input: React.FC };
+type FormComposition = { Input: React.FC<InputProps> };
 
-const Input: React.FC = (): JSX.Element => <input type="text" />;
+type InputProps = {
+  password?: boolean;
+  placeholder: string;
+};
+
+const Input: React.FC<InputProps> = ({ password, placeholder }: InputProps): JSX.Element =>
+  <input type={ password ? `password` : 'text' } placeholder={ placeholder } />;
 
 const Form: React.FC<FormProps> & FormComposition = ({ children }: FormProps): JSX.Element =>
   <StyledForm>

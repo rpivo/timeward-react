@@ -30,6 +30,7 @@ Sprint 9 / March 28, 2020
 - moved default case underneath 'stop' case in Dashboard reducer.
 - updated Handleblur function in Dashboard component to check for `typeof` ref's value.
 - added RestoreAllMocks() as teardown after each test is run.
+- updated Input component in Form to accept placeholder and password props.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
