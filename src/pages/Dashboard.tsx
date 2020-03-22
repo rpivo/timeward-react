@@ -40,6 +40,7 @@ const Dashboard: React.FC = (): JSX.Element => {
   const reducer = (state: DashboardStore, action: DashboardAction): DashboardStore => {
     switch (action.type) {
     case 'stop':
+    default:
       return [
         ...state,
         {
