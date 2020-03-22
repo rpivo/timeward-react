@@ -24,6 +24,7 @@ Sprint 9 / March 28, 2020
 - added React.FC typing to all functional components.
 - updated action name button clicked to stop in Dashboard component.
 - updated Timesheet textbox to become empty when Timer's stop button is clicked.
+- updated incoming props to be come in destructured in some places.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
