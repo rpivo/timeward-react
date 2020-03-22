@@ -6,16 +6,18 @@ exports[`Login render should render correctly 1`] = `
 >
   <div>
     <form
-      className="sc-AxirZ nBVHB"
+      className="sc-AxirZ kyogvO"
     >
       <label>
         LOGIN
       </label>
       <input
+        placeholder="Email Address"
         type="text"
       />
       <input
-        type="text"
+        placeholder="Password"
+        type="password"
       />
       <input
         type="submit"
