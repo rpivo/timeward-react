@@ -9,18 +9,26 @@ import Timer from '@components/Timer';
 import Timesheet from '@components/Timesheet';
 import StyledDashboard from '@styles/pages/Dashboard.styled';
 
-type Action = {
+type DashboardAction = {
   type: 'stop';
   payload: number;
 };
-type Store = {
+
+type DashboardStore = {
   label: string | undefined;
   seconds: number;
 }[];
 
+const initialDashboardStore: DashboardStore = [
+  {
+    label: '',
+    seconds: 0,
+  },
+];
+
 type DashboardContextType = {
-  dispatch: React.Dispatch<Action>;
-  store: Store;
+  dispatch: React.Dispatch<DashboardAction>;
+  store: DashboardStore;
 }
 
 export const DashboardContext = createContext({} as DashboardContextType);
@@ -29,7 +37,7 @@ const Dashboard: React.FC = (): JSX.Element => {
 
   const ref = useRef<HTMLInputElement>(null);
 
-  const reducer = (state: Store, action: Action): Store => {
+  const reducer = (state: DashboardStore, action: DashboardAction): DashboardStore => {
     switch (action.type) {
     case 'stop':
       return [
@@ -44,13 +52,7 @@ const Dashboard: React.FC = (): JSX.Element => {
     }
   };
 
-  const dashboardStore = [
-    {
-      label: '',
-      seconds: 0,
-    },
-  ];
-  const [store, dispatch] = useReducer(reducer, dashboardStore);
+  const [store, dispatch] = useReducer(reducer, initialDashboardStore);
 
   useEffect((): void => {
     ref.current!.value = '';
