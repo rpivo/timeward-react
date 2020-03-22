@@ -7,6 +7,10 @@ import Button from '@components/Button';
 
 describe('Timer', () => {
 
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   describe('render', () => {
     const wrapper = mount(<Timer />);
     const timer = wrapper.find(Timer);

@@ -4,6 +4,10 @@ import Button from '@components/Button';
 
 describe('Button', () => {
 
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   const button = <Button kind='pause' handleClick={ (): null => null }/>;
 
   describe('render', () => {

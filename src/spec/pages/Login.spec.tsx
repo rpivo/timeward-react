@@ -3,6 +3,11 @@ import renderer from 'react-test-renderer';
 import Login from '@pages/Login';
 
 describe('Login', () => {
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   describe('render', () => {
     const testRenderer = renderer.create(<Login />);
 

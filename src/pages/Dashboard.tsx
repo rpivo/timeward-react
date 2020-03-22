@@ -48,8 +48,6 @@ const Dashboard: React.FC = (): JSX.Element => {
           seconds: action.payload,
         },
       ];
-    default:
-      return state;
     }
   };
 

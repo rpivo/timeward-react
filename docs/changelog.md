@@ -29,6 +29,7 @@ Sprint 9 / March 28, 2020
 - updated naming conventions for Dashboard state store.
 - moved default case underneath 'stop' case in Dashboard reducer.
 - updated Handleblur function in Dashboard component to check for `typeof` ref's value.
+- added RestoreAllMocks() as teardown after each test is run.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020

@@ -13,6 +13,10 @@ import Timesheet from '@components/Timesheet';
 
 describe('Login', () => {
 
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   describe('render', () => {
     const wrapper = mount(<Dashboard />);
     const dashboard = wrapper.find(Dashboard);
