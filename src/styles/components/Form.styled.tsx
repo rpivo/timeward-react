@@ -15,14 +15,16 @@ export const StyledForm = styled.form`
     margin-top: 10px;
     margin-bottom: 15px;
     border: 0;
+    font-weight: 300;
+    min-width: 250px;
   }
 
-  input[type=text] {
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.22), inset 0 -1px 2px rgba(0,0,0,0.22);
-    font-size: 1.4rem;
+  input[type=text], input[type=password] {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.25), inset 0 -1px 2px rgba(0,0,0,0.25);
+    font-size: 1.3rem;
 
     :focus {
-      background: #AFC;
+      background: #CFFFDD;
     }
   }
 
