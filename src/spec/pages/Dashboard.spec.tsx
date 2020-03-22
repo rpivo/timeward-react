@@ -1,8 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import Dashboard from '@pages/Dashboard';
 import Alignment from '@components/Alignment';
+import Button from '@components/Button';
 import Graph from '@components/Graph';
 import PieChart from '@components/PieChart';
 import Section from '@components/Section';
@@ -11,7 +13,7 @@ import Timeline from '@components/Timeline';
 import Timer from '@components/Timer';
 import Timesheet from '@components/Timesheet';
 
-describe('Login', () => {
+describe('Dashboard', () => {
 
   afterEach(() => {
     jest.restoreAllMocks();
@@ -70,16 +72,22 @@ describe('Login', () => {
   });
 
   describe('timesheet input', () => {
-    const wrapper = mount(<Dashboard />);
-    const dashboard = wrapper.find(Dashboard);
-    const input = dashboard.find('input');
+    it('should be set to empty string when stop button is clicked', () => {
+      const wrapper = mount(<Dashboard />);
+      wrapper.find('input').props().value = 'hello';
+
+      act(() => wrapper.find(Button).at(1).props().handleClick());
+      wrapper.update();
+
+      // todo: add expect here once ref undefined issue is solved
+    });
 
     it('should call console.log when the inputs onBlur is invoked', () => {
+      const wrapper = mount(<Dashboard />);
       console.log = jest.fn();
+      act(() => wrapper.find('input').prop('onBlur')!({} as never));
 
-      input.simulate('blur');
-
-      expect(console.log).toHaveBeenCalledWith('');
+      expect(console.log).toHaveBeenCalledWith('string');
     });
   });
 
