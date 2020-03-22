@@ -67,7 +67,7 @@ const Dashboard: React.FC = (): JSX.Element => {
         <DashboardContext.Provider value={{ dispatch, store }}>
           <Tile>
             <Alignment horizontal>
-              <input ref={ref} type='text' onBlur={(): void => handleBlur()}></input>
+              <input ref={ ref } type='text' onBlur={ handleBlur }></input>
             </Alignment>
             <Alignment horizontal>
               <Timer />
