@@ -79,8 +79,8 @@ const Timer: React.FC = (): JSX.Element => {
   return (
     <StyledTimer>
       <span>{ constructStringFromSeconds() }</span>
-      <MemoizedButton kind={state.buttonType} handleClick={ (): void => toggleTimer() } />
-      <MemoizedButton kind='stop' handleClick={ (): void => stopTimer() } />
+      <MemoizedButton kind={state.buttonType} handleClick={ toggleTimer } />
+      <MemoizedButton kind='stop' handleClick={ stopTimer } />
     </StyledTimer>
   );
 };
