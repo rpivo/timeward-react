@@ -59,7 +59,7 @@ const Dashboard: React.FC = (): JSX.Element => {
     ref.current!.value = '';
   }, [store]);
 
-  const handleBlur = (): void => console.log(ref?.current?.value);
+  const handleBlur = (): void => console.log(typeof ref.current!.value);
 
   return (
     <StyledDashboard>
