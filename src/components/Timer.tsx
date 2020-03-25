@@ -10,21 +10,20 @@ const Timer: React.FC = (): JSX.Element => {
     clockHours: 0,
     clockMinutes: 0,
     clockSeconds: 0,
-    timeInterval: false,
+    interval: 0,
+    isIntervalSet: false,
     totalSeconds: 0,
   });
 
   useEffect(() => {
-    let interval: number | undefined;
-    if (state.timeInterval) {
-      interval = setInterval(() => {
+    if (state.isIntervalSet) {
+      state.interval = setInterval(() => {
         setState(prevState => ({ ...prevState, totalSeconds: prevState.totalSeconds + 1 }));
       }, 1000);
-    } else if (!state.timeInterval) {
-      clearInterval(interval);
+    } else if (!state.isIntervalSet) {
+      clearInterval(state.interval);
     }
-    return (): void => clearInterval(interval);
-  }, [state.timeInterval, state.totalSeconds]);
+  }, [state.isIntervalSet]);
 
   const convertNumberToPaddedString = (num: number | string): string => {
     num = num.toString();
@@ -50,10 +49,10 @@ const Timer: React.FC = (): JSX.Element => {
 
   const toggleTimer = (): void => {
     if (state.buttonType === 'start') {
-      setState(prevState => ({ ...prevState, buttonType: 'pause', timeInterval: true }));
+      setState(prevState => ({ ...prevState, buttonType: 'pause', isIntervalSet: true }));
       return;
     }
-    setState(prevState => ({ ...prevState, buttonType: 'start', timeInterval: false }));
+    setState(prevState => ({ ...prevState, buttonType: 'start', isIntervalSet: false }));
   };
 
   const stopTimer = (): void => {
@@ -61,14 +60,15 @@ const Timer: React.FC = (): JSX.Element => {
       payload: state.totalSeconds,
       type: 'stop',
     });
-    setState({
+    setState(prevState => ({
+      ...prevState,
       buttonType: 'start',
       clockHours: 0,
       clockMinutes: 0,
       clockSeconds: 0,
-      timeInterval: false,
+      isIntervalSet: false,
       totalSeconds: 0,
-    });
+    }));
   };
 
   const MemoizedButton = memo(({ kind, handleClick }: ButtonProps) => {
