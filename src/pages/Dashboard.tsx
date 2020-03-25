@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer, useRef } from 'react';
+import React, { createContext, useEffect, useReducer, useRef, useState } from 'react';
 import Alignment from '@components/Alignment';
 import Graph from '@components/Graph';
 import PieChart from '@components/PieChart';
@@ -34,7 +34,7 @@ type DashboardContextType = {
 export const DashboardContext = createContext({} as DashboardContextType);
 
 const Dashboard: React.FC = (): JSX.Element => {
-
+  const [inputValue, setInputValue] = useState('');
   const ref = useRef<HTMLInputElement>(null);
 
   const reducer = (state: DashboardStore, action: DashboardAction): DashboardStore => {
@@ -53,11 +53,10 @@ const Dashboard: React.FC = (): JSX.Element => {
 
   const [store, dispatch] = useReducer(reducer, initialDashboardStore);
 
-  useEffect((): void => {
-    ref.current!.value = '';
-  }, [store]);
+  useEffect((): void => setInputValue(''), [store]);
 
-  const handleBlur = (): void => console.log(typeof ref.current!.value);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void =>
+    setInputValue(event.target.value);
 
   return (
     <StyledDashboard>
@@ -65,7 +64,7 @@ const Dashboard: React.FC = (): JSX.Element => {
         <DashboardContext.Provider value={{ dispatch, store }}>
           <Tile>
             <Alignment horizontal>
-              <input ref={ ref } type='text' onBlur={ handleBlur }></input>
+              <input onChange={ handleChange } ref={ ref } type='text' value={ inputValue } />
             </Alignment>
             <Alignment horizontal>
               <Timer />
