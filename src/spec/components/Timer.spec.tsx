@@ -45,16 +45,23 @@ describe('Timer', () => {
   });
 
   describe('pause', () => {
-    const wrapper = mount(<Timer />);
-    const timer = wrapper.find(Timer);
-    const startButton = timer.find(Button).at(0);
-
-    it('should pause after the start button is clicked', () => {
-      act(() => startButton.props().handleClick());
+    it('should show the pause button after the start button is clicked', () => {
+      const wrapper = mount(<Timer />);
+      act(() => wrapper.find(Button).at(0).props().handleClick());
       wrapper.update();
 
-      const updatedTimer = wrapper.find(Timer);
-      expect(updatedTimer.find(Button).at(0).prop('kind')).toBe('pause');
+      expect(wrapper.find(Button).at(0).prop('kind')).toBe('pause');
+    });
+
+
+    it('should show the start button after the pause button is clicked', () => {
+      const wrapper = mount(<Timer />);
+      act(() => wrapper.find(Button).at(0).props().handleClick());
+      wrapper.update();
+      act(() => wrapper.find(Button).at(0).props().handleClick());
+      wrapper.update();
+
+      expect(wrapper.find(Button).at(0).prop('kind')).toBe('start');
     });
   });
 
