@@ -72,22 +72,9 @@ describe('Dashboard', () => {
   });
 
   describe('timesheet input', () => {
-    it('should be set to empty string when stop button is clicked', () => {
+    it('should initially be set to an empty string', () => {
       const wrapper = mount(<Dashboard />);
-      wrapper.find('input').props().value = 'hello';
-
-      act(() => wrapper.find(Button).at(1).props().handleClick());
-      wrapper.update();
-
-      // todo: add expect here once ref undefined issue is solved
-    });
-
-    it('should call console.log when the inputs onBlur is invoked', () => {
-      const wrapper = mount(<Dashboard />);
-      console.log = jest.fn();
-      act(() => wrapper.find('input').prop('onBlur')!({} as never));
-
-      expect(console.log).toHaveBeenCalledWith('string');
+      expect(wrapper.find('input').props().value).toBe('');
     });
   });
 

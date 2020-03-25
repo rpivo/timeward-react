@@ -15,8 +15,9 @@ exports[`Dashboard render should render correctly 1`] = `
       >
         <div>
           <input
-            onBlur={[Function]}
+            onChange={[Function]}
             type="text"
+            value=""
           />
         </div>
       </div>
@@ -100,9 +101,21 @@ exports[`Dashboard render should render correctly 1`] = `
       <div
         className="day"
       >
-        3/22/2020
+        3/24/2020
         <br />
         1
+      </div>
+      <div
+        className="day"
+      >
+        3/23/2020
+        <br />
+      </div>
+      <div
+        className="day"
+      >
+        3/22/2020
+        <br />
       </div>
       <div
         className="day"
@@ -126,18 +139,6 @@ exports[`Dashboard render should render correctly 1`] = `
         className="day"
       >
         3/18/2020
-        <br />
-      </div>
-      <div
-        className="day"
-      >
-        3/17/2020
-        <br />
-      </div>
-      <div
-        className="day"
-      >
-        3/16/2020
         <br />
       </div>
     </div>
