@@ -23,6 +23,7 @@ const Timer: React.FC = (): JSX.Element => {
     } else if (!state.isIntervalSet) {
       clearInterval(state.interval);
     }
+    return (): void => clearInterval(state.interval);
   }, [state.isIntervalSet]);
 
   const convertNumberToPaddedString = (num: number | string): string => {
