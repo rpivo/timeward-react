@@ -16,6 +16,7 @@ exports[`Login render should render correctly 1`] = `
         type="text"
       />
       <input
+        autoComplete="on"
         placeholder="Password"
         type="password"
       />
