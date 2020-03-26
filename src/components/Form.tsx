@@ -11,7 +11,11 @@ type InputProps = {
 };
 
 const Input: React.FC<InputProps> = ({ password, placeholder }: InputProps): JSX.Element =>
-  <input type={ password ? `password` : 'text' } placeholder={ placeholder } />;
+  <input
+    autoComplete={ password ? 'on' : undefined }
+    placeholder={ placeholder }
+    type={ password ? 'password' : 'text' }
+  />;
 
 const Form: React.FC<FormProps> & FormComposition = ({ children }: FormProps): JSX.Element =>
   <StyledForm>
