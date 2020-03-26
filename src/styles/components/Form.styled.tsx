@@ -6,11 +6,12 @@ export const StyledForm = styled.form`
 
   label {
     color: ${(props): string => props.theme.primary};
+    letter-spacing: 1px;
   }
 
   input {
-    display: block;
     border-radius: 3px;
+    display: block;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -29,13 +30,20 @@ export const StyledForm = styled.form`
   }
 
   input[type=submit] {
-    width: 100%;
-    cursor: pointer;
+    background: linear-gradient(180deg, #3498DB 0%, #1468AB 100%);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.44);
-    font-weight: bold;
+    cursor: pointer;
     color: white;
-    background: #5A8;
+    font-weight: bold;
+    letter-spacing: 1px;
     line-height: 1.75rem;
     font-size: 0.85rem;
+    width: 100%;
+    position: relative;
+    transition: all 0.5s;
+
+    :hover {
+      background: linear-gradient(0deg, #386 0%, rgba(95,180,146,1) 100%);
+    }
   }
 `;

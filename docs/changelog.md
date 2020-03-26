@@ -37,6 +37,7 @@ Sprint 9 / March 28, 2020
 - updated input element on Dashboard page to be a controlled component.
 - refactored and simplified Timer's `useEffect` / `setInterval` logic.
 - added conditional autocomplete prop to Form Inputs in the event that the Input is of type password.
+- updated styles for Form submit button.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
