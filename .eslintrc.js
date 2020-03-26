@@ -37,6 +37,7 @@ module.exports = {
     "no-inline-comments": 0,
     "no-magic-numbers": 0,
     "no-param-reassign": 0,
+    "no-undefined": 0,
     "no-ternary": 0,
     "no-underscore-dangle": 0,
     "no-warning-comments": 0,
