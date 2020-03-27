@@ -106,7 +106,7 @@ exports[`App should render correctly 1`] = `
             <div
               className="sc-AxmLO biSLxw"
             >
-              0
+              00:00:00
                / 
               
             </div>
