@@ -19,6 +19,7 @@ module.exports = {
     "dot-location": 0,
     "dot-notation": 0,
     "function-call-argument-newline": 0,
+    "function-paren-newline": 0,
     "global-require": 0,
     "init-declarations": 0,
     "jsx-quotes": 0,
