@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { DashboardContext } from '@pages/Dashboard';
+import { constructStringFromSeconds } from '@utilities/time';
 import { StyledTimesheet, StyledRecord } from '@styles/components/Timesheet.styled';
 
 type TimesheetProps = { children: React.ReactNode };
@@ -11,7 +12,10 @@ const Record: React.FC = (): JSX.Element => {
   return (
     <>
       {store.map((record, index) =>
-        <StyledRecord key={index}>{record.seconds} / {record.label}</StyledRecord>)}
+        <StyledRecord key={index}>
+          { constructStringFromSeconds(record.seconds) } / {record.label}
+        </StyledRecord>
+      )}
     </>
   );
 };
