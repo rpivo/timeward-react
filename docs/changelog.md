@@ -38,6 +38,7 @@ Sprint 9 / March 28, 2020
 - refactored and simplified Timer's `useEffect` / `setInterval` logic.
 - added conditional autocomplete prop to Form Inputs in the event that the Input is of type password.
 - updated styles for Form submit button.
+- renamed buttonPaths utitilies file to svg.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
