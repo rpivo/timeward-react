@@ -1,7 +1,10 @@
 import React from 'react';
 import { StyledForm } from '@styles/components/Form.styled';
 
-type FormProps = { children: React.ReactNode };
+type FormProps = {
+  children: React.ReactNode;
+  onSubmit: () => void;
+};
 
 type FormComposition = { Input: React.FC<InputProps> };
 
@@ -17,12 +20,13 @@ const Input: React.FC<InputProps> = ({ password, placeholder }: InputProps): JSX
     type={ password ? 'password' : 'text' }
   />;
 
-const Form: React.FC<FormProps> & FormComposition = ({ children }: FormProps): JSX.Element =>
-  <StyledForm>
-    <label>LOGIN</label>
-    { children }
-    <input type="submit" value="SUBMIT" />
-  </StyledForm>;
+const Form: React.FC<FormProps> & FormComposition =
+  ({ children, onSubmit }: FormProps): JSX.Element =>
+    <StyledForm>
+      <label>LOGIN</label>
+      { children }
+      <input onClick={ onSubmit } type="submit" value="SUBMIT" />
+    </StyledForm>;
 
 Form.Input = Input;
 
