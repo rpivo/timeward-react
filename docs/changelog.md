@@ -45,6 +45,7 @@ Sprint 9 / March 28, 2020
 - added amazon-cognito-identity-js and aws-sdk packages.
 - added onSubmit prop to Form submit input.
 - added onChange prop to Form Inputs.
+- added AWS Cognito newPasswordRequired, onSuccess, and onFailure authentication flows to Login page.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
