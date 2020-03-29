@@ -42,6 +42,7 @@ Sprint 9 / March 28, 2020
 - added time.ts utilities file.
 - added constructStringFromSeconds utility function.
 - updated Timesheet records to use utilities' constructStringFromSeconds function to display records as time strings.
+- added amazon-cognito-identity-js and aws-sdk packages.
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
