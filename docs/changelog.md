@@ -5,8 +5,19 @@ route: /changelog
 
 # changelog
 
+## Release 0.10.0
+Sprint 10 / April 12, 2020
+
+### Updates
+
+<hr />
+
 ## Release 0.9.0
-Sprint 9 / March 28, 2020
+Sprint 9 / March 29, 2020
+
+### 0 bug, 0 documentation, 11 feature, and 6 question issues were closed (17 total)
+
+Added docz package for documentation. Routed up initial authentication flow for AWS Cognito, handling `onSuccess`, `onFailure`, and `newPasswordRequired` possibilities. The Login page now receives JWT tokens on successful login. Added a text label that can be set for each individual time record. Added React.FC typing to all functional components. Doubled the number of tests, and generally improved testing. Set up individual Days in Timeline to display the total number of records. Set up form components to be controlled components. Added `time.ts` utility file to hold global time-based functions.
 
 ### Updates
 
@@ -38,7 +49,7 @@ Sprint 9 / March 28, 2020
 - refactored and simplified Timer's `useEffect` / `setInterval` logic.
 - added conditional autocomplete prop to Form Inputs in the event that the Input is of type password.
 - updated styles for Form submit button.
-- renamed buttonPaths utitilies file to svg.
+- renamed buttonPaths utilities file to svg.
 - added time.ts utilities file.
 - added constructStringFromSeconds utility function.
 - updated Timesheet records to use utilities' constructStringFromSeconds function to display records as time strings.
@@ -46,6 +57,8 @@ Sprint 9 / March 28, 2020
 - added onSubmit prop to Form submit input.
 - added onChange prop to Form Inputs.
 - added AWS Cognito newPasswordRequired, onSuccess, and onFailure authentication flows to Login page.
+
+<hr />
 
 ## Release 0.8.0
 Sprint 8 / March 14, 2020
@@ -81,6 +94,8 @@ Implemented first uses of memoization in the app, specifically in the way button
 - added Section component to create flexbox rows on pages.
 - added margin to Tile components.
 - updated packages.
+
+<hr />
 
 ## Release 0.7.0
 Sprint 7 / February 29, 2020
@@ -120,6 +135,8 @@ Made a variety of styling improvements, including improved global and theme styl
 - converted remaining class components to function components.
 - added Graph component and utilized type definition React.FC for this component.
 
+<hr />
+
 ## Release 0.6.0
 Sprint 6 / February 15, 2020
 
@@ -148,6 +165,8 @@ Added login page, and installed React Router to handle multiple routes. Created 
 - uninstalled webpack-merge due to typing issues.
 - updated webpack env files to work without the use of webpack-merge.
 - deleted webpack.common.ts.
+
+<hr />
 
 ## Release 0.5.0
 Sprint 5 / February 1, 2020
@@ -184,6 +203,8 @@ Added all basic functionality to the Timer component, which is now able to start
 - wrapped timer component in tile component.
 - added site-wide font styles.
 - updated readme and linked changelog to it.
+
+<hr />
 
 ## Release 0.4.0
 Sprint 4 / January 16, 2020
@@ -222,6 +243,8 @@ Improved the Webpack configuration with a number of changes, including splitting
 - added styles folder to moduleNameMapper in package.json so that Jest knows where to find style files.
 - wrapped App component in styled-components ThemeProvider and passed it custom theme.
 
+<hr />
+
 ## Release 0.3.0
 Sprint 3 / January 2, 2020
 
@@ -250,6 +273,8 @@ Restructured overall `src` folder structure. Added Timer and Button components. 
 - added sprints markdown file to the docs folder, outlining how the project is iterated upon from one sprint to the next.
 - route up props and state to Timer and Button components.
 
+<hr />
+
 ## Release 0.2.0
 Sprint 2 / December 19, 2019
 
@@ -271,6 +296,8 @@ Improved and extended TypeScript integration. Added Jest config and the first te
 - added start script.
 - added webpack-dev-server config in webpack config, allowing for webpack-dev-server to work and hot reload.
 - added noImplicitReturns to tsconfig.
+
+<hr />
 
 ## Release 0.1.0
 Sprint 1 / December 1, 2019

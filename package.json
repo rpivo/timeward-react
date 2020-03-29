@@ -1,6 +1,6 @@
 {
   "name": "timeward",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "productivity for perfectionists",
   "main": "index.js",
   "repository": "git@github.com:rpivo/timeward.git",
