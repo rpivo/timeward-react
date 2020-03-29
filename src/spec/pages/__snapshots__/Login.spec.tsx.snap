@@ -12,15 +12,18 @@ exports[`Login render should render correctly 1`] = `
         LOGIN
       </label>
       <input
+        onChange={[Function]}
         placeholder="Email Address"
         type="text"
       />
       <input
         autoComplete="on"
+        onChange={[Function]}
         placeholder="Password"
         type="password"
       />
       <input
+        onClick={[Function]}
         type="submit"
         value="SUBMIT"
       />
