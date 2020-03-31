@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useReducer, useRef, useState } from 'react';
+import { constructStringFromSeconds } from '@utilities/time';
 import Alignment from '@components/Alignment';
 import Graph from '@components/Graph';
 import PieChart from '@components/PieChart';
@@ -35,6 +36,8 @@ export const DashboardContext = createContext({} as DashboardContextType);
 
 const Dashboard: React.FC = (): JSX.Element => {
   const [inputValue, setInputValue] = useState('');
+  const [totalSeconds, setTotalSeconds] = useState(0);
+
   const ref = useRef<HTMLInputElement>(null);
 
   const reducer = (state: DashboardStore, action: DashboardAction): DashboardStore => {
@@ -53,7 +56,10 @@ const Dashboard: React.FC = (): JSX.Element => {
 
   const [store, dispatch] = useReducer(reducer, initialDashboardStore);
 
-  useEffect((): void => setInputValue(''), [store]);
+  useEffect((): void => {
+    setTotalSeconds(prevState => prevState + store.slice(-1)[0].seconds);
+    setInputValue('');
+  }, [store]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void =>
     setInputValue(event.target.value);
@@ -71,6 +77,7 @@ const Dashboard: React.FC = (): JSX.Element => {
             </Alignment>
             <Timesheet>
               <Timesheet.Record />
+              <div>Today: { constructStringFromSeconds(totalSeconds) }</div>
             </Timesheet>
           </Tile>
         </DashboardContext.Provider>
