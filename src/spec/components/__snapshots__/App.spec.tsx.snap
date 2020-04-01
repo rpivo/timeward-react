@@ -62,7 +62,6 @@ exports[`App should render correctly 1`] = `
               >
                 <span>
                   00:00:00
-    
                 </span>
                 <div
                   className="sc-AxheI jGfEct"
