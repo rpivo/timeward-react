@@ -16,4 +16,12 @@ Timeward is designed to be a failsafe for these moments.
 
 ### Toolchain
 
-Timeward is built with **React** for the front-end, **TypeScript** for added language strictness, **Jest** and **Enzyme** for testing, **Webpack** for bundling, **ESLint** for linting, **styled-components** for styles, **Docz** for documentation, and Amazon Cognito to manage auth flow.
+Timeward is built with:
+- **React** for the front-end
+- **TypeScript** for added language strictness
+- **Amazon Cognito** to manage auth flow.
+- **Jest** and **Enzyme** for testing
+- **Webpack** for bundling
+- **ESLint** for linting
+- **styled-components** for styles
+- **Docz** for documentation
