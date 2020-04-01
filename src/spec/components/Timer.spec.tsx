@@ -44,6 +44,26 @@ describe('Timer', () => {
     });
   });
 
+  describe('span / constructStringFromSeconds', () => {
+    const wrapper = mount(<Timer />);
+
+    it('should initially display 00:00:00', () => {
+      expect(wrapper.find('span').text()).toBe(`00:00:00`);
+    });
+
+    it('should display 00:00:01 after 1 second', () => {
+      jest.useFakeTimers();
+      act(() => wrapper.find(Button).at(0).props().handleClick());
+      wrapper.update();
+      act(() => {
+        jest.advanceTimersByTime(1000);
+      });
+      wrapper.update();
+
+      expect(wrapper.find('span').text()).toBe(`00:00:01`);
+    });
+  });
+
   describe('pause', () => {
     it('should show the pause button after the start button is clicked', () => {
       const wrapper = mount(<Timer />);

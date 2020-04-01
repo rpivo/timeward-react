@@ -12,6 +12,7 @@ Sprint 10 / April 12, 2020
 
 - added total daily time to Dashboard.
 - updated readme.
+- added tests for Timer.
 
 <hr />
 

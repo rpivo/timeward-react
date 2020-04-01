@@ -44,8 +44,7 @@ const Timer: React.FC = (): JSX.Element => {
     return (`${
       convertNumberToPaddedString(state.clockHours)}:${
       convertNumberToPaddedString(state.clockMinutes)}:${
-      convertNumberToPaddedString(state.clockSeconds)}
-    `);
+      convertNumberToPaddedString(state.clockSeconds)}`);
   };
 
   const toggleTimer = (): void => {
