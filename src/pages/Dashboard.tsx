@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useReducer, useRef, useState } from 'react';
 import { constructStringFromSeconds } from '@utilities/time';
 import Alignment from '@components/Alignment';
+import Input from '@components/Input';
 import Graph from '@components/Graph';
 import PieChart from '@components/PieChart';
 import Section from '@components/Section';
@@ -70,7 +71,7 @@ const Dashboard: React.FC = (): JSX.Element => {
         <DashboardContext.Provider value={{ dispatch, store }}>
           <Tile>
             <Alignment horizontal>
-              <input onChange={ handleChange } ref={ ref } type='text' value={ inputValue } />
+              <Input onChange={ handleChange } ref={ ref } value={ inputValue } />
             </Alignment>
             <Alignment horizontal>
               <Timer />

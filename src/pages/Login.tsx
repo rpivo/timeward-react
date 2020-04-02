@@ -3,6 +3,7 @@ import AWS from 'aws-sdk/global';
 import { AuthenticationDetails, CognitoUserPool, CognitoUser } from 'amazon-cognito-identity-js';
 import Alignment from '@components/Alignment';
 import Form from '@components/Form';
+import Input from '@components/Input';
 
 const Login: React.FC = (): JSX.Element => {
   const [state, setState] = useState({ email: '', password: '' });
@@ -86,8 +87,8 @@ const Login: React.FC = (): JSX.Element => {
   return (
     <Alignment vertical horizontal>
       <Form onSubmit={ login } >
-        <Form.Input onChange={ handleChange('email') } placeholder='Email Address' />
-        <Form.Input onChange={ handleChange('password') } placeholder='Password' password />
+        <Input onChange={ handleChange('email') } placeholder='Email Address' />
+        <Input onChange={ handleChange('password') } placeholder='Password' password />
       </Form>
     </Alignment>
   );

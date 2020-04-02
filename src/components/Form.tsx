@@ -1,4 +1,5 @@
 import React from 'react';
+import { InputProps } from '@components/Input';
 import { StyledForm } from '@styles/components/Form.styled';
 
 type FormProps = {
@@ -6,22 +7,7 @@ type FormProps = {
   onSubmit: () => void;
 };
 
-type FormComposition = { Input: React.FC<InputProps> };
-
-type InputProps = {
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  password?: boolean;
-  placeholder: string;
-};
-
-const Input: React.FC<InputProps> =
-  ({ onChange, password, placeholder }: InputProps): JSX.Element =>
-    <input
-      onChange={ onChange }
-      autoComplete={ password ? 'on' : undefined }
-      placeholder={ placeholder }
-      type={ password ? 'password' : 'text' }
-    />;
+type FormComposition = { Input?: React.FC<InputProps> };
 
 const Form: React.FC<FormProps> & FormComposition =
   ({ children, onSubmit }: FormProps): JSX.Element =>
@@ -30,7 +16,5 @@ const Form: React.FC<FormProps> & FormComposition =
       { children }
       <input onClick={ onSubmit } type="submit" value="SUBMIT" />
     </StyledForm>;
-
-Form.Input = Input;
 
 export default Form;
