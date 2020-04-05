@@ -31,7 +31,7 @@ const Timer: React.FC = (): JSX.Element => {
     return num.length < 2 ? num.padStart(2, '0') : num;
   };
 
-  const constructStringFromSeconds = (): string => {
+  const getStringFromTimeUnits = (): string => {
     if (state.totalSeconds > 0 && state.totalSeconds % 60 === 0) {
       state.clockSeconds = 0;
       state.clockMinutes += 1;
@@ -78,7 +78,7 @@ const Timer: React.FC = (): JSX.Element => {
 
   return (
     <StyledTimer>
-      <span>{ constructStringFromSeconds() }</span>
+      <span>{ getStringFromTimeUnits() }</span>
       <MemoizedButton kind={state.buttonType} handleClick={ toggleTimer } />
       <MemoizedButton kind='stop' handleClick={ stopTimer } />
     </StyledTimer>
