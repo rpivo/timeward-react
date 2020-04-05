@@ -136,9 +136,33 @@ exports[`App should render correctly 1`] = `
           <div
             className="day"
           >
-            4/1/2020
+            4/5/2020
             <br />
             1
+          </div>
+          <div
+            className="day"
+          >
+            4/4/2020
+            <br />
+          </div>
+          <div
+            className="day"
+          >
+            4/3/2020
+            <br />
+          </div>
+          <div
+            className="day"
+          >
+            4/2/2020
+            <br />
+          </div>
+          <div
+            className="day"
+          >
+            4/1/2020
+            <br />
           </div>
           <div
             className="day"
@@ -150,30 +174,6 @@ exports[`App should render correctly 1`] = `
             className="day"
           >
             3/30/2020
-            <br />
-          </div>
-          <div
-            className="day"
-          >
-            3/29/2020
-            <br />
-          </div>
-          <div
-            className="day"
-          >
-            3/28/2020
-            <br />
-          </div>
-          <div
-            className="day"
-          >
-            3/27/2020
-            <br />
-          </div>
-          <div
-            className="day"
-          >
-            3/26/2020
             <br />
           </div>
         </div>
