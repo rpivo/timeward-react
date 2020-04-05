@@ -1,5 +1,4 @@
-import React, { createContext, useEffect, useReducer, useRef, useState } from 'react';
-import { constructStringFromSeconds } from '@utilities/time';
+import React, { createContext, useCallback, useEffect, useReducer, useRef, useState } from 'react';
 import Alignment from '@components/Alignment';
 import Input from '@components/Input';
 import Graph from '@components/Graph';
@@ -41,24 +40,37 @@ const Dashboard: React.FC = (): JSX.Element => {
 
   const ref = useRef<HTMLInputElement>(null);
 
-  const reducer = (state: DashboardStore, action: DashboardAction): DashboardStore => {
+  const getLabelIndex = (label: string, store: DashboardStore): number =>
+    store.findIndex(record => record.label === label);
+
+  const reducer = useCallback((state: DashboardStore, action: DashboardAction): DashboardStore => {
     switch (action.type) {
-    case 'stop':
-    default:
+    default: {
+      const refValue = ref.current!.value;
+      const labelIndex = getLabelIndex(refValue, state);
+      if (refValue && labelIndex !== -1) {
+        return state.map(record => {
+          if (record.label === refValue) {
+            record.seconds += action.payload;
+          }
+          return record;
+        });
+      }
       return [
         ...state,
         {
-          label: ref.current!.value,
+          label: refValue,
           seconds: action.payload,
         },
       ];
     }
-  };
+    }
+  }, []);
 
   const [store, dispatch] = useReducer(reducer, initialDashboardStore);
 
   useEffect((): void => {
-    setTotalSeconds(prevState => prevState + store.slice(-1)[0].seconds);
+    setTotalSeconds(store.reduce((acc, record) => acc + record.seconds, 0));
     setInputValue('');
   }, [store]);
 

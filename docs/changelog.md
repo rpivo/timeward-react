@@ -18,6 +18,7 @@ Sprint 10 / April 12, 2020
 - rename Time component's constructStringFromSeconds method to getStringFromTimeUnits.
 - refactored Timesheet and Record components, and improved how these components are rendered from the Dashboard.
 - moved constructStringFromSeconds from time.ts to Dashboard component and rename it getStringFromSeconds.
+- updated Dashboard reducer to check if a record already exists with the same label as the incoming payload. This stacks records with the same label into one displayed Record component.
 
 <hr />
 
