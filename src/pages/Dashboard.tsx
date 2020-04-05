@@ -62,6 +62,9 @@ const Dashboard: React.FC = (): JSX.Element => {
     setInputValue('');
   }, [store]);
 
+  const getStringFromSeconds = (seconds: number): string =>
+    new Date(seconds * 1000).toISOString().substr(11, 8);
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void =>
     setInputValue(event.target.value);
 
