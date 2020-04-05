@@ -77,7 +77,7 @@ const Dashboard: React.FC = (): JSX.Element => {
   const getStringFromSeconds = (seconds: number): string =>
     new Date(seconds * 1000).toISOString().substr(11, 8);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void =>
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void =>
     setInputValue(event.target.value);
 
   return (
@@ -86,7 +86,7 @@ const Dashboard: React.FC = (): JSX.Element => {
         <DashboardContext.Provider value={{ dispatch, store }}>
           <Tile>
             <Alignment horizontal>
-              <Input onChange={ handleChange } ref={ ref } value={ inputValue } />
+              <Input onChange={ handleInputChange } ref={ ref } value={ inputValue } />
             </Alignment>
             <Alignment horizontal>
               <Timer />

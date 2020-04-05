@@ -71,10 +71,26 @@ describe('Dashboard', () => {
     });
   });
 
-  describe('timesheet input', () => {
-    it('should initially be set to an empty string', () => {
-      const wrapper = mount(<Dashboard />);
-      expect(wrapper.find('input').props().value).toBe('');
+  describe('timesheet', () => {
+    describe('input', () => {
+      it('should initially be set to an empty string', () => {
+        const wrapper = mount(<Dashboard />);
+        expect(wrapper.find('input').props().value).toBe('');
+      });
+    });
+
+    describe('records', () => {
+      it('should initially have one record', () => {
+        const wrapper = mount(<Dashboard />);
+        expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(1);
+      });
+
+      it('should have two records when the Timer stop Button is clicked', () => {
+        const wrapper = mount(<Dashboard />);
+        act(() => wrapper.find(Timer).find(Button).at(1).props().handleClick());
+        wrapper.update();
+        expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(2);
+      });
     });
   });
 

@@ -44,7 +44,7 @@ describe('Timer', () => {
     });
   });
 
-  describe('span / constructStringFromSeconds', () => {
+  describe('span / getStringFromTimeUnits', () => {
     const wrapper = mount(<Timer />);
 
     it('should initially display 00:00:00', () => {
