@@ -16,6 +16,7 @@ Sprint 10 / April 12, 2020
 - made Form's Input a separate component.
 - removed time.ts utility file.
 - rename Time component's constructStringFromSeconds method to getStringFromTimeUnits.
+- refactored Timesheet and Record components, and improved how these components are rendered from the Dashboard.
 
 <hr />
 

@@ -1,28 +1,20 @@
-import React, { useContext } from 'react';
-import { DashboardContext } from '@pages/Dashboard';
-import { constructStringFromSeconds } from '@utilities/time';
+import React from 'react';
 import { StyledTimesheet, StyledRecord } from '@styles/components/Timesheet.styled';
+
+type RecordProps = {
+  label: string;
+  seconds: string;
+};
 
 type TimesheetProps = { children: React.ReactNode };
 
-type TimesheetComposition = { Record: React.FC };
+type TimesheetComposition = { Record: React.FC<RecordProps> };
 
-const Record: React.FC = (): JSX.Element => {
-  const { store } = useContext(DashboardContext);
-  return (
-    <>
-      {store.map((record, index) =>
-        <StyledRecord key={index}>
-          { constructStringFromSeconds(record.seconds) } / {record.label}
-        </StyledRecord>
-      )}
-    </>
-  );
-};
+const Record: React.FC<RecordProps> = ({ label, seconds }: RecordProps): JSX.Element =>
+  <StyledRecord>{ seconds } / { label }</StyledRecord>;
 
 const Timesheet: React.FC<TimesheetProps> & TimesheetComposition =
-  ({ children }: TimesheetProps): JSX.Element =>
-    <StyledTimesheet>{ children }</StyledTimesheet>;
+  ({ children }: TimesheetProps): JSX.Element => <StyledTimesheet>{ children }</StyledTimesheet>;
 
 Timesheet.Record = Record;
 

@@ -77,8 +77,14 @@ const Dashboard: React.FC = (): JSX.Element => {
               <Timer />
             </Alignment>
             <Timesheet>
-              <Timesheet.Record />
-              <div>Today: { constructStringFromSeconds(totalSeconds) }</div>
+              {store.map((record, index) =>
+                <Timesheet.Record
+                  key={ index }
+                  label={ record.label! }
+                  seconds={ getStringFromSeconds(record.seconds) }
+                />
+              )}
+              <div>Today: { getStringFromSeconds(totalSeconds) }</div>
             </Timesheet>
           </Tile>
         </DashboardContext.Provider>
