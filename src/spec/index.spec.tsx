@@ -4,7 +4,7 @@ import App from '@components/App';
 
 jest.mock("react-dom", () => ({ render: jest.fn() }));
 
-beforeAll(() => {
+beforeEach(() => {
   document.body.innerHTML = `<div id = "root"></div>`;
 });
 
