@@ -20,6 +20,7 @@ Sprint 10 / April 12, 2020
 - moved constructStringFromSeconds from time.ts to Dashboard component and rename it getStringFromSeconds.
 - updated Dashboard reducer to check if a record already exists with the same label as the incoming payload. This stacks records with the same label into one displayed Record component.
 - added node environment to ESLint as well as some new linting rules.
+- added env.ts to move all environment-specific, sensitive credentials to local, non-checked file.
 
 <hr />
 
