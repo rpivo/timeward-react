@@ -29,6 +29,7 @@ Sprint 10 / April 12, 2020
 - moved Cognito credentials from Login page to external env.ts file.
 - updated webpack.dev.ts to use EnvironmentPlugin to inject NODE_ENV variable into the local build.
 - updated .gitignore to include env.ts and node_modules in lambda subdirectory.
+- removed lambda-specific packages from root package.json.
 
 <hr />
 
