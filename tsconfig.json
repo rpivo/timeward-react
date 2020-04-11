@@ -11,6 +11,7 @@
     "outDir": "./dist/",
     "paths": {
       "@components/*": ["components/*"],
+      "@env": ["../env.ts"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
       "@utilities/*": ["utilities/*"],
@@ -19,6 +20,7 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
+    "suppressImplicitAnyIndexErrors": true,
     "target": "es5",
   },
   "exclude": [
