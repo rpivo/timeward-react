@@ -1,3 +1,4 @@
+import { EnvironmentPlugin } from 'webpack';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import path from 'path';
 
@@ -31,6 +32,7 @@ const dev = {
       },
     ],
   },
+  plugins: [new EnvironmentPlugin({ NODE_ENV: 'test' })],
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     plugins: [new TsconfigPathsPlugin({})],
