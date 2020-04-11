@@ -1,7 +1,8 @@
 module.exports = {
   "env": {
     "browser": true,
-    "jest": true
+    "jest": true,
+    "node": true,
   },
   "extends": [
     "eslint:all",
@@ -10,6 +11,7 @@ module.exports = {
   ],
   "plugins": ["@typescript-eslint", "react"],
   "rules": {
+    "array-bracket-newline": 0,
     "array-element-newline": 0,
     "arrow-parens": 0,
     "capitalized-comments": 0,
@@ -37,7 +39,9 @@ module.exports = {
     "no-extra-parens": 0,
     "no-inline-comments": 0,
     "no-magic-numbers": 0,
+    "no-negated-condition": 0,
     "no-param-reassign": 0,
+    "no-process-env": 0,
     "no-undefined": 0,
     "no-ternary": 0,
     "no-underscore-dangle": 0,
@@ -49,6 +53,7 @@ module.exports = {
     "prefer-named-capture-group": 0,
     "quote-props": 0,
     "quotes": 0,
+    "require-atomic-updates": 0,
     "require-unicode-regexp": 0,
     "sort-imports": 0,
     "space-before-function-paren": 0,
