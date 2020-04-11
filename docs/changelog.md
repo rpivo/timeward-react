@@ -28,6 +28,7 @@ Sprint 10 / April 12, 2020
 - added Spinner component to temporarily display while Dashboard lazy loads with React Suspense (may possibly revert this depending on how Lambda and Cognito are further integrated).
 - moved Cognito credentials from Login page to external env.ts file.
 - updated webpack.dev.ts to use EnvironmentPlugin to inject NODE_ENV variable into the local build.
+- updated .gitignore to include env.ts and node_modules in lambda subdirectory.
 
 <hr />
 
