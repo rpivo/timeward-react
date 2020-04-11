@@ -24,6 +24,7 @@ Sprint 10 / April 12, 2020
 - added packages for decodeVerifyJWT Lambda function (will possibly remove these from root package.json and make package.json files for Lambda subdirectories).
 - updated ts config.
 - added decodeVerifyJWT Lambda function.
+- wrapped Dashboard in React Suspense (may possibly revert this depending on how Lambda and Cognito are further integrated).
 
 <hr />
 

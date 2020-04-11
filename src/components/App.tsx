@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Dashboard from '@pages/Dashboard';
+// import Dashboard from '@pages/Dashboard';
 import Login from '@pages/Login';
 import Header from '@components/Header';
 import Page from '@components/Page';
 import { ThemeProvider } from 'styled-components';
 import { Theme } from '@styles/theme';
 import { GlobalStyle } from '@styles/global';
+
+const Dashboard = lazy(() => import('@pages/Dashboard'));
 
 const App: React.FC = (): JSX.Element =>
   <ThemeProvider theme={ Theme }>
@@ -20,7 +22,7 @@ const App: React.FC = (): JSX.Element =>
               <Login />
             </Route>
             <Route path="*">
-              <Dashboard />
+              <Suspense fallback={<div>Loading...</div>}><Dashboard /></Suspense>
             </Route>
           </Switch>
         </Page>
