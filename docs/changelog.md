@@ -26,6 +26,7 @@ Sprint 10 / April 12, 2020
 - added decodeVerifyJWT Lambda function.
 - wrapped Dashboard in React Suspense (may possibly revert this depending on how Lambda and Cognito are further integrated).
 - added Spinner component to temporarily display while Dashboard lazy loads with React Suspense (may possibly revert this depending on how Lambda and Cognito are further integrated).
+- moved Cognito credentials from Login page to external env.ts file.
 
 <hr />
 

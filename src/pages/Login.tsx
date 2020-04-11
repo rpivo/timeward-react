@@ -4,13 +4,21 @@ import { AuthenticationDetails, CognitoUserPool, CognitoUser } from 'amazon-cogn
 import Alignment from '@components/Alignment';
 import Form from '@components/Form';
 import Input from '@components/Input';
+import env from '@env';
+
+const {
+  clientID,
+  identityPoolID,
+  region,
+  userPoolID,
+} = env[process.env.NODE_ENV!].cognito;
 
 const Login: React.FC = (): JSX.Element => {
   const [state, setState] = useState({ email: '', password: '' });
 
   const poolData = {
-    ClientId: '1ccobdlb42fqkep9t8rilvrrjp',
-    UserPoolId: 'us-east-1_VstCEyxTZ',
+    ClientId: clientID,
+    UserPoolId: userPoolID,
   };
 
   const login = (): void => {
@@ -58,12 +66,12 @@ const Login: React.FC = (): JSX.Element => {
         console.log('onSuccess with result, accessToken', {
           accessToken, result,
         });
-        AWS.config.region = 'us-east-1';
+        AWS.config.region = region;
 
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-          IdentityPoolId: 'us-east-1:8dec48e1-3192-46b7-b31a-868f2dd7df85',
+          IdentityPoolId: identityPoolID,
           Logins: {
-            'cognito-idp.us-east-1.amazonaws.com/us-east-1_VstCEyxTZ': result
+            [`cognito-idp.${region}.amazonaws.com/${userPoolID}`]: result
               .getIdToken()
               .getJwtToken(),
           },
@@ -79,16 +87,17 @@ const Login: React.FC = (): JSX.Element => {
     });
   };
 
-  const handleChange = (kind: string) => (event: React.ChangeEvent<HTMLInputElement>): void => {
-    event.persist();
-    setState(prevState => ({ ...prevState, [kind]: event.target.value }));
-  };
+  const handleInputChange =
+    (kind: string) => (event: React.ChangeEvent<HTMLInputElement>): void => {
+      event.persist();
+      setState(prevState => ({ ...prevState, [kind]: event.target.value }));
+    };
 
   return (
     <Alignment vertical horizontal>
       <Form onSubmit={ login } >
-        <Input onChange={ handleChange('email') } placeholder='Email Address' />
-        <Input onChange={ handleChange('password') } placeholder='Password' password />
+        <Input onChange={ handleInputChange('email') } placeholder='Email Address' />
+        <Input onChange={ handleInputChange('password') } placeholder='Password' password />
       </Form>
     </Alignment>
   );
