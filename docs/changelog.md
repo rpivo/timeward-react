@@ -23,6 +23,7 @@ Sprint 10 / April 12, 2020
 - added env.ts to move all environment-specific, sensitive credentials to local, non-checked file.
 - added packages for decodeVerifyJWT Lambda function (will possibly remove these from root package.json and make package.json files for Lambda subdirectories).
 - updated ts config.
+- added decodeVerifyJWT Lambda function.
 
 <hr />
 
