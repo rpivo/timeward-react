@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import AWS from 'aws-sdk/global';
 import { AuthenticationDetails, CognitoUserPool, CognitoUser } from 'amazon-cognito-identity-js';
 import Alignment from '@components/Alignment';
 import Form from '@components/Form';
 import Input from '@components/Input';
+import Spinner from '@components/Spinner';
 import env from '@env';
 
 const {
@@ -14,25 +16,30 @@ const {
 } = env[process.env.NODE_ENV!].cognito;
 
 const Login: React.FC = (): JSX.Element => {
-  const [state, setState] = useState({ email: '', password: '' });
+  const [inputs, setInputs] = useState({ email: '', password: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   const poolData = {
     ClientId: clientID,
     UserPoolId: userPoolID,
   };
 
+  const history = useHistory();
+
   const login = (): void => {
     event!.preventDefault();
+    setIsLoading(true);
+
     const authenticationData = {
-      Password: state.password,
-      Username: state.email,
+      Password: inputs.password,
+      Username: inputs.email,
     };
 
     const authenticationDetails = new AuthenticationDetails(authenticationData);
     const userPool = new CognitoUserPool(poolData);
     const userData = {
       Pool: userPool,
-      Username: state.email,
+      Username: inputs.email,
     };
     const cognitoUser = new CognitoUser(userData);
     let sessionUserAttributes: {};
@@ -58,14 +65,14 @@ const Login: React.FC = (): JSX.Element => {
         );
       },
       onFailure: err => {
+        setIsLoading(false);
+
         console.log('onFailure with err', err);
         console.error(err.message || JSON.stringify(err));
       },
       onSuccess: result => {
-        const accessToken = result.getAccessToken().getJwtToken();
-        console.log('onSuccess with result, accessToken', {
-          accessToken, result,
-        });
+        setIsLoading(true);
+
         AWS.config.region = region;
 
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -76,13 +83,9 @@ const Login: React.FC = (): JSX.Element => {
               .getJwtToken(),
           },
         });
-        (AWS.config.credentials as AWS.CognitoIdentityCredentials).refresh((error) => {
-          if (error) {
-            console.error(error);
-          } else {
-            console.log('Successfully logged!');
-          }
-        });
+
+        (AWS.config.credentials as AWS.CognitoIdentityCredentials).refresh((error) =>
+          error ? console.error(error) : history.push('/dashboard'));
       },
     });
   };
@@ -90,15 +93,19 @@ const Login: React.FC = (): JSX.Element => {
   const handleInputChange =
     (kind: string) => (event: React.ChangeEvent<HTMLInputElement>): void => {
       event.persist();
-      setState(prevState => ({ ...prevState, [kind]: event.target.value }));
+      setInputs(prevState => ({ ...prevState, [kind]: event.target.value }));
     };
 
   return (
     <Alignment vertical horizontal>
-      <Form onSubmit={ login } >
-        <Input onChange={ handleInputChange('email') } placeholder='Email Address' />
-        <Input onChange={ handleInputChange('password') } placeholder='Password' password />
-      </Form>
+      { isLoading ? (
+        <Spinner />
+      ) : (
+        <Form onSubmit={ login } >
+          <Input onChange={ handleInputChange('email') } placeholder='Email Address' />
+          <Input onChange={ handleInputChange('password') } placeholder='Password' password />
+        </Form>
+      )}
     </Alignment>
   );
 };

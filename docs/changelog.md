@@ -23,7 +23,7 @@ Sprint 10 / April 12, 2020
 - added env.ts to move all environment-specific, sensitive credentials to local, non-checked file.
 - added packages for decodeVerifyJWT Lambda function (will possibly remove these from root package.json and make package.json files for Lambda subdirectories).
 - updated ts config.
-- added Spinner component to temporarily display while authentication is being checked in Cognito.
+- added Spinner component to Login page to temporarily display while authentication is being checked in Cognito.
 - moved Cognito credentials from Login page to external env.ts file.
 - updated webpack.dev.ts to use EnvironmentPlugin to inject NODE_ENV variable into the local build.
 
