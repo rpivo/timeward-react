@@ -3,4 +3,3 @@ coverage
 dist
 env.ts
 node_modules
-lambda/node_modules
