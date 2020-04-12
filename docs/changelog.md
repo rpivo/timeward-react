@@ -5,8 +5,20 @@ route: /changelog
 
 # changelog
 
+## Release 0.11.0
+Sprint 11 / April 26, 2020
+
+### Updates
+
+
+<hr />
+
 ## Release 0.10.0
 Sprint 10 / April 12, 2020
+
+### 0 bug, 1 documentation, 4 feature, and 3 question issues were closed (8 total)
+
+Added some additional time features on the Dashboard, including displaying the total time recorded for the day as well as stacking records that have the same label. Moved all sensitive credentials from the codebase to a local env.ts file that gets loaded in with Webpack. Added Spinner component to display while user is being authenticated in Cognito on the Login page.
 
 ### Updates
 
@@ -21,7 +33,6 @@ Sprint 10 / April 12, 2020
 - updated Dashboard reducer to check if a record already exists with the same label as the incoming payload. This stacks records with the same label into one displayed Record component.
 - added node environment to ESLint as well as some new linting rules.
 - added env.ts to move all environment-specific, sensitive credentials to local, non-checked file.
-- added packages for decodeVerifyJWT Lambda function (will possibly remove these from root package.json and make package.json files for Lambda subdirectories).
 - updated ts config.
 - added Spinner component to Login page to temporarily display while authentication is being checked in Cognito.
 - moved Cognito credentials from Login page to external env.ts file.
