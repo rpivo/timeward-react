@@ -10,6 +10,7 @@ Sprint 11 / April 26, 2020
 
 ### Updates
 
+- added blog.
 
 <hr />
 
