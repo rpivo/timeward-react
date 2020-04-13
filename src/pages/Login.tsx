@@ -18,6 +18,7 @@ const {
 const Login: React.FC = (): JSX.Element => {
   const [inputs, setInputs] = useState({ email: '', password: '' });
   const [isLoading, setIsLoading] = useState(false);
+  const [didAuthFail, setDidAuthFail] = useState(false);
 
   const poolData = {
     ClientId: clientID,
@@ -66,6 +67,7 @@ const Login: React.FC = (): JSX.Element => {
       },
       onFailure: err => {
         setIsLoading(false);
+        setDidAuthFail(true);
 
         console.log('onFailure with err', err);
         console.error(err.message || JSON.stringify(err));
@@ -98,13 +100,18 @@ const Login: React.FC = (): JSX.Element => {
 
   return (
     <Alignment vertical horizontal>
-      { isLoading ? (
-        <Spinner />
-      ) : (
-        <Form onSubmit={ login } >
-          <Input onChange={ handleInputChange('email') } placeholder='Email Address' />
-          <Input onChange={ handleInputChange('password') } placeholder='Password' password />
-        </Form>
+      { isLoading ? <Spinner /> : (
+        <>
+          { didAuthFail &&
+            <p style={{ color: 'red', fontSize: '1.14rem', textAlign: 'center' }}>
+              Incorrect username or password.
+            </p>
+          }
+          <Form onSubmit={ login } >
+            <Input onChange={ handleInputChange('email') } placeholder='Email Address' />
+            <Input onChange={ handleInputChange('password') } placeholder='Password' password />
+          </Form>
+        </>
       )}
     </Alignment>
   );
