@@ -1,8 +1,3 @@
----
-name: Changelog
-route: /changelog
----
-
 # changelog
 
 ## Release 0.11.0
@@ -12,6 +7,7 @@ Sprint 11 / April 26, 2020
 
 - added blog.
 - added login failure message on Login page.
+- updated Alignment documentation.
 
 <hr />
 

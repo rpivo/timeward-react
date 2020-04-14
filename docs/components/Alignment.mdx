@@ -1,6 +1,42 @@
 ---
 name: Alignment
-route: /components/Alignment
+menu: Components
 ---
 
 # Alignment
+
+## Arguments
+
+`Alignment` has a prop signature of type `AlignmentProps`:
+
+```ts
+type AlignmentProps = {
+  children: React.ReactNode;
+  vertical?: boolean;
+  horizontal?: boolean;
+};
+```
+
+`Alignment` is expecting to wrap `children`. It may also receive optional `vertical` and `horizontal` props. `vertical` and `horizontal` can be used to control the vertical and horizontal positioning of the child element inside the `Alignment` component.
+
+## Example Usage
+
+This example is taken from the **Login** page. Here, `Alignment` wraps children and is passed the optional `vertical` and `horizontal` props so that children will be centered vertically and horizontally within the `Alignment` component.
+
+```tsx
+<Alignment vertical horizontal>
+  { isLoading ? <Spinner /> : (
+    <>
+      { didAuthFail &&
+        <p style={{ color: 'red', fontSize: '1.14rem', textAlign: 'center' }}>
+          Incorrect username or password.
+        </p>
+      }
+      <Form onSubmit={ login } >
+        <Input onChange={ handleInputChange('email') } placeholder='Email Address' />
+        <Input onChange={ handleInputChange('password') } placeholder='Password' password />
+      </Form>
+    </>
+  )}
+</Alignment>
+```
