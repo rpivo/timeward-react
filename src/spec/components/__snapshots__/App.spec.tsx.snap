@@ -119,8 +119,86 @@ exports[`App should render correctly 1`] = `
           className="sc-AxhUy fVAfvQ"
         >
           <div
-            className="sc-AxirZ pWORn"
-          />
+            className="sc-AxirZ fGiiap"
+          >
+            <svg
+              width="50"
+            >
+              <rect
+                height="100%"
+                id="box"
+                width="100%"
+                x="0"
+                y="0"
+              />
+            </svg>
+            <svg
+              width="50"
+            >
+              <rect
+                height="100%"
+                id="box"
+                width="100%"
+                x="0"
+                y="0"
+              />
+            </svg>
+            <svg
+              width="50"
+            >
+              <rect
+                height="100%"
+                id="box"
+                width="100%"
+                x="0"
+                y="0"
+              />
+            </svg>
+            <svg
+              width="50"
+            >
+              <rect
+                height="100%"
+                id="box"
+                width="100%"
+                x="0"
+                y="0"
+              />
+            </svg>
+            <svg
+              width="50"
+            >
+              <rect
+                height="100%"
+                id="box"
+                width="100%"
+                x="0"
+                y="0"
+              />
+            </svg>
+            <svg
+              width="50"
+            >
+              <rect
+                height="100%"
+                id="box"
+                width="100%"
+                x="0"
+                y="0"
+              />
+            </svg>
+            <svg
+              width="50"
+            >
+              <rect
+                height="100%"
+                id="box"
+                width="100%"
+                x="0"
+                y="0"
+              />
+            </svg>
+          </div>
         </div>
       </section>
       <div
@@ -136,9 +214,15 @@ exports[`App should render correctly 1`] = `
           <div
             className="day"
           >
-            4/13/2020
+            4/14/2020
             <br />
             1
+          </div>
+          <div
+            className="day"
+          >
+            4/13/2020
+            <br />
           </div>
           <div
             className="day"
@@ -168,12 +252,6 @@ exports[`App should render correctly 1`] = `
             className="day"
           >
             4/8/2020
-            <br />
-          </div>
-          <div
-            className="day"
-          >
-            4/7/2020
             <br />
           </div>
         </div>
