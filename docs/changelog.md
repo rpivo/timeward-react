@@ -8,6 +8,7 @@ Sprint 11 / April 26, 2020
 - added blog.
 - added login failure message on Login page.
 - updated Alignment documentation.
+- added bar graphs to Graph component.
 
 <hr />
 
