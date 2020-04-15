@@ -10,6 +10,7 @@ Sprint 11 / April 26, 2020
 - updated Alignment documentation.
 - added bar graphs to Graph component.
 - updated theme and global styles.
+- animated Spinner component.
 
 <hr />
 
