@@ -27,8 +27,7 @@ const Login: React.FC = (): JSX.Element => {
 
   const history = useHistory();
 
-  const login = (): void => {
-    event!.preventDefault();
+  const handleAuthFlow = (): void => {
     setIsLoading(true);
 
     const authenticationData = {
@@ -100,16 +99,16 @@ const Login: React.FC = (): JSX.Element => {
 
   return (
     <Alignment vertical horizontal>
-      { isLoading ? <Spinner /> : (
+      {isLoading ? <Spinner /> : (
         <>
-          { didAuthFail &&
+          {didAuthFail &&
             <p style={{ color: 'red', fontSize: '1.14rem', textAlign: 'center' }}>
               Incorrect username or password.
             </p>
           }
-          <Form onSubmit={ login } >
-            <Input onChange={ handleInputChange('email') } placeholder='Email Address' />
-            <Input onChange={ handleInputChange('password') } placeholder='Password' password />
+          <Form onSubmit={handleAuthFlow}>
+            <Input onChange={handleInputChange('email')} placeholder='Email Address' />
+            <Input onChange={handleInputChange('password')} placeholder='Password' password />
           </Form>
         </>
       )}

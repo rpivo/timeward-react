@@ -12,6 +12,7 @@ Sprint 11 / April 26, 2020
 - updated theme and global styles.
 - animated Spinner component.
 - added AWS Cognito Identity SDK mock for testing auth flow.
+- added tests for Login page.
 
 <hr />
 

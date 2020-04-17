@@ -1,6 +1,7 @@
 module.exports = {
   "env": {
     "browser": true,
+    "es6": true,
     "jest": true,
     "node": true,
   },
@@ -27,6 +28,7 @@ module.exports = {
     "jsx-quotes": 0,
     "implicit-arrow-linebreak": 0,
     "indent": ["error", 2],
+    "lines-between-class-members": 0,
     "max-len": ["error", { "code": 100 }],
     "max-lines-per-function": 0,
     "max-params": 0,
