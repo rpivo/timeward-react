@@ -182,9 +182,27 @@ exports[`Dashboard render should render correctly 1`] = `
       <div
         className="day"
       >
-        4/14/2020
+        4/17/2020
         <br />
         1
+      </div>
+      <div
+        className="day"
+      >
+        4/16/2020
+        <br />
+      </div>
+      <div
+        className="day"
+      >
+        4/15/2020
+        <br />
+      </div>
+      <div
+        className="day"
+      >
+        4/14/2020
+        <br />
       </div>
       <div
         className="day"
@@ -202,24 +220,6 @@ exports[`Dashboard render should render correctly 1`] = `
         className="day"
       >
         4/11/2020
-        <br />
-      </div>
-      <div
-        className="day"
-      >
-        4/10/2020
-        <br />
-      </div>
-      <div
-        className="day"
-      >
-        4/9/2020
-        <br />
-      </div>
-      <div
-        className="day"
-      >
-        4/8/2020
         <br />
       </div>
     </div>
