@@ -8,17 +8,21 @@ import Input from '@components/Input';
 import Spinner from '@components/Spinner';
 import env from '@env';
 
-const {
-  clientID,
-  identityPoolID,
-  region,
-  userPoolID,
-} = env[process.env.NODE_ENV!].cognito;
+type LoginProps = {
+  setIsAuthorized: (arg: boolean) => void;
+};
 
-const Login: React.FC = (): JSX.Element => {
+const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Element => {
   const [inputs, setInputs] = useState({ email: '', password: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [didAuthFail, setDidAuthFail] = useState(false);
+
+  const {
+    clientID,
+    identityPoolID,
+    region,
+    userPoolID,
+  } = env[process.env.NODE_ENV!].cognito;
 
   const poolData = {
     ClientId: clientID,
@@ -42,38 +46,14 @@ const Login: React.FC = (): JSX.Element => {
       Username: inputs.email,
     };
     const cognitoUser = new CognitoUser(userData);
-    let sessionUserAttributes: {};
 
     cognitoUser.authenticateUser(authenticationDetails, {
-      newPasswordRequired: (userAttributes, requiredAttributes) => {
-        delete userAttributes.email_verified;
-        sessionUserAttributes = userAttributes;
-        const callback = {
-          onFailure: (): void =>
-            console.error('Login / login / newPasswordRequired / updating password failed', {
-              requiredAttributes, userAttributes,
-            }),
-          onSuccess: (): void =>
-            console.log('Login / login / newPasswordRequired / updating password successful', {
-              requiredAttributes, userAttributes,
-            }),
-        };
-        cognitoUser.completeNewPasswordChallenge(
-          '$Penrosetriangle2',
-          sessionUserAttributes,
-          callback
-        );
-      },
       onFailure: err => {
         setIsLoading(false);
         setDidAuthFail(true);
-
-        console.log('onFailure with err', err);
-        console.error(err.message || JSON.stringify(err));
+        console.error('handleAuthFlow / cognitoUser.authenticateUser / onFailure with err', err);
       },
       onSuccess: result => {
-        setIsLoading(true);
-
         AWS.config.region = region;
 
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -85,8 +65,11 @@ const Login: React.FC = (): JSX.Element => {
           },
         });
 
-        (AWS.config.credentials as AWS.CognitoIdentityCredentials).refresh((error) =>
-          error ? console.error(error) : history.push('/dashboard'));
+        (AWS.config.credentials as AWS.CognitoIdentityCredentials).refresh((error) => {
+          if (error) return console.error(error);
+          setIsAuthorized(true);
+          return history.push('/dashboard');
+        });
       },
     });
   };
