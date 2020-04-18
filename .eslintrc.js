@@ -27,7 +27,7 @@ module.exports = {
     "init-declarations": 0,
     "jsx-quotes": 0,
     "implicit-arrow-linebreak": 0,
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "lines-between-class-members": 0,
     "max-len": ["error", { "code": 100 }],
     "max-lines-per-function": 0,

@@ -13,6 +13,7 @@ Sprint 11 / April 26, 2020
 - animated Spinner component.
 - added AWS Cognito Identity SDK mock for testing auth flow.
 - added tests for Login page.
+- updated ESLint config.
 
 <hr />
 
