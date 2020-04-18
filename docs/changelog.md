@@ -20,6 +20,7 @@ Sprint 11 / April 26, 2020
 - passed in isAuthorized prop to Header component to update Header elements based on authorization.
 - updated formatting in Dashboard component.
 - passed in setIsAuthorized useState function to Login page to manage App-wide authorization.
+- updated Login tests to take in setIsAuthorized prop.
 
 <hr />
 
