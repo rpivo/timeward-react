@@ -45,25 +45,25 @@ const Dashboard: React.FC = (): JSX.Element => {
 
   const reducer = useCallback((state: DashboardStore, action: DashboardAction): DashboardStore => {
     switch (action.type) {
-    default: {
-      const refValue = ref.current!.value;
-      const labelIndex = getLabelIndex(refValue, state);
-      if (refValue && labelIndex !== -1) {
-        return state.map(record => {
-          if (record.label === refValue) {
-            record.seconds += action.payload;
-          }
-          return record;
-        });
+      default: {
+        const refValue = ref.current!.value;
+        const labelIndex = getLabelIndex(refValue, state);
+        if (refValue && labelIndex !== -1) {
+          return state.map(record => {
+            if (record.label === refValue) {
+              record.seconds += action.payload;
+            }
+            return record;
+          });
+        }
+        return [
+          ...state,
+          {
+            label: refValue,
+            seconds: action.payload,
+          },
+        ];
       }
-      return [
-        ...state,
-        {
-          label: refValue,
-          seconds: action.payload,
-        },
-      ];
-    }
     }
   }, []);
 
@@ -86,7 +86,7 @@ const Dashboard: React.FC = (): JSX.Element => {
         <DashboardContext.Provider value={{ dispatch, store }}>
           <Tile>
             <Alignment horizontal>
-              <Input onChange={ handleInputChange } ref={ ref } value={ inputValue } />
+              <Input onChange={handleInputChange} ref={ref} value={inputValue} />
             </Alignment>
             <Alignment horizontal>
               <Timer />
@@ -94,12 +94,12 @@ const Dashboard: React.FC = (): JSX.Element => {
             <Timesheet>
               {store.map((record, index) =>
                 <Timesheet.Record
-                  key={ index }
-                  label={ record.label! }
-                  seconds={ getStringFromSeconds(record.seconds) }
+                  key={index}
+                  label={record.label!}
+                  seconds={getStringFromSeconds(record.seconds)}
                 />
               )}
-              <div>Today: { getStringFromSeconds(totalSeconds) }</div>
+              <div>Today: {getStringFromSeconds(totalSeconds)}</div>
             </Timesheet>
           </Tile>
         </DashboardContext.Provider>
@@ -110,7 +110,7 @@ const Dashboard: React.FC = (): JSX.Element => {
       <PieChart />
       <Tile width='full'>
         <Timeline>
-          <Timeline.Day day={0} recordCount={ store.length } />
+          <Timeline.Day day={0} recordCount={store.length} />
           <Timeline.Day day={1} />
           <Timeline.Day day={2} />
           <Timeline.Day day={3} />

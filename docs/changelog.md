@@ -18,6 +18,7 @@ Sprint 11 / April 26, 2020
 - updated React Router Route syntax.
 - added PrivateRoute component to handle routes that require authorization.
 - passed in isAuthorized prop to Header component to update Header elements based on authorization.
+- updated formatting in Dashboard component.
 
 <hr />
 
