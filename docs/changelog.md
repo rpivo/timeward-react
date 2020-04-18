@@ -14,6 +14,9 @@ Sprint 11 / April 26, 2020
 - added AWS Cognito Identity SDK mock for testing auth flow.
 - added tests for Login page.
 - updated ESLint config.
+- added isAuthorized boolean in App component to manage authorization across the application.
+- updated React Router Route syntax.
+- added PrivateRoute component to handle routes that require authorization.
 
 <hr />
 
