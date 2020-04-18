@@ -5,14 +5,14 @@ Sprint 11 / April 26, 2020
 
 ### Updates
 
-- added blog.
+- added blog section to documentation.
 - added login failure message on Login page.
 - updated Alignment documentation.
 - added bar graphs to Graph component.
 - updated theme and global styles.
 - animated Spinner component.
 - added AWS Cognito Identity SDK mock for testing auth flow.
-- added tests for Login page.
+- added tests for Login page and Timer component.
 - updated ESLint config.
 - added isAuthorized boolean in App component to manage authorization across the application.
 - updated React Router Route syntax.

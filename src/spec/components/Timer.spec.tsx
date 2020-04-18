@@ -9,6 +9,7 @@ describe('Timer', () => {
 
   afterEach(() => {
     jest.restoreAllMocks();
+    jest.clearAllTimers();
   });
 
   describe('render', () => {
@@ -45,13 +46,13 @@ describe('Timer', () => {
   });
 
   describe('span / getStringFromTimeUnits', () => {
-    const wrapper = mount(<Timer />);
-
     it('should initially display 00:00:00', () => {
+      const wrapper = mount(<Timer />);
       expect(wrapper.find('span').text()).toBe(`00:00:00`);
     });
 
     it('should display 00:00:01 after 1 second', () => {
+      const wrapper = mount(<Timer />);
       jest.useFakeTimers();
       act(() => wrapper.find(Button).at(0).props().handleClick());
       wrapper.update();
@@ -61,6 +62,33 @@ describe('Timer', () => {
       wrapper.update();
 
       expect(wrapper.find('span').text()).toBe(`00:00:01`);
+    });
+
+    it('should display 00:01:00 after 60 seconds', () => {
+      const wrapper = mount(<Timer />);
+      jest.useFakeTimers();
+      act(() => wrapper.find(Button).at(0).props().handleClick());
+      wrapper.update();
+      act(() => {
+        jest.advanceTimersByTime(60000);
+      });
+      wrapper.update();
+      expect(wrapper.find('span').text()).toBe(`00:01:00`);
+    });
+
+    it('should display 01:00:00 after 3600 seconds', () => {
+      const wrapper = mount(<Timer />);
+      jest.useFakeTimers();
+      act(() => wrapper.find(Button).at(0).props().handleClick());
+      wrapper.update();
+      // eslint-disable-next-line no-plusplus
+      for (let index = 0; index < 60; index++) {
+        act(() => {
+          jest.advanceTimersByTime(60000);
+        });
+        wrapper.update();
+      }
+      expect(wrapper.find('span').text()).toBe(`01:00:00`);
     });
   });
 
