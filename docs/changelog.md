@@ -27,8 +27,8 @@ Sprint 11 / April 26, 2020
 - updated buildspec to use $CODEBUILD_SRC_DIR environment variable to find output files.
 - updated buildspec to pull in env.ts from S3 bucket.
 - moved buildspec S3 env.ts path to CodeBuild environment variable.
-- updated artifacts file path in buildspec.
 - added discard-paths field to artifacts section in buildspec.
+- removed echo ls statement from buildspec.
 - updated readme.
 
 <hr />
