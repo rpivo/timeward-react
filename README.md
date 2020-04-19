@@ -17,7 +17,7 @@ Timeward is designed to be a failsafe for these moments.
 ### Toolchain
 
 Timeward is built with:
-- **React** for the front-end.
+- **React** for the frontend.
 - **TypeScript** for added language strictness
 - **AWS Cognito** to manage auth flow.
 - **AWS CodeBuild**, **CodePipeline**, & **CodeDeploy** for CI/CD.
