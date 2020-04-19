@@ -28,8 +28,7 @@ Sprint 11 / April 26, 2020
 - updated buildspec to pull in env.ts from S3 bucket.
 - moved buildspec S3 env.ts path to CodeBuild environment variable.
 - updated artifacts file path in buildspec.
-- added name field to buildspec artifacts.
-- added type field to buildspec artifacts.
+- added discard-paths field to artifacts section in buildspec.
 - updated readme.
 
 <hr />
