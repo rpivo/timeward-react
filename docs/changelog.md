@@ -24,6 +24,7 @@ Sprint 11 / April 26, 2020
 - added dev environment variables to webpack prod config (temporary until prod credentials are set up).
 - added buildspec.yaml for AWS CodeBuild.
 - updated buildspec to not --watch for tests and halt progress in AWS CodePipeline.
+- updated buildspec to use $CODEBUILD_SRC_DIR environment variable to find output files.
 - updated readme.
 
 <hr />
