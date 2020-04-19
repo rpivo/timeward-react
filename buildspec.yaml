@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo installing packages...
+      - npm install --global yarn
+      - yarn install
+  build:
+    commands:
+      - echo running tests...
+      - yarn test
+      - echo building...
+      - yarn build
+
+artifacts:
+  files:
+    - dist/prod/*

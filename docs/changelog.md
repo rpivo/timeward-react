@@ -22,6 +22,7 @@ Sprint 11 / April 26, 2020
 - passed in setIsAuthorized useState function to Login page to manage App-wide authorization.
 - updated Login tests to take in setIsAuthorized prop.
 - added dev environment variables to webpack prod config (temporary until prod credentials are set up).
+- added buildspec.yaml for AWS CodeBuild.
 
 <hr />
 
