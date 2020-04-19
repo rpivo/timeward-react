@@ -17,11 +17,14 @@ Timeward is designed to be a failsafe for these moments.
 ### Toolchain
 
 Timeward is built with:
-- **React** for the front-end
+- **React** for the front-end.
 - **TypeScript** for added language strictness
 - **Amazon Cognito** to manage auth flow.
-- **Jest** and **Enzyme** for testing
-- **Webpack** for bundling
-- **ESLint** for linting
-- **styled-components** for styles
-- **Docz** for documentation
+- **AWS CodeBuild**, **AWS CodePipeline**, & **AWS CodeDeploy** for CI/CD.
+- **Amazon CloudWatch** for pipeline monitoring and metrics.
+- **AWS CodeCommit** & **GitHub** for source code management.
+- **Jest** and **Enzyme** for testing.
+- **Webpack** for bundling.
+- **ESLint** for linting.
+- **styled-components** for styles.
+- **Docz** for documentation.

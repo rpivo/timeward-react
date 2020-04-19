@@ -23,6 +23,8 @@ Sprint 11 / April 26, 2020
 - updated Login tests to take in setIsAuthorized prop.
 - added dev environment variables to webpack prod config (temporary until prod credentials are set up).
 - added buildspec.yaml for AWS CodeBuild.
+- updated buildspec to not --watch for tests and halt progress in AWS CodePipeline.
+- updated readme.
 
 <hr />
 
