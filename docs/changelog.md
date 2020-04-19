@@ -29,6 +29,7 @@ Sprint 11 / April 26, 2020
 - moved buildspec S3 env.ts path to CodeBuild environment variable.
 - updated artifacts file path in buildspec.
 - added name field to buildspec artifacts.
+- added type field to buildspec artifacts.
 - updated readme.
 
 <hr />

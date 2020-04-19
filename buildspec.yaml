@@ -19,3 +19,4 @@ artifacts:
   files:
     - dist/prod/*
   name: "/"
+  type: s3
