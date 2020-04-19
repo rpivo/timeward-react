@@ -6,6 +6,8 @@ phases:
       - echo installing packages...
       - npm install --global yarn
       - yarn install
+      - aws s3 cp s3://timeward-env.s3.amazonaws.com/env.ts $CODEBUILD_SRC_DIR/env.ts
+      - echo ls $CODEBUILD_SRC_DIR
   build:
     commands:
       - echo running tests...
