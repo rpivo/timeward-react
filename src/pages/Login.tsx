@@ -6,7 +6,7 @@ import Alignment from '@components/Alignment';
 import Form from '@components/Form';
 import Input from '@components/Input';
 import Spinner from '@components/Spinner';
-import env from '@env';
+import config from '@env';
 
 type LoginProps = {
   setIsAuthorized: (arg: boolean) => void;
@@ -22,7 +22,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
     identityPoolID,
     region,
     userPoolID,
-  } = env[process.env.NODE_ENV!].cognito;
+  } = config[process.env.NODE_ENV!].cognito;
 
   const poolData = {
     ClientId: clientID,
