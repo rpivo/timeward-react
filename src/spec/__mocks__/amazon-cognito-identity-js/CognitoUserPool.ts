@@ -1,4 +1,4 @@
-export class CognitoUserPool {
+export default class CognitoUserPool {
   public userPoolId = '';
   public clientId = '';
   public getCurrentUser = jest.fn().mockReturnValue('cognitouserpool');

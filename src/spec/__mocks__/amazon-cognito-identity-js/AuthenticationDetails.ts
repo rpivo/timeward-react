@@ -1,4 +1,4 @@
-export class AuthenticationDetails {
+export default class AuthenticationDetails {
   public validationData = {};
   public authParameters = {};
   public clientMetadata = {};

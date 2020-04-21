@@ -1,4 +1,4 @@
-export class CognitoUser {
+export default class CognitoUser {
   public username = '';
   public pool = {};
   public Session = null;
@@ -10,7 +10,11 @@ export class CognitoUser {
   public userDataKey = '';
   public setSignInUserSession = jest.fn();
   public getSignInUserSession = jest.fn().mockReturnValue({});
-  public authenticateUser = jest.fn();
+  public authenticateUser =
+  jest.fn().mockImplementation((authenticationDetails, callback) => {
+    callback.onFailure({});
+  });
+  // public authenticateUser = jest.fn();
 
   constructor(data: Partial<CognitoUser>) {
     Object.assign(this, data);

@@ -12,6 +12,7 @@ Sprint 11 / April 26, 2020
 - updated theme and global styles.
 - animated Spinner component.
 - added AWS Cognito Identity SDK mock for testing auth flow.
+- updated all mock Cognito Identity classes to export as defaults.
 - added tests for Login page and Timer component.
 - updated ESLint config.
 - added isAuthorized boolean in App component to manage authorization across the application.
