@@ -32,6 +32,7 @@ Sprint 11 / April 26, 2020
 - removed echo ls statement from buildspec.
 - updated readme.
 - simplified Timer useEffect logic.
+- removed error log from failed login attempt on Login page.
 
 <hr />
 

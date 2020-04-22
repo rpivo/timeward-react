@@ -48,10 +48,9 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
     const cognitoUser = new CognitoUser(userData);
 
     cognitoUser.authenticateUser(authenticationDetails, {
-      onFailure: err => {
+      onFailure: () => {
         setIsLoading(false);
         setDidAuthFail(true);
-        console.error('handleAuthFlow / cognitoUser.authenticateUser / onFailure with err', err);
       },
       onSuccess: result => {
         AWS.config.region = region;
