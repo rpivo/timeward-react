@@ -20,8 +20,6 @@ const Timer: React.FC = (): JSX.Element => {
       state.interval = setInterval(() => {
         setState(prevState => ({ ...prevState, totalSeconds: prevState.totalSeconds + 1 }));
       }, 1000);
-    } else if (!state.isIntervalSet) {
-      clearInterval(state.interval);
     }
     return (): void => clearInterval(state.interval);
   }, [state.isIntervalSet]);

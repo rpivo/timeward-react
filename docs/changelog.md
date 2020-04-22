@@ -31,6 +31,7 @@ Sprint 11 / April 26, 2020
 - added discard-paths field to artifacts section in buildspec.
 - removed echo ls statement from buildspec.
 - updated readme.
+- simplified Timer useEffect logic.
 
 <hr />
 

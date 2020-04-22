@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
+import { DashboardContext } from '@pages/Dashboard';
 import Timer from '@components/Timer';
 import Button from '@components/Button';
 
@@ -92,7 +93,7 @@ describe('Timer', () => {
     });
   });
 
-  describe('pause', () => {
+  describe('play / pause', () => {
     it('should show the pause button after the start button is clicked', () => {
       const wrapper = mount(<Timer />);
       act(() => wrapper.find(Button).at(0).props().handleClick());
@@ -113,4 +114,28 @@ describe('Timer', () => {
     });
   });
 
+  describe('stop', () => {
+    it('should stop the timer and clear the interval when the stop button is clicked', () => {
+      const dispatch = jest.fn();
+      const store = [{
+        label: '',
+        seconds: 0,
+      }];
+      jest.useFakeTimers();
+      const wrapper = mount(
+        <DashboardContext.Provider value={{ dispatch, store }}>
+          <Timer />
+        </DashboardContext.Provider>
+      );
+      act(() => wrapper.find(Button).at(0).props().handleClick());
+      wrapper.update();
+      act(() => {
+        jest.advanceTimersByTime(5000);
+      });
+      wrapper.update();
+      act(() => wrapper.find(Button).at(1).props().handleClick());
+      wrapper.update();
+      expect(wrapper.find('span').text()).toBe(`00:00:00`);
+    });
+  });
 });
