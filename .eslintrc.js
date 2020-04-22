@@ -14,6 +14,7 @@ module.exports = {
   "rules": {
     "array-bracket-newline": 0,
     "array-element-newline": 0,
+    "arrow-body-style": 0,
     "arrow-parens": 0,
     "capitalized-comments": 0,
     "class-methods-use-this": 0,
