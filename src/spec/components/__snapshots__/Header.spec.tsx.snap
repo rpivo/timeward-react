@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header render should render correctly 1`] = `
+<header
+  className="sc-AxjAm gTaTel"
+>
+  <h6>
+    <a
+      href="/dashboard"
+      onClick={[Function]}
+    >
+      TIMEWARD
+    </a>
+  </h6>
+  <nav>
+    <a
+      href="/dashboard"
+      onClick={[Function]}
+    >
+      Dashboard
+    </a>
+    <a
+      href="/login"
+      onClick={[Function]}
+    >
+      Account
+    </a>
+  </nav>
+</header>
+`;
