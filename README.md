@@ -2,7 +2,7 @@
 
 See the [changelog](docs/changelog.md) for the latest updates on this project.
 
-### productivity for perfectionists.
+### day manager & time tracker.
 
 Timeward is a productivity tool designed to help you manage your time better, and to help make the progress in that time more meaningful.
 

@@ -7,6 +7,7 @@ import Form from '@components/Form';
 import Input from '@components/Input';
 import Spinner from '@components/Spinner';
 import config from '@env';
+import StyledLogin from '@styles/pages/Login.styled';
 
 type LoginProps = {
   setIsAuthorized: (arg: boolean) => void;
@@ -82,7 +83,10 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
   return (
     <Alignment vertical horizontal>
       {isLoading ? <Spinner /> : (
-        <>
+        <StyledLogin>
+          <h1>TIMEWARD</h1>
+          <hr />
+          <h2>DAY MANAGER & TIME TRACKER</h2>
           {didAuthFail &&
             <p style={{ color: 'red', fontSize: '1.14rem', textAlign: 'center' }}>
               Incorrect username or password.
@@ -92,7 +96,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
             <Input onChange={handleInputChange('email')} placeholder='Email Address' />
             <Input onChange={handleInputChange('password')} placeholder='Password' password />
           </Form>
-        </>
+        </StyledLogin>
       )}
     </Alignment>
   );

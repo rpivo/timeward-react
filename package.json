@@ -1,7 +1,7 @@
 {
   "name": "timeward",
   "version": "0.10.0",
-  "description": "productivity for perfectionists",
+  "description": "day manager & time tracker",
   "main": "index.js",
   "repository": "git@github.com:rpivo/timeward.git",
   "author": "Ryan Pivovar <ryanpivovar@gmail.com>",
