@@ -5,7 +5,7 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <header
-    className="sc-fznyAO gqpyua"
+    className="sc-fznKkj gMGjXP"
   >
     <h6>
       <a
@@ -25,35 +25,46 @@ exports[`App should render correctly 1`] = `
     </nav>
   </header>
   <main
-    className="sc-fznKkj hKCTYx"
+    className="sc-fznZeY bvwTAl"
   >
     <div
       className="sc-AxjAm czhxNj"
     >
       <div>
-        <form
-          className="sc-fzpans cwcucV"
+        <div
+          className="sc-fznyAO cIZQjd"
         >
-          <label>
-            LOGIN
-          </label>
-          <input
-            onChange={[Function]}
-            placeholder="Email Address"
-            type="text"
-          />
-          <input
-            autoComplete="on"
-            onChange={[Function]}
-            placeholder="Password"
-            type="password"
-          />
-          <input
-            onClick={[Function]}
-            type="submit"
-            value="SUBMIT"
-          />
-        </form>
+          <h1>
+            TIMEWARD
+          </h1>
+          <hr />
+          <h2>
+            DAY MANAGER & TIME TRACKER
+          </h2>
+          <form
+            className="sc-fzpans cwcucV"
+          >
+            <label>
+              LOGIN
+            </label>
+            <input
+              onChange={[Function]}
+              placeholder="Email Address"
+              type="text"
+            />
+            <input
+              autoComplete="on"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+            <input
+              onClick={[Function]}
+              type="submit"
+              value="SUBMIT"
+            />
+          </form>
+        </div>
       </div>
     </div>
   </main>

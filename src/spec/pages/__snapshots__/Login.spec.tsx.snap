@@ -5,29 +5,40 @@ exports[`Login render should render correctly 1`] = `
   className="sc-AxjAm czhxNj"
 >
   <div>
-    <form
-      className="sc-AxirZ gjSkbk"
+    <div
+      className="sc-AxhCb enlXMB"
     >
-      <label>
-        LOGIN
-      </label>
-      <input
-        onChange={[Function]}
-        placeholder="Email Address"
-        type="text"
-      />
-      <input
-        autoComplete="on"
-        onChange={[Function]}
-        placeholder="Password"
-        type="password"
-      />
-      <input
-        onClick={[Function]}
-        type="submit"
-        value="SUBMIT"
-      />
-    </form>
+      <h1>
+        TIMEWARD
+      </h1>
+      <hr />
+      <h2>
+        DAY MANAGER & TIME TRACKER
+      </h2>
+      <form
+        className="sc-AxirZ gjSkbk"
+      >
+        <label>
+          LOGIN
+        </label>
+        <input
+          onChange={[Function]}
+          placeholder="Email Address"
+          type="text"
+        />
+        <input
+          autoComplete="on"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+        />
+        <input
+          onClick={[Function]}
+          type="submit"
+          value="SUBMIT"
+        />
+      </form>
+    </div>
   </div>
 </div>
 `;
