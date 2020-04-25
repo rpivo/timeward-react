@@ -5,8 +5,21 @@ export const StyledForm = styled.form`
   font-weight: bold;
 
   label {
-    color: ${(props): string => props.theme.primary};
+    color: ${(props): string => props.theme.tertiary};
     letter-spacing: 1px;
+    cursor: pointer;
+
+    &.label-signup {
+      float: right;
+    }
+
+    &.active {
+      color: ${(props): string => props.theme.primary};
+    }
+
+    :hover {
+      color: ${(props): string => props.theme.primary};
+    }
   }
 
   input {

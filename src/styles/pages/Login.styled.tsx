@@ -14,7 +14,7 @@ const StyledLogin = styled.div`
     font-size: 0.64rem;
     letter-spacing: 0.25rem;
     margin-top: -0.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
     color: ${(props): string => props.theme.tertiary};
   }
 

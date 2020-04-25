@@ -17,6 +17,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
   const [inputs, setInputs] = useState({ email: '', password: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [didAuthFail, setDidAuthFail] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
 
   const {
     clientID,
@@ -80,6 +81,9 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       setInputs(prevState => ({ ...prevState, [kind]: event.target.value }));
     };
 
+  const handleLabelClick = (label: string): void =>
+    label === 'signup' ? setIsSignup(true) : setIsSignup(false);
+
   return (
     <Alignment vertical horizontal>
       {isLoading ? <Spinner /> : (
@@ -92,9 +96,16 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
               Incorrect username or password.
             </p>
           }
-          <Form onSubmit={handleAuthFlow}>
-            <Input onChange={handleInputChange('email')} placeholder='Email Address' />
-            <Input onChange={handleInputChange('password')} placeholder='Password' password />
+          <Form isSignup={isSignup} handleLabelClick={handleLabelClick} onSubmit={handleAuthFlow}>
+            <Input
+              onChange={handleInputChange('email')}
+              placeholder={`${isSignup ? 'New' : ''} Email Address`}
+            />
+            <Input
+              onChange={handleInputChange('password')}
+              placeholder={`${isSignup ? 'New' : ''} Password`}
+              password
+            />
           </Form>
         </StyledLogin>
       )}

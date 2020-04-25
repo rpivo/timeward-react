@@ -37,6 +37,7 @@ Sprint 11 / April 26, 2020
 - moved DashboardContext further out so that Graph component will be within its scope.
 - added tertiary theme color.
 - added logo and subheading to Login page.
+- added Sign Up Label on Login Page Form.
 
 <hr />
 
