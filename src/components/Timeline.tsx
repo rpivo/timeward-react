@@ -18,16 +18,16 @@ const Day: React.FC<DayProps & {}> = ({ day, recordCount }: DayProps): JSX.Eleme
   };
   return (
     <div className='day'>
-      { getDayString() }
+      {getDayString()}
       <br />
-      { recordCount }
+      {recordCount}
     </div>
   );
 };
 
 const Timeline: React.FC<TimelineProps> & TimelineComposition =
   ({ children }: TimelineProps): JSX.Element =>
-    <StyledTimeline>{ children }</StyledTimeline>;
+    <StyledTimeline>{children}</StyledTimeline>;
 
 Timeline.Day = Day;
 
