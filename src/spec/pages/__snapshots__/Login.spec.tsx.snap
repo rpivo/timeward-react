@@ -6,7 +6,7 @@ exports[`Login render should render correctly 1`] = `
 >
   <div>
     <div
-      className="sc-AxhCb enlXMB"
+      className="sc-AxhCb kdtVSE"
     >
       <h1>
         TIMEWARD
@@ -16,26 +16,35 @@ exports[`Login render should render correctly 1`] = `
         DAY MANAGER & TIME TRACKER
       </h2>
       <form
-        className="sc-AxirZ gjSkbk"
+        className="sc-AxirZ klrddU"
       >
-        <label>
+        <label
+          className="label-login active"
+          onClick={[Function]}
+        >
           LOGIN
+        </label>
+        <label
+          className="label-signup "
+          onClick={[Function]}
+        >
+          SIGN UP
         </label>
         <input
           onChange={[Function]}
-          placeholder="Email Address"
+          placeholder=" Email Address"
           type="text"
         />
         <input
           autoComplete="on"
           onChange={[Function]}
-          placeholder="Password"
+          placeholder=" Password"
           type="password"
         />
         <input
           onClick={[Function]}
           type="submit"
-          value="SUBMIT"
+          value="LOGIN"
         />
       </form>
     </div>
