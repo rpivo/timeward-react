@@ -30,7 +30,8 @@ const initialDashboardStore: DashboardStore = [
 type DashboardContextType = {
   dispatch: React.Dispatch<DashboardAction>;
   store: DashboardStore;
-}
+  totalSeconds: number;
+};
 
 export const DashboardContext = createContext({} as DashboardContextType);
 
@@ -82,8 +83,8 @@ const Dashboard: React.FC = (): JSX.Element => {
 
   return (
     <StyledDashboard>
-      <Section>
-        <DashboardContext.Provider value={{ dispatch, store }}>
+      <DashboardContext.Provider value={{ dispatch, store, totalSeconds }}>
+        <Section>
           <Tile>
             <Alignment horizontal>
               <Input onChange={handleInputChange} ref={ref} value={inputValue} />
@@ -102,11 +103,11 @@ const Dashboard: React.FC = (): JSX.Element => {
               <div>Today: {getStringFromSeconds(totalSeconds)}</div>
             </Timesheet>
           </Tile>
-        </DashboardContext.Provider>
-        <Tile>
-          <Graph />
-        </Tile>
-      </Section>
+          <Tile>
+            <Graph />
+          </Tile>
+        </Section>
+      </DashboardContext.Provider>
       <PieChart />
       <Tile width='full'>
         <Timeline>

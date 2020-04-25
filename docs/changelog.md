@@ -34,6 +34,7 @@ Sprint 11 / April 26, 2020
 - simplified Timer useEffect logic.
 - removed error log from failed login attempt on Login page.
 - updated Graph component to adjust inner bar divisions based on records.
+- moved DashboardContext further out so that Graph component will be within its scope.
 
 <hr />
 
