@@ -9,10 +9,12 @@ const StyledGraph = styled.div`
 
   svg {
     height: 100%;
+    display: flex;
+    flex-direction: column;
 
     rect {
       cursor: pointer;
-      fill: ${(props): string => props.theme.gray};
+      outline: 1px solid green;
     }
   }
 `;

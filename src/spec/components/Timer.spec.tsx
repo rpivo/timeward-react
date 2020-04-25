@@ -121,9 +121,10 @@ describe('Timer', () => {
         label: '',
         seconds: 0,
       }];
+      const totalSeconds = 0;
       jest.useFakeTimers();
       const wrapper = mount(
-        <DashboardContext.Provider value={{ dispatch, store }}>
+        <DashboardContext.Provider value={{ dispatch, store, totalSeconds }}>
           <Timer />
         </DashboardContext.Provider>
       );
