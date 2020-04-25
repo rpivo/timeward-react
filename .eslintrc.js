@@ -37,6 +37,7 @@ module.exports = {
     "multiline-comment-style": 0,
     "multiline-ternary": 0,
     "newline-per-chained-call": 0,
+    "no-bitwise": 0,
     "no-confusing-arrow": 0,
     "no-console": 0,
     "no-extra-parens": 0,
