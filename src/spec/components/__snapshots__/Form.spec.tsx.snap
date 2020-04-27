@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should render correctly 1`] = `
+<form
+  className="sc-AxjAm iczpkf"
+>
+  <label
+    className="label-login "
+    onClick={[Function]}
+  >
+    LOGIN
+  </label>
+  <label
+    className="label-signup active"
+    onClick={[Function]}
+  >
+    SIGN UP
+  </label>
+  <input />
+  <input
+    onClick={[MockFunction]}
+    type="submit"
+    value="SIGN UP"
+  />
+</form>
+`;
