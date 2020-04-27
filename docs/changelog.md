@@ -38,6 +38,7 @@ Sprint 11 / April 26, 2020
 - added tertiary theme color.
 - added logo and subheading to Login page.
 - added Sign Up Label on Login Page Form.
+- updated PieChart component to segment itself according to time records.
 
 <hr />
 

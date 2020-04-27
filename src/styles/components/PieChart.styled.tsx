@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 const StyledPieChart = styled.div`
-  background: ${(props): string => props.theme.primary};
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 25px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+
+  svg {
+    margin: 25px;
+    position: absolute;
+  }
 `;
 
 export default StyledPieChart;
