@@ -36,7 +36,6 @@ type DashboardContextType = {
 export const DashboardContext = createContext({} as DashboardContextType);
 
 const Dashboard: React.FC = (): JSX.Element => {
-  const [inputValue, setInputValue] = useState('');
   const [totalSeconds, setTotalSeconds] = useState(0);
 
   const ref = useRef<HTMLInputElement>(null);
@@ -72,14 +71,11 @@ const Dashboard: React.FC = (): JSX.Element => {
 
   useEffect((): void => {
     setTotalSeconds(store.reduce((acc, record) => acc + record.seconds, 0));
-    setInputValue('');
+    ref.current!.value = '';
   }, [store]);
 
   const getStringFromSeconds = (seconds: number): string =>
     new Date(seconds * 1000).toISOString().substr(11, 8);
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void =>
-    setInputValue(event.target.value);
 
   return (
     <StyledDashboard>
@@ -87,7 +83,7 @@ const Dashboard: React.FC = (): JSX.Element => {
         <Section>
           <Tile>
             <Alignment horizontal>
-              <Input onChange={handleInputChange} ref={ref} value={inputValue} />
+              <Input ref={ref} />
             </Alignment>
             <Alignment horizontal>
               <Timer />
@@ -107,19 +103,19 @@ const Dashboard: React.FC = (): JSX.Element => {
             <Graph />
           </Tile>
         </Section>
+        <PieChart />
+        <Tile width='full'>
+          <Timeline>
+            <Timeline.Day day={0} recordCount={store.length} />
+            <Timeline.Day day={1} />
+            <Timeline.Day day={2} />
+            <Timeline.Day day={3} />
+            <Timeline.Day day={4} />
+            <Timeline.Day day={5} />
+            <Timeline.Day day={6} />
+          </Timeline>
+        </Tile>
       </DashboardContext.Provider>
-      <PieChart />
-      <Tile width='full'>
-        <Timeline>
-          <Timeline.Day day={0} recordCount={store.length} />
-          <Timeline.Day day={1} />
-          <Timeline.Day day={2} />
-          <Timeline.Day day={3} />
-          <Timeline.Day day={4} />
-          <Timeline.Day day={5} />
-          <Timeline.Day day={6} />
-        </Timeline>
-      </Tile>
     </StyledDashboard >
   );
 };

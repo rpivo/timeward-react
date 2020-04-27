@@ -34,11 +34,12 @@ Sprint 11 / April 26, 2020
 - simplified Timer useEffect logic.
 - removed error log from failed login attempt on Login page.
 - updated Graph component to adjust inner bar divisions based on records.
-- moved DashboardContext further out so that Graph component will be within its scope.
+- moved DashboardContext further out so that Graph component and PieChart component will be within its scope.
 - added tertiary theme color.
 - added logo and subheading to Login page.
 - added Sign Up Label on Login Page Form.
 - updated PieChart component to segment itself according to time records.
+- Refactored Input component on Dashboard page to not store its value in state, preventing needless rerenders.
 
 <hr />
 
