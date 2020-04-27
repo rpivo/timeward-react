@@ -1,7 +1,19 @@
 # changelog
 
+## Release 0.12.0
+Sprint 12 / May 10, 2020
+
+### Updates
+
+
+<hr />
+
 ## Release 0.11.0
 Sprint 11 / April 26, 2020
+
+### 0 bug, 1 documentation, 12 feature, and 4 question issues were closed (17 total)
+
+Set up an AWS CodePipeline for Timeward that remotely runs tests, builds the production code, and places the code in an S3 bucket. Added the blog section to the documentation. Added initial functionality to the Bar Graph and Pie Chart components so that they segment and change depending on time records (ongoing process). Animated the Spinner component that's displayed while JWT tokens are being fetched from Cognito. Added an `isAuthorized` property to manage auth across the application, and added a PrivateRoute component to prevent users from accessing authorized routes. Added logo and subheading to Login page. Added a Sign Up button on the Login page (not yet functional).
 
 ### Updates
 
