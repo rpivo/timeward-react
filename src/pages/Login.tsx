@@ -99,7 +99,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
           <Form isSignup={isSignup} handleLabelClick={handleLabelClick} onSubmit={handleAuthFlow}>
             <Input
               onChange={handleInputChange('email')}
-              placeholder={`${isSignup ? 'New' : ''} Email Address`}
+              placeholder={`${isSignup ? 'New' : ''} Email`}
             />
             <Input
               onChange={handleInputChange('password')}

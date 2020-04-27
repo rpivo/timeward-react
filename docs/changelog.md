@@ -14,6 +14,7 @@ Sprint 11 / April 26, 2020
 - added AWS Cognito Identity SDK mock for testing auth flow.
 - updated all mock Cognito Identity classes to export as defaults.
 - added tests for Login page, Dashboard page, Timer component, and Header component.
+- updated Dashboard tests for the Input component after Input value was moved out of state.
 - updated ESLint config.
 - added isAuthorized boolean in App component to manage authorization across the application.
 - updated React Router Route syntax.
