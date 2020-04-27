@@ -12,12 +12,12 @@ const Input = forwardRef(
     Input.displayName = 'Input';
     return (
       <input
-        onChange={ onChange }
-        autoComplete={ password ? 'on' : undefined }
-        placeholder={ placeholder }
-        type={ password ? 'password' : 'text' }
-        ref={ ref }
-        value={ value }
+        onChange={onChange}
+        autoComplete={password ? 'on' : undefined}
+        placeholder={placeholder}
+        type={password ? 'password' : 'text'}
+        ref={ref}
+        value={value}
       />
     );
   },
