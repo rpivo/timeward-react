@@ -6,7 +6,7 @@ exports[`Login render should render correctly 1`] = `
 >
   <div>
     <div
-      className="sc-AxhCb kdtVSE"
+      className="sc-AxhCb ezZHFC"
     >
       <h1>
         TIMEWARD
@@ -32,7 +32,7 @@ exports[`Login render should render correctly 1`] = `
         </label>
         <input
           onChange={[Function]}
-          placeholder=" Email Address"
+          placeholder=" Email"
           type="text"
         />
         <input

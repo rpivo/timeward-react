@@ -15,9 +15,7 @@ exports[`Dashboard render should render correctly 1`] = `
       >
         <div>
           <input
-            onChange={[Function]}
             type="text"
-            value=""
           />
         </div>
       </div>
@@ -114,8 +112,14 @@ exports[`Dashboard render should render correctly 1`] = `
     </div>
   </section>
   <div
-    className="sc-AxiKw cJspvL"
-  />
+    className="sc-AxiKw hIppFK"
+  >
+    <svg
+      height="100"
+      viewBox="0 0 100 100"
+      width="100"
+    />
+  </div>
   <div
     className="sc-AxhUy gMuXYF"
     width="full"
@@ -126,9 +130,15 @@ exports[`Dashboard render should render correctly 1`] = `
       <div
         className="day"
       >
-        4/25/2020
+        4/26/2020
         <br />
         1
+      </div>
+      <div
+        className="day"
+      >
+        4/25/2020
+        <br />
       </div>
       <div
         className="day"
@@ -158,12 +168,6 @@ exports[`Dashboard render should render correctly 1`] = `
         className="day"
       >
         4/20/2020
-        <br />
-      </div>
-      <div
-        className="day"
-      >
-        4/19/2020
         <br />
       </div>
     </div>
