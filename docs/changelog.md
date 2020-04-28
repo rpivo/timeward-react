@@ -5,7 +5,7 @@ Sprint 12 / May 10, 2020
 
 ### Updates
 
-- added tests for Form component.
+- added tests for Form and PieChart components.
 
 <hr />
 
