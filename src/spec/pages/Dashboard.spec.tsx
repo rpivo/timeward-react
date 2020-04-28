@@ -5,7 +5,7 @@ import { act } from 'react-dom/test-utils';
 import Dashboard from '@pages/Dashboard';
 import Alignment from '@components/Alignment';
 import Button from '@components/Button';
-import Graph from '@components/Graph';
+import BarGraph from '@components/BarGraph';
 import Input from '@components/Input';
 import PieChart from '@components/PieChart';
 import Section from '@components/Section';
@@ -37,7 +37,7 @@ describe('Dashboard', () => {
     });
 
     it('should contain one Graph component', () => {
-      const children = dashboard.find(Graph);
+      const children = dashboard.find(BarGraph);
       expect(children.length).toEqual(1);
     });
 

@@ -5,7 +5,8 @@ Sprint 12 / May 10, 2020
 
 ### Updates
 
-- added tests for Form and PieChart components.
+- added tests for Form, PieChart, and BarGraph components.
+- renamed Graph to BarGraph.
 
 <hr />
 

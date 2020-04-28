@@ -1,7 +1,7 @@
 import React, { createContext, useCallback, useEffect, useReducer, useRef, useState } from 'react';
 import Alignment from '@components/Alignment';
 import Input from '@components/Input';
-import Graph from '@components/Graph';
+import BarGraph from '@components/BarGraph';
 import PieChart from '@components/PieChart';
 import Section from '@components/Section';
 import Tile from '@components/Tile';
@@ -100,7 +100,7 @@ const Dashboard: React.FC = (): JSX.Element => {
             </Timesheet>
           </Tile>
           <Tile>
-            <Graph />
+            <BarGraph />
           </Tile>
         </Section>
         <PieChart />

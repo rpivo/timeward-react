@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { DashboardContext } from '@pages/Dashboard';
-import StyledGraph from '@styles/components/Graph.styled';
+import StyledBarGraph from '@styles/components/BarGraph.styled';
 
 const Bar: React.FC = (): JSX.Element => {
   const { store, totalSeconds } = useContext(DashboardContext);
@@ -33,8 +33,8 @@ const Bar: React.FC = (): JSX.Element => {
   );
 };
 
-const Graph: React.FC = (): JSX.Element =>
-  <StyledGraph>
+const BarGraph: React.FC = (): JSX.Element =>
+  <StyledBarGraph>
     <Bar />
     <Bar />
     <Bar />
@@ -42,6 +42,6 @@ const Graph: React.FC = (): JSX.Element =>
     <Bar />
     <Bar />
     <Bar />
-  </StyledGraph>;
+  </StyledBarGraph>;
 
-export default Graph;
+export default BarGraph;
