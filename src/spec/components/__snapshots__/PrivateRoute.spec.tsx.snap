@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dashboard render should render correctly 1`] = `
+exports[`PrivateRoute should render correctly 1`] = `
 <div
   className="sc-fzoLsD jIDzto"
 >
