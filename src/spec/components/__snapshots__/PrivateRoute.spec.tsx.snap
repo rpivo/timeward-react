@@ -68,13 +68,6 @@ exports[`PrivateRoute should render correctly 1`] = `
       <div
         className="sc-fzozJi ddqBGC"
       >
-        <div
-          className="sc-AxmLO biSLxw"
-        >
-          00:00:00
-           / 
-          
-        </div>
         <div>
           Today: 
           00:00:00
@@ -132,7 +125,7 @@ exports[`PrivateRoute should render correctly 1`] = `
       >
         4/28/2020
         <br />
-        1
+        0
       </div>
       <div
         className="day"

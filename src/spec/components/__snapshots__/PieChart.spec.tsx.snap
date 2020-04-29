@@ -24,7 +24,7 @@ exports[`PieChart should render correctly 1`] = `
       cy="50"
       fill="transparent"
       r="25"
-      stroke="#5ce6a5"
+      stroke="#4a0f26"
       strokeDasharray="0 157"
       strokeWidth="50"
     />
@@ -44,7 +44,7 @@ exports[`PieChart should render correctly 1`] = `
       cy="50"
       fill="transparent"
       r="25"
-      stroke="#ee677b"
+      stroke="#9ea7ed"
       strokeDasharray="0 157"
       strokeWidth="50"
     />
