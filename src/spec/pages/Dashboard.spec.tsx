@@ -86,16 +86,16 @@ describe('Dashboard', () => {
     });
 
     describe('records', () => {
-      it('should initially have one record', () => {
+      it('should initially have 0 records', () => {
         const wrapper = mount(<Dashboard />);
-        expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(1);
+        expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(0);
       });
 
-      it('should have two records when the Timer stop Button is clicked', () => {
+      it('should have 1 record when the Timer stop Button is clicked', () => {
         const wrapper = mount(<Dashboard />);
         act(() => wrapper.find(Timer).find(Button).at(1).props().handleClick());
         wrapper.update();
-        expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(2);
+        expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(1);
       });
 
       it('should stack records when timer is stopped and new record name already exists', () => {
@@ -106,7 +106,7 @@ describe('Dashboard', () => {
         wrapper.find(Input).getDOMNode<HTMLInputElement>().value = 'test';
         act(() => wrapper.find(Timer).find(Button).at(1).props().handleClick());
         wrapper.update();
-        expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(2);
+        expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(1);
       });
     });
   });

@@ -20,13 +20,6 @@ type DashboardStore = {
   seconds: number;
 }[];
 
-const initialDashboardStore: DashboardStore = [
-  {
-    label: '',
-    seconds: 0,
-  },
-];
-
 type DashboardContextType = {
   dispatch: React.Dispatch<DashboardAction>;
   store: DashboardStore;
@@ -67,7 +60,7 @@ const Dashboard: React.FC = (): JSX.Element => {
     }
   }, []);
 
-  const [store, dispatch] = useReducer(reducer, initialDashboardStore);
+  const [store, dispatch] = useReducer(reducer, []);
 
   useEffect((): void => {
     setTotalSeconds(store.reduce((acc, record) => acc + record.seconds, 0));
