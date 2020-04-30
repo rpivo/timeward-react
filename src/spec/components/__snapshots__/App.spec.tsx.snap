@@ -17,10 +17,16 @@ exports[`App should render correctly 1`] = `
     </h6>
     <nav>
       <a
+        href="/dashboard"
+        onClick={[Function]}
+      >
+        Dashboard
+      </a>
+      <a
         href="/login"
         onClick={[Function]}
       >
-        Login
+        Account
       </a>
     </nav>
   </header>
@@ -28,51 +34,167 @@ exports[`App should render correctly 1`] = `
     className="sc-fznZeY bvwTAl"
   >
     <div
-      className="sc-AxjAm czhxNj"
+      className="sc-fzoLsD jIDzto"
     >
-      <div>
+      <section
+        className="sc-AxhCb ZaNiK"
+      >
         <div
-          className="sc-fznyAO eHAqdq"
+          className="sc-AxhUy fVAfvQ"
         >
-          <h1>
-            TIMEWARD
-          </h1>
-          <hr />
-          <h2>
-            DAY MANAGER & TIME TRACKER
-          </h2>
-          <form
-            className="sc-fzpans cikTCC"
+          <div
+            className="sc-AxjAm cEVkqc"
           >
-            <label
-              className="label-login active"
-              onClick={[Function]}
-            >
-              LOGIN
-            </label>
-            <label
-              className="label-signup "
-              onClick={[Function]}
-            >
-              SIGN UP
-            </label>
-            <input
-              onChange={[Function]}
-              placeholder=" Email"
-              type="text"
+            <div>
+              <input
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            className="sc-AxjAm cEVkqc"
+          >
+            <div>
+              <div
+                className="sc-Axmtr gKmsNw"
+              >
+                <span>
+                  00:00:00
+                </span>
+                <div
+                  className="sc-AxheI jGfEct"
+                  kind="start"
+                  onClick={[Function]}
+                >
+                  <svg
+                    height="15"
+                    viewBox="0 0 50 50"
+                    width="15"
+                  >
+                    <path
+                      d="M28.682,12.087a4.188,4.188,0,0,1,7.254,0L56.741,48.109a4.188,4.188,0,0,1-3.627,6.283H11.5a4.188,4.188,0,0,1-3.627-6.283Z"
+                      fill="#aaa"
+                      transform="translate(54.392 -7.309) rotate(90)"
+                    />
+                  </svg>
+                </div>
+                <div
+                  className="sc-AxheI jGfEct"
+                  kind="stop"
+                  onClick={[Function]}
+                >
+                  <svg
+                    height="15"
+                    viewBox="0 0 50 50"
+                    width="15"
+                  >
+                    <path
+                      d="M4.237,0H45.763A4.237,4.237,0,0,1,50,4.237V45.763A4.237,4.237,0,0,1,45.763,50H4.237A4.237,4.237,0,0,1,0,45.763V4.237A4.237,4.237,0,0,1,4.237,0Z"
+                      fill="#aaa"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-fzozJi ddqBGC"
+          >
+            <div>
+              Today: 
+              00:00:00
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-AxhUy fVAfvQ"
+        >
+          <div
+            className="sc-AxirZ kEiYJF"
+          >
+            <svg
+              width="65"
             />
-            <input
-              autoComplete="on"
-              onChange={[Function]}
-              placeholder=" Password"
-              type="password"
+            <svg
+              width="65"
             />
-            <input
-              onClick={[Function]}
-              type="submit"
-              value="LOGIN"
+            <svg
+              width="65"
             />
-          </form>
+            <svg
+              width="65"
+            />
+            <svg
+              width="65"
+            />
+            <svg
+              width="65"
+            />
+            <svg
+              width="65"
+            />
+          </div>
+        </div>
+      </section>
+      <div
+        className="sc-AxiKw hIppFK"
+      >
+        <svg
+          height="100"
+          viewBox="0 0 100 100"
+          width="100"
+        />
+      </div>
+      <div
+        className="sc-AxhUy gMuXYF"
+        width="full"
+      >
+        <div
+          className="sc-AxgMl jpVdqI"
+        >
+          <div
+            className="day"
+          >
+            4/29/2020
+            <br />
+            0
+          </div>
+          <div
+            className="day"
+          >
+            4/28/2020
+            <br />
+          </div>
+          <div
+            className="day"
+          >
+            4/27/2020
+            <br />
+          </div>
+          <div
+            className="day"
+          >
+            4/26/2020
+            <br />
+          </div>
+          <div
+            className="day"
+          >
+            4/25/2020
+            <br />
+          </div>
+          <div
+            className="day"
+          >
+            4/24/2020
+            <br />
+          </div>
+          <div
+            className="day"
+          >
+            4/23/2020
+            <br />
+          </div>
         </div>
       </div>
     </div>
