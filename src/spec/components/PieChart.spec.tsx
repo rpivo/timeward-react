@@ -8,10 +8,12 @@ describe('PieChart', () => {
     const dispatch = jest.fn();
     const store = [
       {
+        color: '#000000',
         label: 'work',
         seconds: 10,
       },
       {
+        color: '#111111',
         label: 'play',
         seconds: 20,
       },

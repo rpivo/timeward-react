@@ -118,6 +118,7 @@ describe('Timer', () => {
     it('should stop the timer and clear the interval when the stop button is clicked', () => {
       const dispatch = jest.fn();
       const store = [{
+        color: '#000000',
         label: '',
         seconds: 0,
       }];
