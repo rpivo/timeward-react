@@ -8,7 +8,7 @@ Sprint 12 / May 10, 2020
 - added tests for Form, PieChart, PrivateRoute, and BarGraph components.
 - renamed Graph to BarGraph.
 - removed unnecessary initial time record.
-- passed record color into BarGraph component.
+- passed record color into BarGraph and PieChart components.
 
 <hr />
 

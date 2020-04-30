@@ -14,8 +14,6 @@ const PieChart: React.FC = (): JSX.Element => {
   const getRotation = (index: number): number =>
     ((getPreviousStrokeLengths(index) / 157) * 360) - 90;
 
-  const getRandomHexColor = (): string => `#${(Math.random() * 0xFFFFFF << 0).toString(16)}`;
-
   return (
     <StyledPieChart>
       <svg
@@ -40,7 +38,7 @@ const PieChart: React.FC = (): JSX.Element => {
               cx='50'
               cy='50'
               fill='transparent'
-              stroke={getRandomHexColor()}
+              stroke={record.color}
               strokeDasharray={`${stroke} 157`}
               strokeWidth='50'
             />
