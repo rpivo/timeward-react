@@ -12,6 +12,7 @@ Sprint 12 / May 10, 2020
 - moved getRandomHexColor function into the Dashboard component, and added record color to each record in the Dashboard store.
 - updated Dashboard store shape in tests.
 - removed outline from BarGraph rects.
+- added `/* istanbul ignore next */` in Dashboard page for line that is covered in tests but erroneously listed as uncovered.
 
 <hr />
 

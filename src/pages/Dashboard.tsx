@@ -46,6 +46,7 @@ const Dashboard: React.FC = (): JSX.Element => {
         const labelIndex = getLabelIndex(refValue, state);
         if (refValue && labelIndex !== -1) {
           return state.map(record => {
+            /* istanbul ignore next */
             if (record.label === refValue) {
               record.seconds += action.payload;
             }
