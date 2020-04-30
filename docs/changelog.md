@@ -11,6 +11,7 @@ Sprint 12 / May 10, 2020
 - passed record color into BarGraph and PieChart components.
 - moved getRandomHexColor function into the Dashboard component, and added record color to each record in the Dashboard store.
 - updated Dashboard store shape in tests.
+- removed outline from BarGraph rects.
 
 <hr />
 

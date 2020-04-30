@@ -14,7 +14,6 @@ const StyledGraph = styled.div`
 
     rect {
       cursor: pointer;
-      outline: 1px solid green;
     }
   }
 `;
