@@ -9,6 +9,7 @@ Sprint 12 / May 10, 2020
 - renamed Graph to BarGraph.
 - removed unnecessary initial time record.
 - passed record color into BarGraph and PieChart components.
+- moved getRandomHexColor function into the Dashboard component, and added record color to each record in the Dashboard store.
 
 <hr />
 

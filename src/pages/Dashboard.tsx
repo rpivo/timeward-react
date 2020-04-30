@@ -16,6 +16,7 @@ type DashboardAction = {
 };
 
 type DashboardStore = {
+  color: string;
   label: string | undefined;
   seconds: number;
 }[];
@@ -36,6 +37,8 @@ const Dashboard: React.FC = (): JSX.Element => {
   const getLabelIndex = (label: string, store: DashboardStore): number =>
     store.findIndex(record => record.label === label);
 
+  const getRandomHexColor = (): string => `#${(Math.random() * 0xFFFFFF << 0).toString(16)}`;
+
   const reducer = useCallback((state: DashboardStore, action: DashboardAction): DashboardStore => {
     switch (action.type) {
       default: {
@@ -52,6 +55,7 @@ const Dashboard: React.FC = (): JSX.Element => {
         return [
           ...state,
           {
+            color: getRandomHexColor(),
             label: refValue,
             seconds: action.payload,
           },
