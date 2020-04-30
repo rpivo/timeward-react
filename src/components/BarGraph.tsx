@@ -19,6 +19,7 @@ const Bar: React.FC = (): JSX.Element => {
         if (record.seconds) return (
           <rect
             id={`bar-monday-${index - 1}`}
+            fill={record.color}
             key={index}
             height={arr[index + 1] ? `${height}%` : `${100 - getPreviousHeights(index)}%`}
             width='100%'
