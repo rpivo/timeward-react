@@ -81,7 +81,7 @@ const Dashboard: React.FC = (): JSX.Element => {
         <Section>
           <Tile>
             <Alignment horizontal>
-              <Input ref={ref} />
+              <Input placeholder='What are you doing?' ref={ref} />
             </Alignment>
             <Alignment horizontal>
               <Timer />
