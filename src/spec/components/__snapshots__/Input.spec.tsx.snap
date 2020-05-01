@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input render should render correctly 1`] = `
+Array [
+  <label
+    htmlFor=""
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />,
+  <input
+    type="text"
+  />,
+]
+`;
