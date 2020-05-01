@@ -4,21 +4,27 @@ export const StyledForm = styled.form`
   font-size: 0.85rem;
   font-weight: bold;
 
-  label {
-    color: ${(props): string => props.theme.tertiary};
-    letter-spacing: 1px;
-    cursor: pointer;
+  div.button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-    &.label-signup {
-      float: right;
-    }
-
-    &.active {
-      color: ${(props): string => props.theme.primary};
-    }
-
-    :hover {
-      color: ${(props): string => props.theme.primary};
+    div {
+      color: ${(props): string => props.theme.tertiary};
+      letter-spacing: 1px;
+      cursor: pointer;
+  
+      &.signup {
+        float: right;
+      }
+  
+      &.active {
+        color: ${(props): string => props.theme.primary};
+      }
+  
+      :hover {
+        color: ${(props): string => props.theme.primary};
+      }
     }
   }
 

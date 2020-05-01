@@ -81,7 +81,7 @@ describe('Dashboard', () => {
     describe('input', () => {
       it('should initially be set to an empty string', () => {
         const wrapper = mount(<Dashboard />);
-        expect(wrapper.find(Input).getDOMNode<HTMLInputElement>().value).toBe('');
+        expect(wrapper.find(Input).find('input').getDOMNode<HTMLInputElement>().value).toBe('');
       });
     });
 
@@ -100,10 +100,10 @@ describe('Dashboard', () => {
 
       it('should stack records when timer is stopped and new record name already exists', () => {
         const wrapper = mount(<Dashboard />);
-        wrapper.find(Input).getDOMNode<HTMLInputElement>().value = 'test';
+        wrapper.find(Input).find('input').getDOMNode<HTMLInputElement>().value = 'test';
         act(() => wrapper.find(Timer).find(Button).at(1).props().handleClick());
         wrapper.update();
-        wrapper.find(Input).getDOMNode<HTMLInputElement>().value = 'test';
+        wrapper.find(Input).find('input').getDOMNode<HTMLInputElement>().value = 'test';
         act(() => wrapper.find(Timer).find(Button).at(1).props().handleClick());
         wrapper.update();
         expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(1);
