@@ -2,20 +2,26 @@
 
 exports[`Form should render correctly 1`] = `
 <form
-  className="sc-AxjAm iczpkf"
+  className="sc-AxjAm tWRmG"
 >
-  <label
-    className="label-login "
-    onClick={[Function]}
+  <div
+    className="button-wrapper"
   >
-    LOGIN
-  </label>
-  <label
-    className="label-signup active"
-    onClick={[Function]}
-  >
-    SIGN UP
-  </label>
+    <div
+      className="button login "
+      onClick={[Function]}
+      role="button"
+    >
+      LOGIN
+    </div>
+    <div
+      className="button signup active"
+      onClick={[Function]}
+      role="button"
+    >
+      SIGN UP
+    </div>
+  </div>
   <input />
   <input
     onClick={[MockFunction]}

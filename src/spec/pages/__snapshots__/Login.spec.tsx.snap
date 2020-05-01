@@ -16,29 +16,55 @@ exports[`Login render should render correctly 1`] = `
         DAY MANAGER & TIME TRACKER
       </h2>
       <form
-        className="sc-AxirZ klrddU"
+        className="sc-AxirZ ieNPDt"
       >
-        <label
-          className="label-login active"
-          onClick={[Function]}
+        <div
+          className="button-wrapper"
         >
-          LOGIN
-        </label>
+          <div
+            className="button login active"
+            onClick={[Function]}
+            role="button"
+          >
+            LOGIN
+          </div>
+          <div
+            className="button signup "
+            onClick={[Function]}
+            role="button"
+          >
+            SIGN UP
+          </div>
+        </div>
         <label
-          className="label-signup "
-          onClick={[Function]}
+          htmlFor="email"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
         >
-          SIGN UP
+          Email
         </label>
         <input
           onChange={[Function]}
-          placeholder=" Email"
+          placeholder="Email"
           type="text"
         />
+        <label
+          htmlFor="password"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          Password
+        </label>
         <input
           autoComplete="on"
           onChange={[Function]}
-          placeholder=" Password"
+          placeholder="Password"
           type="password"
         />
         <input

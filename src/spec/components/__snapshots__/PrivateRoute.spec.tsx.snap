@@ -14,7 +14,18 @@ exports[`PrivateRoute should render correctly 1`] = `
         className="sc-AxjAm cEVkqc"
       >
         <div>
+          <label
+            htmlFor="what_are_you_doing?"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            What are you doing?
+          </label>
           <input
+            placeholder="What are you doing?"
             type="text"
           />
         </div>
