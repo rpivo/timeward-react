@@ -4,7 +4,7 @@ import { StyledForm } from '@styles/components/Form.styled';
 
 type FormProps = {
   children: React.ReactNode;
-  handleLabelClick: (label: string) => void;
+  handleButtonClick: (label: string) => void;
   isSignup: boolean;
   onSubmit: () => void;
 };
@@ -12,20 +12,24 @@ type FormProps = {
 type FormComposition = { Input?: React.FC<InputProps> };
 
 const Form: React.FC<FormProps> & FormComposition =
-  ({ children, onSubmit, handleLabelClick, isSignup }: FormProps): JSX.Element =>
+  ({ children, onSubmit, handleButtonClick, isSignup }: FormProps): JSX.Element =>
     <StyledForm>
-      <label
-        className={`label-login ${!isSignup ? 'active' : ''}`}
-        onClick={(): void => handleLabelClick('login')}
-      >
-        LOGIN
-      </label>
-      <label
-        className={`label-signup ${isSignup ? 'active' : ''}`}
-        onClick={(): void => handleLabelClick('signup')}
-      >
-        SIGN UP
-      </label>
+      <div className='button-wrapper'>
+        <div
+          className={`button login ${!isSignup ? 'active' : ''}`}
+          onClick={(): void => handleButtonClick('login')}
+          role='button'
+        >
+          LOGIN
+        </div>
+        <div
+          className={`button signup ${isSignup ? 'active' : ''}`}
+          onClick={(): void => handleButtonClick('signup')}
+          role='button'
+        >
+          SIGN UP
+        </div>
+      </div>
       {children}
       <input onClick={onSubmit} type='submit' value={isSignup ? 'SIGN UP' : 'LOGIN'} />
     </StyledForm>;

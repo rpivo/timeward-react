@@ -13,6 +13,7 @@ Sprint 12 / May 10, 2020
 - updated Dashboard store shape in tests.
 - removed outline from BarGraph rects.
 - added `/* istanbul ignore next */` in Dashboard page for line that is covered in tests but erroneously listed as uncovered.
+- updated Form labels to be more semantic and accessible.
 
 <hr />
 
