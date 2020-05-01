@@ -92,9 +92,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
           <hr />
           <h2>DAY MANAGER & TIME TRACKER</h2>
           {didAuthFail &&
-            <p style={{ color: 'red', fontSize: '1.14rem', textAlign: 'center' }}>
-              Incorrect username or password.
-            </p>
+            <p>Incorrect username or password.</p>
           }
           <Form isSignup={isSignup} handleButtonClick={handleButtonClick} onSubmit={handleAuthFlow}>
             <Input

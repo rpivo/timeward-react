@@ -23,6 +23,13 @@ const StyledLogin = styled.div`
     border-bottom: 1px solid ${(props): string => props.theme.tertiary};
     width: 268px;
   }
+
+  p {
+    color: red;
+    font-size: 1.14rem;
+    margin-top: 0;
+    text-align: center;
+  }
 `;
 
 export default StyledLogin;

@@ -17,6 +17,7 @@ Sprint 12 / May 10, 2020
 - moved label element to Input component.
 - added placeholder to Input on Dashboard page.
 - renamed Login page's handleLabelClick method to handleButtonClick.
+- moved Login 'Invalid Username or Password' paragraph styles to Login.styled.tsx file.
 
 <hr />
 
