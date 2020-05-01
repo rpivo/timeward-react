@@ -81,7 +81,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       setInputs(prevState => ({ ...prevState, [kind]: event.target.value }));
     };
 
-  const handleLabelClick = (label: string): void =>
+  const handleButtonClick = (label: string): void =>
     label === 'signup' ? setIsSignup(true) : setIsSignup(false);
 
   return (
@@ -96,14 +96,14 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
               Incorrect username or password.
             </p>
           }
-          <Form isSignup={isSignup} handleLabelClick={handleLabelClick} onSubmit={handleAuthFlow}>
+          <Form isSignup={isSignup} handleButtonClick={handleButtonClick} onSubmit={handleAuthFlow}>
             <Input
               onChange={handleInputChange('email')}
-              placeholder={`${isSignup ? 'New' : ''} Email`}
+              placeholder={`${isSignup ? 'New ' : ''}Email`}
             />
             <Input
               onChange={handleInputChange('password')}
-              placeholder={`${isSignup ? 'New' : ''} Password`}
+              placeholder={`${isSignup ? 'New ' : ''}Password`}
               password
             />
           </Form>

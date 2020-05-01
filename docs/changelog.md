@@ -16,6 +16,7 @@ Sprint 12 / May 10, 2020
 - updated Form labels to be more semantic and accessible.
 - moved label element to Input component.
 - added placeholder to Input on Dashboard page.
+- renamed Login page's handleLabelClick method to handleButtonClick.
 
 <hr />
 
