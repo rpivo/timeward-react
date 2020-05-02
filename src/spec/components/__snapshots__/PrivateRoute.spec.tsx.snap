@@ -134,9 +134,21 @@ exports[`PrivateRoute should render correctly 1`] = `
       <div
         className="day"
       >
-        4/30/2020
+        5/2/2020
         <br />
         0
+      </div>
+      <div
+        className="day"
+      >
+        5/1/2020
+        <br />
+      </div>
+      <div
+        className="day"
+      >
+        4/30/2020
+        <br />
       </div>
       <div
         className="day"
@@ -160,18 +172,6 @@ exports[`PrivateRoute should render correctly 1`] = `
         className="day"
       >
         4/26/2020
-        <br />
-      </div>
-      <div
-        className="day"
-      >
-        4/25/2020
-        <br />
-      </div>
-      <div
-        className="day"
-      >
-        4/24/2020
         <br />
       </div>
     </div>

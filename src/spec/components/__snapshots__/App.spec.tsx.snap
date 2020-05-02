@@ -32,7 +32,7 @@ exports[`App should render correctly 1`] = `
     >
       <div>
         <div
-          className="sc-fznyAO EuCOB"
+          className="sc-fznyAO kRyQuj"
         >
           <h1>
             TIMEWARD
@@ -89,7 +89,9 @@ exports[`App should render correctly 1`] = `
             </label>
             <input
               autoComplete="on"
+              onBlur={[Function]}
               onChange={[Function]}
+              onFocus={[Function]}
               placeholder="Password"
               type="password"
             />
