@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Button from '@components/Button';
+import Button from '@components/TimerButton';
 
 describe('Button', () => {
 
