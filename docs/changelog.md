@@ -19,6 +19,7 @@ Sprint 12 / May 10, 2020
 - renamed Login page's handleLabelClick method to handleButtonClick.
 - moved Login 'Invalid Username or Password' paragraph styles to Login.styled.tsx file.
 - renamed Button component to TimerButton component.
+- added Icon component.
 
 <hr />
 
