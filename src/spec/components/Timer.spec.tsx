@@ -4,7 +4,7 @@ import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
 import { DashboardContext } from '@pages/Dashboard';
 import Timer from '@components/Timer';
-import Button from '@components/Button';
+import Button from '@components/TimerButton';
 
 describe('Timer', () => {
 
