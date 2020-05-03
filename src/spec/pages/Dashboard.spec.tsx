@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import Dashboard from '@pages/Dashboard';
 import Alignment from '@components/Alignment';
-import Button from '@components/Button';
+import TimerButton from '@components/TimerButton';
 import BarGraph from '@components/BarGraph';
 import Input from '@components/Input';
 import PieChart from '@components/PieChart';
@@ -93,7 +93,7 @@ describe('Dashboard', () => {
 
       it('should have 1 record when the Timer stop Button is clicked', () => {
         const wrapper = mount(<Dashboard />);
-        act(() => wrapper.find(Timer).find(Button).at(1).props().handleClick());
+        act(() => wrapper.find(Timer).find(TimerButton).at(1).props().handleClick());
         wrapper.update();
         expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(1);
       });
@@ -101,10 +101,10 @@ describe('Dashboard', () => {
       it('should stack records when timer is stopped and new record name already exists', () => {
         const wrapper = mount(<Dashboard />);
         wrapper.find(Input).find('input').getDOMNode<HTMLInputElement>().value = 'test';
-        act(() => wrapper.find(Timer).find(Button).at(1).props().handleClick());
+        act(() => wrapper.find(Timer).find(TimerButton).at(1).props().handleClick());
         wrapper.update();
         wrapper.find(Input).find('input').getDOMNode<HTMLInputElement>().value = 'test';
-        act(() => wrapper.find(Timer).find(Button).at(1).props().handleClick());
+        act(() => wrapper.find(Timer).find(TimerButton).at(1).props().handleClick());
         wrapper.update();
         expect(wrapper.find(Timesheet).find(Timesheet.Record).length).toBe(1);
       });
