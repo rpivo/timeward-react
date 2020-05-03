@@ -21,6 +21,7 @@ Sprint 12 / May 10, 2020
 - renamed Button component to TimerButton component.
 - added Icon component.
 - added onBlur and onFocus props to Input component.
+- added password validation to Login page.
 
 <hr />
 
