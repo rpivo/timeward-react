@@ -1,6 +1,6 @@
 import React, { memo, useContext, useEffect, useState } from 'react';
 import { DashboardContext } from '@pages/Dashboard';
-import Button, { ButtonProps } from '@components/Button';
+import TimerButton, { TimerButtonProps } from '@components/TimerButton';
 import StyledTimer from '@styles/components/Timer.styled';
 
 const Timer: React.FC = (): JSX.Element => {
@@ -69,9 +69,9 @@ const Timer: React.FC = (): JSX.Element => {
     }));
   };
 
-  const MemoizedButton = memo(({ kind, handleClick }: ButtonProps) => {
+  const MemoizedButton = memo(({ kind, handleClick }: TimerButtonProps) => {
     MemoizedButton.displayName = 'MemoizedButton';
-    return <Button kind={ kind } handleClick={ handleClick } />;
+    return <TimerButton kind={ kind } handleClick={ handleClick } />;
   });
 
   return (
