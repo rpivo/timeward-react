@@ -20,6 +20,7 @@ Sprint 12 / May 10, 2020
 - moved Login 'Invalid Username or Password' paragraph styles to Login.styled.tsx file.
 - renamed Button component to TimerButton component.
 - added Icon component.
+- added onBlur and onFocus props to Input component.
 
 <hr />
 
