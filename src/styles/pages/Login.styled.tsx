@@ -14,7 +14,7 @@ const StyledLogin = styled.div`
     font-size: 0.64rem;
     letter-spacing: 0.25rem;
     margin-top: -0.25rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.6rem;
     color: ${(props): string => props.theme.tertiary};
   }
 
@@ -24,11 +24,30 @@ const StyledLogin = styled.div`
     width: 268px;
   }
 
-  p {
+  p.failure {
     color: red;
     font-size: 1.14rem;
     margin-top: 0;
     text-align: center;
+  }
+
+  div.password-requirements {
+    margin-top: -0.75rem;
+    margin-bottom: 0.75rem;
+
+    svg {
+      width: 0.75rem;
+      height: auto;
+      padding-top: 0.2rem;
+      padding-right: 0.2rem;
+    }
+
+    p {
+      color: ${(props): string => props.theme.primary};
+      margin: 0;
+      margin-bottom: 0.3rem;
+      font-size: 0.67rem;
+    }
   }
 `;
 
