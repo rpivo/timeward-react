@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 
 export type InputProps = {
-  onBlur?: () => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: () => void;
   password?: boolean;
@@ -9,7 +8,6 @@ export type InputProps = {
 };
 
 const Input = forwardRef(({
-  onBlur,
   onChange,
   onFocus,
   password,
@@ -28,7 +26,6 @@ const Input = forwardRef(({
         {placeholder}
       </label>
       <input
-        onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
         autoComplete={password ? 'on' : undefined}

@@ -23,6 +23,7 @@ Sprint 12 / May 10, 2020
 - added onBlur and onFocus props to Input component.
 - added password validation to Login page.
 - added event prop to form submission to `preventDefault()` if password validation fails on the Login page.
+- updated password validation text to continually display unless the user clicks the Login button.
 
 <hr />
 

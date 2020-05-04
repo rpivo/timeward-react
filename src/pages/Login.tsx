@@ -51,6 +51,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       !is8CharactersLong
     )) {
       event.preventDefault();
+      console.error('Password does not satisfy the above requirements.');
       return;
     }
 
@@ -101,10 +102,14 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       setInputs(prevState => ({ ...prevState, [kind]: event.target.value }));
     };
 
-  const handleButtonClick = (flag: string): void =>
-    flag === 'signup' ? setIsSignup(true) : setIsSignup(false);
+  const handleButtonClick = (flag: string): void => {
+    if (flag === 'signup') {
+      setIsSignup(true);
+      if (isNewPasswordFocused) setIsNewPasswordFocused(false);
+    } else setIsSignup(false);
+  };
 
-  const handleFocus = (): void => setIsNewPasswordFocused(!isNewPasswordFocused);
+  const handleFocus = (): void => setIsNewPasswordFocused(true);
 
   const validatePassword = (): void => {
     const refValue = passwordRef.current!.value;
@@ -163,7 +168,6 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
               placeholder={`${isSignup ? 'New ' : ''}Email`}
             />
             <Input
-              onBlur={handleFocus}
               onChange={(): void => {
                 handleInputChange('password');
                 if (isSignup) validatePassword();
