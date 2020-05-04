@@ -89,7 +89,6 @@ exports[`App should render correctly 1`] = `
             </label>
             <input
               autoComplete="on"
-              onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               placeholder="Password"
