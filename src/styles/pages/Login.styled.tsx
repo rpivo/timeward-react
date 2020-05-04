@@ -28,6 +28,7 @@ const StyledLogin = styled.div`
     color: red;
     font-size: 1.14rem;
     margin-top: 0;
+    max-width: 270px;
     text-align: center;
   }
 

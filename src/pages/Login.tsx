@@ -25,6 +25,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
   const [hasSpecialCharacter, setHasSpecialCharacter] = useState(false);
   const [hasUppercaseCharacter, setHasUppercaseCharacter] = useState(false);
   const [is8CharactersLong, setIs8CharactersLong] = useState(false);
+  const [failureMessage, setFailureMessage] = useState('Incorrect username or password.');
 
   const passwordRef = useRef<HTMLInputElement>(null);
 
@@ -51,7 +52,8 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       !is8CharactersLong
     )) {
       event.preventDefault();
-      console.error('Password does not satisfy the above requirements.');
+      setDidAuthFail(true);
+      setFailureMessage('Password does not satisfy the above requirements.');
       return;
     }
 
@@ -74,6 +76,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       onFailure: () => {
         setIsLoading(false);
         setDidAuthFail(true);
+        setFailureMessage('Incorrect username or password.');
       },
       onSuccess: result => {
         AWS.config.region = region;
@@ -157,7 +160,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
               </p>
             </div>
           }
-          {didAuthFail && <p className='failure'>Incorrect username or password.</p>}
+          {didAuthFail && <p className='failure'>{failureMessage}</p>}
           <Form
             isSignup={isSignup}
             handleButtonClick={handleButtonClick}
