@@ -21,7 +21,7 @@ const IconX: React.FC = (): JSX.Element =>
     height='218.496'
     viewBox='0 0 218.496 218.496'
   >
-    <path d={iconPaths.iconX} fill='red' />
+    <path d={iconPaths.iconX} fill='#FF0011' />
   </svg>;
 
 const Icon: React.FC<IconProps> = ({ type }: IconProps): JSX.Element => {
