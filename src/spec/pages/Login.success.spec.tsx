@@ -49,12 +49,13 @@ jest.mock('amazon-cognito-identity-js', () => {
 
 describe('Login failure', () => {
   it('should display an error message when auth fails', () => {
+    const event = {} as React.FormEvent<HTMLInputElement>;
     const wrapper = mount(
       <MemoryRouter>
         <Login setIsAuthorized={jest.fn()} />
       </MemoryRouter>
     );
-    act(() => wrapper.find(Form).props().onSubmit());
+    act(() => wrapper.find(Form).props().onSubmit(event));
     wrapper.update();
     const children = wrapper.find(Spinner);
     expect(children.length).toEqual(1);

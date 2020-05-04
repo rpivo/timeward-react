@@ -6,7 +6,7 @@ type FormProps = {
   children: React.ReactNode;
   handleButtonClick: (label: string) => void;
   isSignup: boolean;
-  onSubmit: () => void;
+  onSubmit: (event: React.FormEvent<HTMLInputElement>) => void;
 };
 
 type FormComposition = { Input?: React.FC<InputProps> };

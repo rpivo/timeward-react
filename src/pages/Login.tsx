@@ -42,7 +42,18 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
 
   const history = useHistory();
 
-  const handleAuthFlow = (): void => {
+  const handleAuthFlow = (event: React.FormEvent<HTMLInputElement>): void => {
+    if (isSignup && (
+      !hasLowercaseCharacter ||
+      !hasNumber ||
+      !hasSpecialCharacter ||
+      !hasUppercaseCharacter ||
+      !is8CharactersLong
+    )) {
+      event.preventDefault();
+      return;
+    }
+
     setIsLoading(true);
 
     const authenticationData = {
@@ -142,7 +153,11 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
             </div>
           }
           {didAuthFail && <p className='failure'>Incorrect username or password.</p>}
-          <Form isSignup={isSignup} handleButtonClick={handleButtonClick} onSubmit={handleAuthFlow}>
+          <Form
+            isSignup={isSignup}
+            handleButtonClick={handleButtonClick}
+            onSubmit={handleAuthFlow}
+          >
             <Input
               onChange={handleInputChange('email')}
               placeholder={`${isSignup ? 'New ' : ''}Email`}

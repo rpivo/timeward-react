@@ -35,12 +35,13 @@ jest.mock('amazon-cognito-identity-js', () => {
 
 describe('Login waiting', () => {
   it('should display the spinner component after the submit button is clicked', () => {
+    const event = {} as React.FormEvent<HTMLInputElement>;
     const wrapper = mount(
       <MemoryRouter>
         <Login setIsAuthorized={jest.fn()} />
       </MemoryRouter>
     );
-    act(() => wrapper.find(Form).props().onSubmit());
+    act(() => wrapper.find(Form).props().onSubmit(event));
     wrapper.update();
     const children = wrapper.find(Spinner);
     expect(children.length).toEqual(1);
