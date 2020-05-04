@@ -26,6 +26,7 @@ Sprint 12 / May 10, 2020
 - updated password validation text to continually display unless the user clicks the Login button.
 - updated auth failure message on Login page to be stored and updateable in state.
 - updated ESLint config.
+- added email validation to Login page Signup flow.
 
 <hr />
 

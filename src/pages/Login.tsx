@@ -44,6 +44,17 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
   const history = useHistory();
 
   const handleAuthFlow = (event: React.FormEvent<HTMLInputElement>): void => {
+    const handleValidationFailure =
+      (evt: React.FormEvent<HTMLInputElement>, message: string): void => {
+        evt.preventDefault();
+        setDidAuthFail(true);
+        setFailureMessage(message);
+      };
+
+    if (isSignup && !(/\S+@\S+\.\S+/).test(inputs.email)) {
+      return handleValidationFailure(event, 'Email address is not valid.');
+    }
+
     if (isSignup && (
       !hasLowercaseCharacter ||
       !hasNumber ||
@@ -51,10 +62,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       !hasUppercaseCharacter ||
       !is8CharactersLong
     )) {
-      event.preventDefault();
-      setDidAuthFail(true);
-      setFailureMessage('Password does not satisfy the above requirements.');
-      return;
+      return handleValidationFailure(event, 'Password does not satisfy the above requirements.');
     }
 
     setIsLoading(true);
@@ -99,13 +107,8 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
     });
   };
 
-  const handleInputChange =
-    (kind: string) => (event: React.ChangeEvent<HTMLInputElement>): void => {
-      event.persist();
-      setInputs(prevState => ({ ...prevState, [kind]: event.target.value }));
-    };
-
   const handleButtonClick = (flag: string): void => {
+    setDidAuthFail(false);
     if (flag === 'signup') {
       setIsSignup(true);
       if (isNewPasswordFocused) setIsNewPasswordFocused(false);
@@ -132,6 +135,13 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
     if ((refValue.length >= 8) !== is8CharactersLong) {
       setIs8CharactersLong(!is8CharactersLong);
     }
+  };
+
+  const handleInputChange =
+  (kind: string) => (event: React.ChangeEvent<HTMLInputElement>): void => {
+    event.persist();
+    setInputs(prevState => ({ ...prevState, [kind]: event.target.value }));
+    if (kind === 'password') validatePassword();
   };
 
   return (
@@ -171,10 +181,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
               placeholder={`${isSignup ? 'New ' : ''}Email`}
             />
             <Input
-              onChange={(): void => {
-                handleInputChange('password');
-                if (isSignup) validatePassword();
-              }}
+              onChange={handleInputChange('password')}
               onFocus={handleFocus}
               placeholder={`${isSignup ? 'New ' : ''}Password`}
               password
