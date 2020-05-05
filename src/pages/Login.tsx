@@ -64,6 +64,11 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       setFailureMessage(message);
     };
 
+    const handleAuthenticationSuccess = (): void => {
+      setIsAuthorized(true);
+      history.push('/dashboard');
+    };
+
     setIsLoading(true);
 
     const authenticationData = {
@@ -98,11 +103,11 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
         inputs.password,
         attributeList,
         [],
-        (err: Error | undefined) => {
-          if (err) {
+        (error: Error | undefined) => {
+          if (error) {
             return handleAuthenticationFailure('Signup was unsuccessful. Please try again.');
           }
-          console.log('user signup presumably worked');
+          return handleAuthenticationSuccess();
         },
       );
     };
@@ -132,9 +137,10 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
           });
 
           (AWS.config.credentials as AWS.CognitoIdentityCredentials).refresh((error) => {
-            if (error) return console.error(error);
-            setIsAuthorized(true);
-            return history.push('/dashboard');
+            if (error) {
+              return handleAuthenticationFailure('Signin was unsuccessful. Please try again.');
+            }
+            return handleAuthenticationSuccess();
           });
         },
       });

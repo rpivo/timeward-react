@@ -29,6 +29,7 @@ Sprint 12 / May 10, 2020
 - added email validation to Login page Signup flow.
 - added Signup flow to Login page.
 - moved authentication failure logic to its own function.
+- moved authentication success logic to its own function.
 
 <hr />
 
