@@ -27,6 +27,7 @@ Sprint 12 / May 10, 2020
 - updated auth failure message on Login page to be stored and updateable in state.
 - updated ESLint config.
 - added email validation to Login page Signup flow.
+- added Signup flow to Login page.
 
 <hr />
 

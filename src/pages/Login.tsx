@@ -1,7 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { useHistory } from "react-router-dom";
 import AWS from 'aws-sdk/global';
-import { AuthenticationDetails, CognitoUserPool, CognitoUser } from 'amazon-cognito-identity-js';
+import {
+  AuthenticationDetails,
+  CognitoUserPool,
+  CognitoUser,
+  CognitoUserAttribute,
+} from 'amazon-cognito-identity-js';
 import Alignment from '@components/Alignment';
 import Form from '@components/Form';
 import Icon from '@components/Icon';
@@ -28,18 +33,6 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
   const [failureMessage, setFailureMessage] = useState('Incorrect username or password.');
 
   const passwordRef = useRef<HTMLInputElement>(null);
-
-  const {
-    clientID,
-    identityPoolID,
-    region,
-    userPoolID,
-  } = config[process.env.NODE_ENV!].cognito;
-
-  const poolData = {
-    ClientId: clientID,
-    UserPoolId: userPoolID,
-  };
 
   const history = useHistory();
 
@@ -72,39 +65,76 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       Username: inputs.email,
     };
 
-    const authenticationDetails = new AuthenticationDetails(authenticationData);
-    const userPool = new CognitoUserPool(poolData);
-    const userData = {
-      Pool: userPool,
-      Username: inputs.email,
+    const {
+      clientID,
+      identityPoolID,
+      region,
+      userPoolID,
+    } = config[process.env.NODE_ENV!].cognito;
+
+    const poolData = {
+      ClientId: clientID,
+      UserPoolId: userPoolID,
     };
-    const cognitoUser = new CognitoUser(userData);
 
-    cognitoUser.authenticateUser(authenticationDetails, {
-      onFailure: () => {
-        setIsLoading(false);
-        setDidAuthFail(true);
-        setFailureMessage('Incorrect username or password.');
-      },
-      onSuccess: result => {
-        AWS.config.region = region;
+    const userPool = new CognitoUserPool(poolData);
 
-        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-          IdentityPoolId: identityPoolID,
-          Logins: {
-            [`cognito-idp.${region}.amazonaws.com/${userPoolID}`]: result
-              .getIdToken()
-              .getJwtToken(),
-          },
-        });
+    const handleSignup = (): void => {
+      const attributeList = [
+        new CognitoUserAttribute({
+          Name: 'email',
+          Value: inputs.email,
+        }),
+      ];
 
-        (AWS.config.credentials as AWS.CognitoIdentityCredentials).refresh((error) => {
-          if (error) return console.error(error);
-          setIsAuthorized(true);
-          return history.push('/dashboard');
-        });
-      },
-    });
+      userPool.signUp(
+        inputs.email,
+        inputs.password,
+        attributeList,
+        [],
+        (err: Error | undefined) => {
+          if (err) return console.error('user signup failed miserably');
+          console.log('user signup presumably worked');
+        },
+      );
+    };
+
+    const handleSignin = (): void => {
+      const userData = {
+        Pool: userPool,
+        Username: inputs.email,
+      };
+      const cognitoUser = new CognitoUser(userData);
+      const authenticationDetails = new AuthenticationDetails(authenticationData);
+
+      cognitoUser.authenticateUser(authenticationDetails, {
+        onFailure: () => {
+          setIsLoading(false);
+          setDidAuthFail(true);
+          setFailureMessage('Incorrect username or password.');
+        },
+        onSuccess: result => {
+          AWS.config.region = region;
+
+          AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: identityPoolID,
+            Logins: {
+              [`cognito-idp.${region}.amazonaws.com/${userPoolID}`]: result
+                .getIdToken()
+                .getJwtToken(),
+            },
+          });
+
+          (AWS.config.credentials as AWS.CognitoIdentityCredentials).refresh((error) => {
+            if (error) return console.error(error);
+            setIsAuthorized(true);
+            return history.push('/dashboard');
+          });
+        },
+      });
+    };
+
+    return isSignup ? handleSignup() : handleSignin();
   };
 
   const handleButtonClick = (flag: string): void => {
@@ -138,11 +168,11 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
   };
 
   const handleInputChange =
-  (kind: string) => (event: React.ChangeEvent<HTMLInputElement>): void => {
-    event.persist();
-    setInputs(prevState => ({ ...prevState, [kind]: event.target.value }));
-    if (kind === 'password') validatePassword();
-  };
+    (kind: string) => (event: React.ChangeEvent<HTMLInputElement>): void => {
+      event.persist();
+      setInputs(prevState => ({ ...prevState, [kind]: event.target.value }));
+      if (kind === 'password') validatePassword();
+    };
 
   return (
     <Alignment vertical horizontal>
