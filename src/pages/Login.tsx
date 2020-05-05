@@ -55,8 +55,14 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
       !hasUppercaseCharacter ||
       !is8CharactersLong
     )) {
-      return handleValidationFailure(event, 'Password does not satisfy the above requirements.');
+      return handleValidationFailure(event, 'Password does not match the above requirements.');
     }
+
+    const handleAuthenticationFailure = (message: string): void => {
+      setIsLoading(false);
+      setDidAuthFail(true);
+      setFailureMessage(message);
+    };
 
     setIsLoading(true);
 
@@ -93,7 +99,9 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
         attributeList,
         [],
         (err: Error | undefined) => {
-          if (err) return console.error('user signup failed miserably');
+          if (err) {
+            return handleAuthenticationFailure('Signup was unsuccessful. Please try again.');
+          }
           console.log('user signup presumably worked');
         },
       );
@@ -109,9 +117,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
 
       cognitoUser.authenticateUser(authenticationDetails, {
         onFailure: () => {
-          setIsLoading(false);
-          setDidAuthFail(true);
-          setFailureMessage('Incorrect username or password.');
+          return handleAuthenticationFailure('Incorrect username or password.');
         },
         onSuccess: result => {
           AWS.config.region = region;

@@ -28,6 +28,7 @@ Sprint 12 / May 10, 2020
 - updated ESLint config.
 - added email validation to Login page Signup flow.
 - added Signup flow to Login page.
+- moved authentication failure logic to its own function.
 
 <hr />
 
