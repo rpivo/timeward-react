@@ -19,11 +19,12 @@ Timeward is designed to be a failsafe for these moments.
 Timeward is built with:
 - **React** for the frontend.
 - **TypeScript** for added language strictness
-- **AWS Cognito** to manage auth flow.
-- **AWS CodeBuild**, **CodePipeline**, & **CodeDeploy** for CI/CD.
-- **AWS CloudWatch** for pipeline monitoring and metrics.
-- **AWS CodeCommit** & **GitHub** for source code management.
-- **AWS S3** for static web hosting & build artifact storage.
+- **Amazon Web Services**, including:
+    - **CloudWatch** for pipeline monitoring and metrics.
+    - **CodeBuild**, **CodePipeline**, & **CodeDeploy** for CI/CD.
+    - **CodeCommit** for source code management.
+    - **Cognito** to manage auth flow.
+    - **S3** for static web hosting & build artifact storage.
 - **Jest** and **Enzyme** for testing.
 - **Webpack** for bundling.
 - **ESLint** for linting.
