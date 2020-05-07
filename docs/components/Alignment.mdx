@@ -7,7 +7,7 @@ menu: Components
 
 ## Arguments
 
-`Alignment` has a prop signature of type `AlignmentProps`:
+#### Prop Signature
 
 ```ts
 type AlignmentProps = {
@@ -17,11 +17,21 @@ type AlignmentProps = {
 };
 ```
 
-`Alignment` is expecting to wrap `children`. It may also receive optional `vertical` and `horizontal` props. `vertical` and `horizontal` can be used to control the vertical and horizontal positioning of the child element inside the `Alignment` component.
+#### children: React.ReactNode
+`Alignment` is expecting to wrap `children`.
+
+#### vertical?: boolean
+`Alignment` may receive an optional `vertical` prop. If this value is passed in, then the outermost child element that `Alignment` wraps will be vertically aligned within `Alignment`.
+
+#### horizontal?: boolean
+`Alignment` may receive an optional `horizontal` prop. If this value is passed in, then the outermost child element that `Alignment` wraps will be horizontally aligned within `Alignment`.
+
+## State
+`Alignment` does not manage any state.
 
 ## Example Usage
 
-This example is taken from the **Login** page. Here, `Alignment` wraps children and is passed the optional `vertical` and `horizontal` props so that children will be centered vertically and horizontally within the `Alignment` component.
+This example is taken from the **Login** page. Here, `Alignment` wraps a Fragment child and is passed the optional `vertical` and `horizontal` props so that the child will be centered vertically and horizontally within the `Alignment` component.
 
 ```tsx
 <Alignment vertical horizontal>

@@ -31,6 +31,7 @@ Sprint 12 / May 10, 2020
 - moved authentication failure logic to its own function.
 - moved authentication success logic to its own function.
 - updated readme.
+- added App component to documentation.
 
 <hr />
 

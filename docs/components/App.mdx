@@ -4,3 +4,41 @@ menu: Components
 ---
 
 # App
+
+## Arguments
+`App` does not take in any props.
+
+## State
+
+#### isAuthorized: Boolean
+`isAuthorized` indicates whether the user is an authorized user. Passing this state down to children will result in specific UI for authorized and non-authorized users.
+
+## Example Usage
+`App` is a top-level, single-use component. `isAuthorized` is initialized as `false`. `App` wraps a `Header` component as well as `Route` components, including a special `Route` component called `PrivateRoute` that takes in state `isAuthorized` to determine whether the user can view the route. `App` passes `setIsAuthorized`, the setter for `isAuthorized` down to the `Login` page where the state value can then be set.
+
+```tsx
+const App: React.FC = (): JSX.Element => {
+  const [isAuthorized, setIsAuthorized] = useState(false);
+
+  return (
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <div className='app'>
+        <Router>
+          <Header isAuthorized={isAuthorized} />
+          <Page>
+            <Switch>
+              <Route
+                path="/login"
+                render={(): JSX.Element => <Login setIsAuthorized={setIsAuthorized} />}
+              />
+              <PrivateRoute isAuthorized={isAuthorized} path="*" component={Dashboard} />
+            </Switch>
+          </Page>
+        </Router>
+      </div>
+    </ThemeProvider>
+
+  );
+};
+```
