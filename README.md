@@ -24,6 +24,7 @@ Timeward is built with:
     - **CodeBuild**, **CodePipeline**, & **CodeDeploy** for CI/CD.
     - **CodeCommit** for source code management.
     - **Cognito** to manage auth flow.
+    - **Route 53** for DNS & record set management.
     - **S3** for static web hosting & build artifact storage.
 - **Jest** and **Enzyme** for testing.
 - **Webpack** for bundling.
