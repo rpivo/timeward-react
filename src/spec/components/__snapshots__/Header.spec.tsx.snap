@@ -2,7 +2,7 @@
 
 exports[`Header render should render correctly 1`] = `
 <header
-  className="sc-AxjAm cZETiN"
+  className="sc-AxjAm bRGVgi"
 >
   <h6>
     <a
@@ -23,7 +23,7 @@ exports[`Header render should render correctly 1`] = `
       href="/login"
       onClick={[Function]}
     >
-      Account
+      Logout
     </a>
   </nav>
 </header>
