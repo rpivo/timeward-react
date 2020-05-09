@@ -3,9 +3,16 @@ import renderer from 'react-test-renderer';
 import Icon from '@components/Icon';
 
 describe('Icon', () => {
-  it('should render correctly', () => {
+  it('should render X icon', () => {
     const tree = renderer
-      .create(<Icon />)
+      .create(<Icon type='x' />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should render checkmark icon', () => {
+    const tree = renderer
+      .create(<Icon type='checkmark' />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
