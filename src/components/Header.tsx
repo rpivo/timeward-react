@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import StyledHeader from '@styles/components/Header.styled';
 
 type HeaderProps = {
-  isAuthorized: boolean;
+  readonly isAuthorized: boolean;
 };
 
 const Header: React.FC<HeaderProps> = ({ isAuthorized }: HeaderProps): JSX.Element =>

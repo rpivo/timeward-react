@@ -34,6 +34,7 @@ Sprint 12 / May 10, 2020
 - added App component to documentation.
 - added ability to log out using React Router's Prompt.
 - added `complement` color to theme.
+- update properties in types to be readonly where needed.
 
 <hr />
 

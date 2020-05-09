@@ -11,20 +11,20 @@ import Timesheet from '@components/Timesheet';
 import StyledDashboard from '@styles/pages/Dashboard.styled';
 
 type DashboardAction = {
-  type: 'stop';
-  payload: number;
+  readonly type: 'stop';
+  readonly payload: number;
 };
 
 type DashboardStore = {
-  color: string;
-  label: string | undefined;
+  readonly color: string;
+  readonly label: string | undefined;
   seconds: number;
 }[];
 
 type DashboardContextType = {
-  dispatch: React.Dispatch<DashboardAction>;
-  store: DashboardStore;
-  totalSeconds: number;
+  readonly dispatch: React.Dispatch<DashboardAction>;
+  readonly store: DashboardStore;
+  readonly totalSeconds: number;
 };
 
 export const DashboardContext = createContext({} as DashboardContextType);

@@ -51,4 +51,3 @@ const PieChart: React.FC = (): JSX.Element => {
 };
 
 export default PieChart;
-

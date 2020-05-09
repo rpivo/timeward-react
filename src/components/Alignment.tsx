@@ -2,9 +2,9 @@ import React from 'react';
 import StyledAlignment from '@styles/components/Alignment.styled';
 
 type AlignmentProps = {
-  children: React.ReactNode;
-  vertical?: boolean;
-  horizontal?: boolean;
+  readonly children: React.ReactNode;
+  readonly vertical?: boolean;
+  readonly horizontal?: boolean;
 };
 
 const Alignment: React.FC<AlignmentProps> =

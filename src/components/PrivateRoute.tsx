@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
 type PrivateRouteProps = {
-  component: React.ComponentType;
-  isAuthorized: boolean;
-  path?: string;
+  readonly component: React.ComponentType;
+  readonly isAuthorized: boolean;
+  readonly path?: string;
 };
 
 const PrivateRoute: React.FC<PrivateRouteProps> =

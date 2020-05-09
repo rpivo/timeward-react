@@ -2,8 +2,8 @@ import React from 'react';
 import { StyledTimesheet, StyledRecord } from '@styles/components/Timesheet.styled';
 
 type RecordProps = {
-  label: string;
-  seconds: string;
+  readonly label: string;
+  readonly seconds: string;
 };
 
 type TimesheetProps = { children: React.ReactNode };

@@ -3,10 +3,10 @@ import { InputProps } from '@components/Input';
 import { StyledForm } from '@styles/components/Form.styled';
 
 type FormProps = {
-  children: React.ReactNode;
-  handleButtonClick: (label: string) => void;
-  isSignup: boolean;
-  onSubmit: (event: React.FormEvent<HTMLInputElement>) => void;
+  readonly children: React.ReactNode;
+  readonly handleButtonClick: (label: string) => void;
+  readonly isSignup: boolean;
+  readonly onSubmit: (event: React.FormEvent<HTMLInputElement>) => void;
 };
 
 type FormComposition = { Input?: React.FC<InputProps> };

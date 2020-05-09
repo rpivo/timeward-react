@@ -2,7 +2,7 @@ import React from 'react';
 import { iconPaths } from '@utilities/svg';
 
 type IconProps = {
-  type?: string;
+  readonly type?: string;
 };
 
 const Checkmark: React.FC = (): JSX.Element =>

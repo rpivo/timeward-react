@@ -3,8 +3,8 @@ import StyledButton from '@styles/components/TimerButton.styled';
 import { timerButtonPaths } from '@utilities/svg';
 
 export type TimerButtonProps = {
-  kind: string;
-  handleClick: () => void;
+  readonly kind: string;
+  readonly handleClick: () => void;
 }
 
 const Button: React.FC<TimerButtonProps> =

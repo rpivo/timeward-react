@@ -4,8 +4,8 @@ import StyledTimeline from '@styles/components/Timeline.styled';
 type TimelineProps = { children: React.ReactNode };
 
 type DayProps = {
-  day: number;
-  recordCount?: number;
+  readonly day: number;
+  readonly recordCount?: number;
 };
 
 type TimelineComposition = { Day: React.FC<DayProps> };

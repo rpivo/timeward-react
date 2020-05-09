@@ -1,7 +1,9 @@
 import React from 'react';
 import StyledSection from '@styles/components/Section.styled';
 
-type SectionProps = { children: React.ReactNode };
+type SectionProps = {
+  readonly children: React.ReactNode;
+};
 
 const Section: React.FC<SectionProps> = ({ children }: SectionProps): JSX.Element =>
   <StyledSection>{ children }</StyledSection>;

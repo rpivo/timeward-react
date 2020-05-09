@@ -16,10 +16,10 @@ import config from '@env';
 import StyledLogin from '@styles/pages/Login.styled';
 
 type LoginProps = {
-  isAuthorized: boolean;
-  isLogoutEnabled: boolean;
-  setIsAuthorized: (arg: boolean) => void;
-  setIsLogoutEnabled: (arg: boolean) => void;
+  readonly isAuthorized: boolean;
+  readonly isLogoutEnabled: boolean;
+  readonly setIsAuthorized: (arg: boolean) => void;
+  readonly setIsLogoutEnabled: (arg: boolean) => void;
 };
 
 const Login: React.FC<LoginProps> =

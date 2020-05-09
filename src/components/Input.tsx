@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react';
 
 export type InputProps = {
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onFocus?: () => void;
-  password?: boolean;
-  placeholder?: string;
+  readonly onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  readonly onFocus?: () => void;
+  readonly password?: boolean;
+  readonly placeholder?: string;
 };
 
 const Input = forwardRef(({
