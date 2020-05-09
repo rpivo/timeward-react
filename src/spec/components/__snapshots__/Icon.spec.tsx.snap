@@ -1,6 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Icon should render correctly 1`] = `
+exports[`Icon should render X icon 1`] = `
+<svg
+  height="218.496"
+  style={
+    Object {
+      "marginBottom": "-0.15rem",
+      "marginTop": "0.15rem",
+    }
+  }
+  viewBox="0 0 218.496 218.496"
+  width="218.496"
+>
+  <path
+    d="M109.248,151.674,42.426,218.5,0,176.07l66.822-66.822L0,42.426,42.426,0l66.822,66.822L176.07,0,218.5,42.426l-66.822,66.822L218.5,176.07,176.07,218.5Z"
+    fill="#FF0011"
+  />
+</svg>
+`;
+
+exports[`Icon should render X icon 2`] = `
 <svg
   height="299.106"
   viewBox="0 0 299.106 299.106"
