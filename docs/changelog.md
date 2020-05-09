@@ -32,6 +32,7 @@ Sprint 12 / May 10, 2020
 - moved authentication success logic to its own function.
 - updated readme.
 - added App component to documentation.
+- added ability to log out using React Router's Prompt.
 
 <hr />
 
