@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon should render correctly 1`] = `
+<svg
+  height="299.106"
+  viewBox="0 0 299.106 299.106"
+  width="299.106"
+>
+  <path
+    d="M113.5,249v-.5H0v-60H113.5V0h60V188.5h.5v60h-.5v.5Z"
+    fill="#00C519"
+    transform="translate(176.07) rotate(45)"
+  />
+</svg>
+`;
