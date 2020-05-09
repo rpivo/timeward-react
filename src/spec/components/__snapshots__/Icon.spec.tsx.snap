@@ -19,7 +19,7 @@ exports[`Icon should render X icon 1`] = `
 </svg>
 `;
 
-exports[`Icon should render X icon 2`] = `
+exports[`Icon should render checkmark icon 1`] = `
 <svg
   height="299.106"
   viewBox="0 0 299.106 299.106"
