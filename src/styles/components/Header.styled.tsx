@@ -24,6 +24,10 @@ const StyledHeader = styled.header`
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     font-size: 0.9rem;
+
+    &:hover {
+      color: ${(props): string => props.theme.complement};
+    }
   }
 `;
 
