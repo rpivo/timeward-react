@@ -5,7 +5,7 @@ exports[`App should render correctly 1`] = `
   className="app"
 >
   <header
-    className="sc-fznKkj bZwArj"
+    className="sc-fznZeY cxLaPD"
   >
     <h6>
       <a
@@ -25,7 +25,7 @@ exports[`App should render correctly 1`] = `
     </nav>
   </header>
   <main
-    className="sc-fznZeY bvwTAl"
+    className="sc-fzokOt hfiqLW"
   >
     <div
       className="sc-AxjAm czhxNj"

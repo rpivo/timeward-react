@@ -8,7 +8,7 @@ exports[`PrivateRoute should render correctly 1`] = `
     className="sc-AxhCb ZaNiK"
   >
     <div
-      className="sc-AxhUy fVAfvQ"
+      className="sc-AxhUy hrMuFC"
     >
       <div
         className="sc-AxjAm cEVkqc"
@@ -86,7 +86,7 @@ exports[`PrivateRoute should render correctly 1`] = `
       </div>
     </div>
     <div
-      className="sc-AxhUy fVAfvQ"
+      className="sc-AxhUy hrMuFC"
     >
       <div
         className="sc-AxirZ cBNplJ"
@@ -125,7 +125,7 @@ exports[`PrivateRoute should render correctly 1`] = `
     />
   </div>
   <div
-    className="sc-AxhUy gMuXYF"
+    className="sc-AxhUy xsjHy"
     width="full"
   >
     <div
