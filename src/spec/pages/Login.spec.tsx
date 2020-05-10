@@ -7,7 +7,7 @@ describe('Login', () => {
   describe('render', () => {
     const testRenderer = renderer.create(
       <MemoryRouter>
-        <Login isAuthorized={false} setIsAuthorized={jest.fn()} />
+        <Login setIsAuthorized={jest.fn()} />
       </MemoryRouter>
     );
 
