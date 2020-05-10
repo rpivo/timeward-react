@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledHeader = styled.header`
   width: calc(100% - 16px);
-  background: ${(props): string => props.theme.primary};
+  background: ${(props): string => props.theme.colorPrimary};
   color: white;
   padding: 8px;
   display: flex;
@@ -26,7 +26,7 @@ const StyledHeader = styled.header`
     font-size: 0.9rem;
 
     &:hover {
-      color: ${(props): string => props.theme.complement};
+      color: ${(props): string => props.theme.colorComplement};
     }
   }
 `;

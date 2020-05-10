@@ -10,7 +10,7 @@ export const StyledForm = styled.form`
     justify-content: space-between;
 
     div {
-      color: ${(props): string => props.theme.tertiary};
+      color: ${(props): string => props.theme.colorTertiary};
       letter-spacing: 1px;
       cursor: pointer;
   
@@ -19,11 +19,11 @@ export const StyledForm = styled.form`
       }
   
       &.active {
-        color: ${(props): string => props.theme.primary};
+        color: ${(props): string => props.theme.colorPrimary};
       }
   
       :hover {
-        color: ${(props): string => props.theme.primary};
+        color: ${(props): string => props.theme.colorPrimary};
       }
     }
   }

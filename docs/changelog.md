@@ -5,6 +5,8 @@ Sprint 13 / May 24, 2020
 
 ### Updates
 
+- added shadow and borderRadius to Theme.
+- updated color names in Theme to be grouped together.
 
 <hr />
 

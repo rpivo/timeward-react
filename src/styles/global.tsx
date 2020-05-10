@@ -6,6 +6,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #222;
     margin: 0;
-    background: ${Theme.secondary};
+    background: ${Theme.colorSecondary};
   }
 `;

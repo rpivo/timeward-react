@@ -7,7 +7,7 @@ const StyledLogin = styled.div`
     letter-spacing: 0.25rem;
     font-size: 1rem;
     font-weight: bold;
-    color: ${(props): string => props.theme.primary};
+    color: ${(props): string => props.theme.colorPrimary};
   }
 
   h2 {
@@ -15,12 +15,12 @@ const StyledLogin = styled.div`
     letter-spacing: 0.25rem;
     margin-top: -0.25rem;
     margin-bottom: 1.6rem;
-    color: ${(props): string => props.theme.tertiary};
+    color: ${(props): string => props.theme.colorTertiary};
   }
 
   hr {
     border: 0;
-    border-bottom: 1px solid ${(props): string => props.theme.tertiary};
+    border-bottom: 1px solid ${(props): string => props.theme.colorTertiary};
     width: 268px;
   }
 
@@ -44,7 +44,7 @@ const StyledLogin = styled.div`
     }
 
     p {
-      color: ${(props): string => props.theme.primary};
+      color: ${(props): string => props.theme.colorPrimary};
       margin: 0;
       margin-bottom: 0.3rem;
       font-size: 0.67rem;
