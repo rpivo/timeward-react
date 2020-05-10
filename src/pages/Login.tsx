@@ -17,23 +17,12 @@ import StyledLogin from '@styles/pages/Login.styled';
 
 type LoginProps = {
   readonly isAuthorized: boolean;
-  readonly isLogoutEnabled: boolean;
   readonly setIsAuthorized: (arg: boolean) => void;
-  readonly setIsLogoutEnabled: (arg: boolean) => void;
 };
 
 const Login: React.FC<LoginProps> =
-  ({
-    isAuthorized,
-    isLogoutEnabled,
-    setIsAuthorized,
-    setIsLogoutEnabled,
-  }: LoginProps): JSX.Element => {
-
-    if (isLogoutEnabled && isAuthorized) {
-      setIsAuthorized(false);
-      setIsLogoutEnabled(false);
-    }
+  ({ isAuthorized, setIsAuthorized }: LoginProps): JSX.Element => {
+    if (isAuthorized) setIsAuthorized(false);
 
     const [didAuthFail, setDidAuthFail] = useState(false);
     const [inputs, setInputs] = useState({ email: '', password: '' });
@@ -82,7 +71,6 @@ const Login: React.FC<LoginProps> =
       const handleAuthenticationSuccess = (): void => {
         setIsAuthorized(true);
         history.push('/dashboard');
-        setIsLogoutEnabled(true);
       };
 
       setIsLoading(true);

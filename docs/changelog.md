@@ -7,6 +7,7 @@ Sprint 13 / May 24, 2020
 
 - added shadow and borderRadius to Theme.
 - updated color names in Theme to be grouped together.
+- removed `isLogout` logic in from Login page.
 
 <hr />
 

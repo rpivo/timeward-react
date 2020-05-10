@@ -38,12 +38,7 @@ describe('Login waiting', () => {
     const event = {} as React.FormEvent<HTMLInputElement>;
     const wrapper = mount(
       <MemoryRouter>
-        <Login
-          isAuthorized={false}
-          isLogoutEnabled={false}
-          setIsAuthorized={jest.fn()}
-          setIsLogoutEnabled={jest.fn()}
-        />
+        <Login isAuthorized={false} setIsAuthorized={jest.fn()} />
       </MemoryRouter>
     );
     act(() => wrapper.find(Form).props().onSubmit(event));
