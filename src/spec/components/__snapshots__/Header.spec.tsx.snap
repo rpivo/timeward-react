@@ -20,7 +20,7 @@ exports[`Header render should render correctly 1`] = `
       Dashboard
     </a>
     <a
-      href="/login"
+      href="#logout"
       onClick={[Function]}
     >
       Logout
