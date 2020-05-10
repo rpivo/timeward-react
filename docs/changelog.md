@@ -1,7 +1,19 @@
 # changelog
 
+## Release 0.13.0
+Sprint 13 / May 24, 2020
+
+### Updates
+
+
+<hr />
+
 ## Release 0.12.0
 Sprint 12 / May 10, 2020
+
+### 1 bug, 1 documentation, 16 feature, and 2 question issues were closed (20 total)
+
+Added color state to records, and set up the Bar Graph and Pie Chart to display the record's color, allowing the graphs to display different colors for different time records. Refactored Form's labels to be more semantic and accessible. Added email and password validation to the Login page. Added continually updating password validation info for new users attempting to sign up. Added Signup flow to Login page authentication. Added the ability to log out from the application. Fixed a bug where the record color could possibly get incorrectly set.
 
 ### Updates
 
@@ -24,7 +36,7 @@ Sprint 12 / May 10, 2020
 - added password validation to Login page.
 - added event prop to form submission to `preventDefault()` if password validation fails on the Login page.
 - updated password validation text to continually display unless the user clicks the Login button.
-- updated auth failure message on Login page to be stored and updateable in state.
+- updated auth failure message on Login page to be stored and updatable in state.
 - updated ESLint config.
 - added email validation to Login page Signup flow.
 - added Signup flow to Login page.
