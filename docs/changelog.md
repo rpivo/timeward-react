@@ -34,7 +34,8 @@ Sprint 12 / May 10, 2020
 - added App component to documentation.
 - added ability to log out using React Router's Prompt.
 - added `complement` color to theme.
-- update properties in types to be readonly where needed.
+- updated properties in types to be readonly where needed.
+- updated getRandomHexColor function to always return a six digit hexadecimal number.
 
 <hr />
 
