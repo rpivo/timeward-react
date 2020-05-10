@@ -11,7 +11,7 @@ exports[`PrivateRoute should render correctly 1`] = `
       className="sc-AxhUy hrMuFC"
     >
       <div
-        className="sc-AxjAm hrhdIN"
+        className="sc-AxjAm gDLXTM"
       >
         <div>
           <label
@@ -31,7 +31,7 @@ exports[`PrivateRoute should render correctly 1`] = `
         </div>
       </div>
       <div
-        className="sc-AxjAm hrhdIN"
+        className="sc-AxjAm gDLXTM"
       >
         <div>
           <div

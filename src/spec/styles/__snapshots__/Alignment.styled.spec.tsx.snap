@@ -2,6 +2,6 @@
 
 exports[`Button render should render correctly 1`] = `
 <div
-  className="sc-AxjAm hMrxYV"
+  className="sc-AxjAm OHMIA"
 />
 `;
