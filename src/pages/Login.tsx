@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useHistory } from "react-router-dom";
-import AWS from 'aws-sdk/global';
+import { config as AWSConfig, CognitoIdentityCredentials } from 'aws-sdk/global';
 import {
   AuthenticationDetails,
   CognitoUserPool,
@@ -125,9 +125,8 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
           return handleAuthenticationFailure('Incorrect username or password.');
         },
         onSuccess: result => {
-          AWS.config.region = region;
-
-          AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+          AWSConfig.region = region;
+          AWSConfig.credentials = new CognitoIdentityCredentials({
             IdentityPoolId: identityPoolID,
             Logins: {
               [`cognito-idp.${region}.amazonaws.com/${userPoolID}`]: result
@@ -136,7 +135,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }: LoginProps): JSX.Eleme
             },
           });
 
-          (AWS.config.credentials as AWS.CognitoIdentityCredentials).refresh((error) => {
+          (AWSConfig.credentials as CognitoIdentityCredentials).refresh((error) => {
             if (error) {
               return handleAuthenticationFailure('Signin was unsuccessful. Please try again.');
             }

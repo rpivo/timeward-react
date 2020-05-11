@@ -12,6 +12,7 @@ Sprint 13 / May 24, 2020
 - removed Prompt in favor of custom Alert component.
 - refactored Alignment component to accept `overlay` prop.
 - updated logout logic.
+- updated AWS import in Login page to destructure needed classes and objects.
 
 <hr />
 
