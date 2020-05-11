@@ -9,6 +9,7 @@ Sprint 13 / May 24, 2020
 - updated color names in Theme to be grouped together.
 - removed `isLogout` logic in from Login page.
 - removed `isAuthorized` from Login page.
+- removed Prompt in favor of custom Alert component.
 
 <hr />
 
