@@ -7,7 +7,7 @@ describe('Header', () => {
 
   const header =
     <MemoryRouter>
-      <Header isAuthorized={true} />
+      <Header isAuthorized={true} setShouldDisplayLogoutAlert={jest.fn()} />
     </MemoryRouter>;
 
   describe('render', () => {

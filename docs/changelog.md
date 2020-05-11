@@ -11,6 +11,7 @@ Sprint 13 / May 24, 2020
 - removed `isAuthorized` from Login page.
 - removed Prompt in favor of custom Alert component.
 - refactored Alignment component to accept `overlay` prop.
+- updated logout logic.
 
 <hr />
 
