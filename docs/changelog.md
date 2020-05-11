@@ -13,6 +13,7 @@ Sprint 13 / May 24, 2020
 - refactored Alignment component to accept `overlay` prop.
 - updated logout logic.
 - updated AWS import in Login page to destructure needed classes and objects.
+- added AWS CognitoIdentityCredentials mock.
 
 <hr />
 
