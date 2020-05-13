@@ -17,6 +17,26 @@ const analyzer = {
       },
     ],
   },
+  optimization: {
+    chunkIds: 'named',
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          chunks: 'initial',
+          maxInitialRequests: 5,
+          minChunks: 2,
+          minSize: 0,
+        },
+        vendor: {
+          chunks: 'initial',
+          enforce: true,
+          name: 'vendor',
+          priority: 10,
+          test: /node_modules/,
+        },
+      },
+    },
+  },
   plugins: [new BundleAnalyzerPlugin()],
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],

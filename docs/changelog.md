@@ -15,6 +15,7 @@ Sprint 13 / May 24, 2020
 - updated AWS import in Login page to destructure needed classes and objects.
 - added AWS CognitoIdentityCredentials mock.
 - added tests for App component.
+- updated Webpack Analyzer config to split bundles by `main` and `vendor` bundles.
 
 <hr />
 
